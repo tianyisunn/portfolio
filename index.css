@@ -1,0 +1,270 @@
+:root{
+  --bg:#ffffff;
+  --text:#121212;
+  --muted:#4b5563;
+  --blue:#2f80ff;
+  --card:#f3f6ff;
+  --panel:#eaf0ff;
+  --shadow: 0 12px 30px rgba(16,24,40,.10);
+  --radius: 28px;
+}
+
+*{ box-sizing:border-box; }
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  color:var(--text);
+  background:var(--bg);
+}
+
+.top{
+  padding:22px 18px 0;
+}
+
+.navPill{
+  max-width: 1120px;
+  margin: 0 auto;
+  background: #f4f5f7;
+  border-radius: 999px;
+  height: 64px;
+  display:flex;
+  align-items:center;
+  padding: 10px 12px;
+  gap: 10px;
+}
+
+.navSpacer{ flex:1; }
+
+.navLinks{
+  display:flex;
+  gap: 22px;
+  align-items:center;
+  padding-right: 10px;
+}
+
+.navLinks a{
+  text-decoration:none;
+  color:#1f2937;
+  font-size: 16px;
+}
+
+.btnPill{
+  text-decoration:none;
+  background:#111;
+  color:#fff;
+  padding: 12px 18px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.container{
+  max-width:1120px;
+  margin: 0 auto;
+  padding: 32px 18px 60px;
+}
+
+/* HERO */
+.heroTitle{
+  text-align:center;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  margin: 30px 0 28px;
+  font-size: clamp(40px, 5vw, 72px);
+}
+
+.heroTitle .blue{ color: var(--blue); }
+
+/* Intro card (text + photo) */
+.introCard{
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 34px;
+  display:grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 28px;
+  align-items:center;
+}
+
+.introText{
+  font-size: 20px;
+  line-height: 1.6;
+  color: #1f2937;
+}
+
+.introText .blue{ color: var(--blue); }
+.introText strong{ font-weight: 800; }
+
+.portrait{
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 22px;
+  overflow:hidden;
+  background: #dbeafe;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.portrait img{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+}
+
+/* Section panel like your "Expertise & Skills" background */
+.sectionPanel{
+  margin-top: 34px;
+  background: var(--panel);
+  border-radius: var(--radius);
+  padding: 44px 34px 34px;
+}
+
+.sectionTag{
+  display:inline-block;
+  background: var(--blue);
+  color:#fff;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.sectionTitle{
+  font-size: clamp(44px, 4vw, 64px);
+  letter-spacing:-0.02em;
+  margin: 14px 0 10px;
+}
+
+.sectionDesc{
+  max-width: 980px;
+  font-size: 18px;
+  line-height: 1.65;
+  color: #111827;
+  margin: 0 0 26px;
+}
+
+.sectionDesc b{ font-weight: 900; }
+.sectionDesc .quote{
+  color: var(--blue);
+  font-weight: 800;
+}
+
+/* Skill cards */
+.skillGrid{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  padding-top: 10px;
+}
+
+.skillCard{
+  background:#ffffffa8;
+  border-radius: 22px;
+  box-shadow: 0 10px 24px rgba(16,24,40,.08);
+  padding: 28px 22px;
+  min-height: 220px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  text-align:center;
+}
+
+.skillCard h3{
+  margin:0 0 10px;
+  font-size: 28px;
+  color: var(--blue);
+  letter-spacing:-0.01em;
+}
+
+.skillCard p{
+  margin:0;
+  color:#111827;
+  line-height:1.6;
+  font-size: 16px;
+}
+
+
+.footer a{
+  color:#111827;
+  text-decoration:none;
+  border-bottom: 1px solid rgba(17,24,39,.18);
+}
+
+/* Responsive */
+@media (max-width: 900px){
+  .introCard{ grid-template-columns: 1fr; }
+  .skillGrid{ grid-template-columns: 1fr; }
+  .navSpacer{ display:none; }
+  .navPill{ justify-content:space-between; }
+}
+
+.footer {
+  background: #ffffff;
+  padding: 40px 0;
+}
+
+/* ✅ Footer：白底 + 不居中对齐文字(文字由 inner 控制) */
+.footer{
+  background:#fff;
+  padding: 40px 0 28px;
+}
+
+/* ✅ 横线：从浏览器最左到最右（避免 100vw 横向滚动） */
+.footer-line{
+  width: 100%;
+  height: 1px;
+  background: #111;
+}
+
+/* ✅ 内容容器：对齐到版心左边（你想要的“左对齐”其实是版心左对齐） */
+.footer-inner{
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 24px;
+  text-align: left;
+}
+
+/* ✅ 联系方式：不要 flex（你要“全部左对齐”，就别让它横排对齐） */
+.footer-item{
+  display: block;
+  font-size: 18px;
+  color: #111;
+  margin: 0 0 18px 0;
+}
+
+/* ✅ 如果你确实有 icon + 文案一行，才用这个类（可选） */
+.footer-item.row{
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* ✅ icon：改成黑色，匹配白底；也更像你截图风格 */
+.icon{
+  width: 32px;
+  height: 32px;
+  background: #111;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-weight: 700;
+}
+
+/* ✅ 底部 “Designed by …”：左对齐 + 分割线从头到尾（不是版心线） */
+.footer-bottom{
+  max-width: 1120px;
+  margin: 18px auto 0;
+  padding: 18px 24px 0;
+  font-size: 14px;
+  color: #111;
+  text-align: left;
+}
+
+
+
+
