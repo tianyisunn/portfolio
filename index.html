@@ -13,34 +13,62 @@
     <div class="navPill">
       <div class="navSpacer"></div>
       <nav class="navLinks" id="navLinks"></nav>
-      <a class="btnPill" href="#" id="resumeBtn">Resume</a>
+      <a class="btnPill" href="resume.html" id="resumeBtn">Resume</a>
+
     </div>
   </header>
 
-  <main id="app"></main>
+  <main>
+    <section class="container">
+      <h1 class="heroTitle" id="heroTitle">
+        <span id="heroTop"></span><br/>
+        <span class="blue" id="heroBlue"></span>
+      </h1>
 
-  <footer class="footer" id="footer"></footer>
+      <div class="introCard" id="work">
+        <div class="introText" id="heroIntro"></div>
+
+        <!-- ✅ 图片放在 HTML，不再从 JS/data.hero.imageSrc 读取 -->
+        <div class="portrait" aria-label="Portrait">
+          <img src="./media/IMG_2459.jpeg" alt="Portrait" class="hero-image"/>
+        </div>
+      </div>
+
+      <div class="sectionPanel">
+        <span class="sectionTag" id="skillsTag"></span>
+        <h2 class="sectionTitle" id="skillsTitle"></h2>
+        <p class="sectionDesc" id="skillsDesc"></p>
+
+        <div class="skillGrid" id="skillsGrid"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ✅ Footer 只保留一个，并且在 body 里 -->
+  <footer class="footer" id="contact">
+    
+
+    <div class="footer-inner">
+      <div class="footer-item">
+        <span class="icon">in</span>
+        <a id="linkedinLink" target="_blank" rel="noreferrer">LinkedIn</a>
+      </div>
+
+      <div class="footer-item">
+        <span class="icon">☎</span>
+        <span id="phoneText"></span>
+      </div>
+
+      <div class="footer-item">
+        <span class="icon">@</span>
+        <a id="emailLink"></a>
+      </div>
+</div>
+      <div class="footer-line"></div>
+      <div class="footer-bottom" id="footerBottom">Designed by Emma</div>
+    
+  </footer>
 
   <script src="app.js"></script>
 </body>
-
-<footer class="footer">
-  
-
-  <!-- 内容容器：左对齐 -->
-  <div class="footer-inner">
-    <div class="footer-item">LinkedIn</div>
-    <div class="footer-item">+353 87 039 2996</div>
-    <div class="footer-item">tianyi_sun0611@163.com</div>
-
-    
-  </div>
-
-  <!-- 这条线：单独一行 -->
-  <div class="footer-line"></div>
-  <div class="footer-bottom">
-      Designed by Emma
-    </div>
-</footer>
-
 </html>

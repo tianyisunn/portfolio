@@ -1,0 +1,140 @@
+/* resume page only */
+.resumeWrap{
+  padding: 24px 18px 80px;
+}
+
+.resumePage{
+  max-width: 920px;
+  margin: 0 auto;
+  background: #fff;
+}
+
+/* header */
+.resumeHeader{
+  padding: 18px 0 10px;
+}
+
+.resumeKicker{
+  color: #2f80ff;
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.resumeName{
+  font-size: 56px;
+  line-height: 1.05;
+  margin: 0 0 14px;
+  letter-spacing: -0.02em;
+}
+
+.resumeContact{
+  color: #111827;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.resumeContact a{
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(17,24,39,.18);
+}
+
+/* sections */
+.resumeSection{
+  padding: 26px 0 6px;
+}
+
+.resumeSection h2{
+  font-size: 22px;
+  margin: 0 0 10px;
+  font-weight: 750;
+  letter-spacing: -0.01em;
+}
+
+.resumeSection hr{
+  border: 0;
+  height: 1px;
+  background: rgba(17,24,39,.14);
+  margin: 10px 0 18px;
+}
+
+.resumeSection p{
+  margin: 0 0 10px;
+  color: #111827;
+  line-height: 1.75;
+  font-size: 16px;
+}
+
+/* items */
+.item{
+  display: grid;
+  grid-template-columns: 1fr 160px;
+  gap: 18px;
+  padding: 14px 0;
+}
+
+.itemTitle{
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.itemOrg{
+  color: rgba(17,24,39,.70);
+  font-style: italic;
+  margin-bottom: 6px;
+}
+
+.itemMeta{
+  text-align: right;
+  color: rgba(17,24,39,.60);
+  font-size: 14px;
+  padding-top: 2px;
+}
+
+.item ul{
+  margin: 8px 0 0 18px;
+  padding: 0;
+  color: #111827;
+  line-height: 1.65;
+}
+
+.item li{
+  margin: 6px 0;
+}
+
+/* skills */
+.skillsGrid{
+  display: grid;
+  gap: 14px;
+}
+
+.skillLine{
+  display: grid;
+  grid-template-columns: 210px 1fr;
+  gap: 16px;
+  padding: 6px 0;
+}
+
+.skillLabel{
+  font-weight: 700;
+  color: #111827;
+}
+
+.skillValue{
+  color: #111827;
+  line-height: 1.6;
+}
+
+/* responsive */
+@media (max-width: 720px){
+  .resumeName{ font-size: 40px; }
+  .item{ grid-template-columns: 1fr; }
+  .itemMeta{ text-align: left; }
+  .skillLine{ grid-template-columns: 1fr; }
+}
+
+.resumeSection{
+  border-top: none !important;
+}

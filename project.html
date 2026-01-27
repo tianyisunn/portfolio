@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project — Emma</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <header class="top">
+    <div class="navPill">
+      <div class="navSpacer"></div>
+      <nav class="navLinks" id="navLinks"></nav>
+      <a class="btnPill" href="resume.html" id="resumeBtn">Resume</a>
+
+    </div>
+  </header>
+
+  <main>
+    <section class="container">
+      <section class="projectHeader">
+        <div class="projectHeadLeft">
+          <div class="projectMeta" id="projectCategory"></div>
+          <h1 class="projectTitle" id="projectTitle"></h1>
+        </div>
+        <div class="projectHeadRight" id="projectFacts"></div>
+      </section>
+
+      <section class="projectBoardWrap">
+        <div class="projectBoard" id="projectBoard"></div>
+      </section>
+
+      <section class="projectText" id="projectText"></section>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="footer-inner">
+      <div class="footer-item">
+        <span class="icon">in</span>
+        <a id="linkedinLink" target="_blank" rel="noreferrer">LinkedIn</a>
+      </div>
+
+      <div class="footer-item">
+        <span class="icon">☎</span>
+        <span id="phoneText"></span>
+      </div>
+
+      <div class="footer-item">
+        <span class="icon">@</span>
+        <a id="emailLink"></a>
+      </div>
+    </div>
+
+    <div class="footer-line"></div>
+    <div class="footer-bottom" id="footerBottom">Designed by Emma</div>
+  </footer>
+
+  <!-- ✅ 注意顺序：先 PROJECTS，再 project.js -->
+   
+  <script src="projects-data.js"></script>
+  <script src="project.js"></script>
+  
+</body>
+</html>
