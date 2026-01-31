@@ -27,7 +27,12 @@ function renderProject() {
   }
 
   const id = getQueryParam("id") || "blossom";
-  const project = PROJECTS.find(p => p.id === id) || PROJECTS[0];
+  const project = PROJECTS.find(p => p.id === id);
+if (!project) {
+  document.body.innerHTML = `<pre>Project not found: ${id}</pre>`;
+  throw new Error(`Project not found: ${id}`);
+}
+
 
   document.title = `${project.title} — Emma`;
 

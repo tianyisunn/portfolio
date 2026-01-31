@@ -33,14 +33,16 @@ const data = {
       }
     ]
   },
-
+//Add the new projects here!!
  projects:{
   title: "Selected Projects",
   filters: [
-    { key: "Interaction & UX Design", label: "Interaction & UX Design" },
-    { key: "Product & Interior Design", label: "Product & Interior Design" },
-    { key: "Visual Narratives", label: "Visual Narratives" }
-  ],
+  { key: "all", label: "All" },
+  { key: "Interaction & UX Design", label: "Interaction & UX Design" },
+  { key: "Product & Interior Design", label: "Product & Interior Design" },
+  { key: "Visual Narratives", label: "Visual Narratives" }
+],
+
   items: [
     {
       category: "Interaction & UX Design",
@@ -50,15 +52,32 @@ const data = {
       img: "https://picsum.photos/800/500?random=11",
       href: "#"
     },
-    
+    {
+      category: "Product & Interior Design",
+      title: "MODU",
+      id: "block",
+      desc: "Camera movement + lighting tests with optimized render pipeline.",
+      tags: ["Furniture", "3D", "Interior"],
+      img: "./media/thumbnail-block.png",
+      href: "project.html?id=block"
+    },
     {
       category: "Product & Interior Design",
       title: "Blossom",
       id: "blossom",
       desc: "Camera movement + lighting tests with optimized render pipeline.",
-      tags: ["Furniture", "3D", "Motion"],
+      tags: ["Furniture", "3D", "Interior"],
       img: "./media/thumbnail-blossom.png",
       href: "project.html?id=blossom"
+    },
+    {
+      category: "Product & Interior Design",
+      title: "UP - A Library for Children",
+      id: "library",
+      desc: "Camera movement + lighting tests with optimized render pipeline.",
+      tags: ["Furniture", "3D", "Interior"],
+      img: "./media/thumbnail-up.png",
+      href: "project.html?id=library"
     },
     {
       category: "Visual Narratives",
@@ -67,6 +86,14 @@ const data = {
       tags: ["Visual", "Print", "Layout"],
       img: "https://picsum.photos/800/500?random=14",
       href: "#"
+    },
+    {
+      category: "Product & Interior Design",
+      title: "Children's Modular Seating Design",
+      desc: "Graphic layout exploration with strong typographic hierarchy.",
+      tags: ["Visual", "Print", "Layout"],
+      img: "./media/thumbnail-kidchair.png",
+      href: "project.html?id=kidchair"
     }
   ],
   viewAllHref: "#"
@@ -104,20 +131,19 @@ function renderSkills() {
   `).join("");
 }
 function renderProjects() {
-  const container = document.querySelector(".sectionPanel");
+  const container = document.getElementById("projectsMount");
   if (!container) return;
 
-  container.insertAdjacentHTML("beforeend", `
+  container.innerHTML = `
     <div class="projectsBlock" id="projects">
       <div class="projectsTop">
         <h3 class="projectsTitle">${data.projects.title}</h3>
-        <a class="projectsViewAll" href="${data.projects.viewAllHref}">View all</a>
       </div>
 
       <div class="projectsFilters" id="projectsFilters"></div>
       <div class="projectsGrid" id="projectsGrid"></div>
     </div>
-  `);
+  `;
 
   const filtersEl = document.getElementById("projectsFilters");
   filtersEl.innerHTML = data.projects.filters
@@ -126,10 +152,13 @@ function renderProjects() {
 
   function paint(key) {
     const grid = document.getElementById("projectsGrid");
-    const items = data.projects.items.filter(p => p.category === key);
+    const items = (key === "all")
+      ? data.projects.items
+      : data.projects.items.filter(p => p.category === key);
 
     grid.innerHTML = items.map(p => `
-      <article class="projectCard">
+      <article class="projectCard" data-id="${p.id || p.title}">
+
         <div class="projectImg">
           <img src="${p.img}" alt="${p.title}">
         </div>
@@ -149,10 +178,8 @@ function renderProjects() {
     `).join("");
   }
 
-  // default
-  paint(data.projects.filters[0].key);
+  paint("all");
 
-  // click events
   filtersEl.addEventListener("click", (e) => {
     const btn = e.target.closest(".filterPill");
     if (!btn) return;
@@ -160,6 +187,17 @@ function renderProjects() {
     btn.classList.add("active");
     paint(btn.dataset.key);
   });
+
+  const gridEl = document.getElementById("projectsGrid");
+
+gridEl.addEventListener("click", (e) => {
+  const card = e.target.closest(".projectCard");
+  if (!card) return;
+
+  document.querySelectorAll(".projectCard").forEach(c => c.classList.remove("is-active"));
+  card.classList.add("is-active");
+});
+
 }
 
 

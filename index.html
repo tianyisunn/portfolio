@@ -14,7 +14,6 @@
       <div class="navSpacer"></div>
       <nav class="navLinks" id="navLinks"></nav>
       <a class="btnPill" href="resume.html" id="resumeBtn">Resume</a>
-
     </div>
   </header>
 
@@ -33,14 +32,35 @@
           <img src="./media/IMG_2459.jpeg" alt="Portrait" class="hero-image"/>
         </div>
       </div>
+<br>
+<br>
 
-      <div class="sectionPanel">
+            <!-- Skills panel -->
+      <div class="sectionPanel" id="skillsPanel">
         <span class="sectionTag" id="skillsTag"></span>
         <h2 class="sectionTitle" id="skillsTitle"></h2>
         <p class="sectionDesc" id="skillsDesc"></p>
 
         <div class="skillGrid" id="skillsGrid"></div>
       </div>
+
+    <br>
+
+      <!-- NEW: Projects panel (separated) -->
+      <div class="projectsSection" id="projectsPanel">
+
+      <br>
+        <span class="sectionTag sectionTag--soft">Selected work</span>
+        <h2 class="sectionTitle sectionTitle--sm">Projects that show my thinking</h2>
+        <p class="sectionDesc sectionDesc--sm">
+          A small set of projects across interaction design, spatial exploration, and visual storytelling.
+          Each one is a proof point. Less talk, more evidence.
+        </p>
+
+        <!-- JS will mount projects here -->
+        <div id="projectsMount"></div>
+      </div>
+
     </section>
   </main>
 

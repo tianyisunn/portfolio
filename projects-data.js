@@ -19,14 +19,56 @@ const PROJECTS = [
   {
     id: "library",
     category: "Interior Design",
-    title: "Library Space Concept",
+    title: "UP - A Library for Children",
     facts: [
       { label: "Tools", value: "3ds Max, CAD, Photoshop" },
       { label: "Role", value: "Interior Designer" },
       { label: "Year", value: "2024" }
     ],
     boards: [
-      { type: "image", src: "./media/library-board.jpg", alt: "Library board" }
+      { type: "image", src: "./media/library.jpg", alt: "Library board" }
+    ],
+    sections: [
+      
+      { h: "Overview", p: "Short overview text goes here." },
+      { h: "Problem", p: "What problem you solved." },
+      { h: "Process", p: "Key steps and decisions." },
+      { h: "Outcome", p: "Final outcome and results." }
+    
+    ]
+  },
+  {
+    id: "kidchair",
+    category: "Product Design",
+    title: "Children's Modular Seating Design",
+    facts: [
+      { label: "Tools", value: "3ds Max, CAD, Photoshop" },
+      { label: "Role", value: "Interior Designer" },
+      { label: "Year", value: "2024" }
+    ],
+    boards: [
+      { type: "image", src: "./media/kidchair.jpg", alt: "Chair board" }
+    ],
+    sections: [
+      
+      { h: "Overview", p: "Short overview text goes here." },
+      { h: "Problem", p: "What problem you solved." },
+      { h: "Process", p: "Key steps and decisions." },
+      { h: "Outcome", p: "Final outcome and results." }
+    
+    ]
+  },
+  {
+    id: "block",
+    category: "Product Design",
+    title: "MODU- A modular, multi-sensory learning system for children.",
+    facts: [
+      { label: "Tools", value: "3ds Max, CAD, Photoshop" },
+      { label: "Role", value: "Interior Designer" },
+      { label: "Year", value: "2024" }
+    ],
+    boards: [
+      { type: "image", src: "./media/block.jpg", alt: "MOdular system board" }
     ],
     sections: [
       

@@ -137,8 +137,12 @@ body{
   transform: translateY(-1px);
 }
 
-
-
+.sectionPanel{
+  margin-top: 34px;
+  background: var(--panel);
+  border-radius: var(--radius);
+  padding: 44px 34px 34px;
+}
 
 .btnPill{
   text-decoration:none;
@@ -153,8 +157,9 @@ body{
 .container{
   max-width:1120px;
   margin: 0 auto;
-  padding: 32px 18px 60px;
+  padding: 32px 0 60px;
 }
+
 
 /* HERO */
 .heroTitle{
@@ -437,9 +442,10 @@ body{
 }
 
 .projectImg{
-  background: rgba(255,255,255,0.7);
+  background: transparent;
   padding: 18px;
 }
+
 
 .projectImg img{
   width: 100%;
@@ -604,198 +610,76 @@ body{
   }
 }
 
-/* ===== Resume page ===== */
-.resumePage{
-  padding-top: 26px;
+/* Separate projects panel styling */
+.sectionPanel--projects{
+  margin-top: 22px;          /* 和上一个 panel 拉开 */
 }
 
-.resumeHeader{
-  display:flex;
-  align-items:flex-end;
-  justify-content:space-between;
-  gap: 18px;
-  margin: 18px 0 22px;
+.sectionTag--soft{
+  background: #2f80ff;
+  color: #fff;
 }
 
-.resumeKicker{
-  font-weight: 800;
-  color: var(--blue);
-  letter-spacing: .02em;
-  margin-bottom: 8px;
+
+.sectionTitle--sm{
+  font-size: clamp(34px, 3.2vw, 48px);
+  margin-top: 14px;
 }
 
-.resumeTitle{
-  margin:0;
-  font-size: clamp(34px, 4vw, 54px);
-  letter-spacing:-0.02em;
-  line-height: 1.05;
-}
-
-.resumeMeta{
-  margin: 10px 0 0;
-  color: #374151;
+.sectionDesc--sm{
   font-size: 16px;
-  line-height: 1.5;
+  max-width: 860px;
+  color: #111827;
+  opacity: .9;
 }
 
-.resumeActions{
-  display:flex;
-  gap: 10px;
-  align-items:center;
+/* ===== Projects section (Nova-like: wide, white, airy) ===== */
+.projectsSection{
+  max-width: 1120px;     /* 跟你整体版心一致 */
+  margin: 34px auto 0;
+  padding: 0 8px;       /* 控制两侧留白；想更宽就改小 */
+  background: transparent;
 }
 
-.btnGhost{
-  text-decoration:none;
-  padding: 12px 16px;
-  border-radius: 999px;
-  background: rgba(255,255,255,0.75);
-  border: 1px solid rgba(17,24,39,0.10);
-  box-shadow: 0 12px 30px rgba(16,24,40,.08);
-  color:#111827;
-  font-weight: 650;
+/* 让标题区更像图2那种大气 */
+.projectsSection .sectionTag{
+  background: #2f80ff;   /* 你要的蓝色标签 */
+  color: #fff;
 }
 
-.btnGhost:hover{
-  background: rgba(47,128,255,0.12);
-  color: var(--blue);
-  border-color: rgba(47,128,255,0.20);
-}
+/* 如果你还在用 sectionTitle--sm / sectionDesc--sm，也可以保留 */
 
-.resumeGrid{
-  display:grid;
-  grid-template-columns: 1.15fr .85fr;
-  gap: 22px;
-  align-items:start;
-}
-
-.resumeCard{
-  background: rgba(255,255,255,0.70);
+.projectCard{
+  background: rgba(255,255,255,0.55);
   border-radius: 28px;
-  box-shadow: 0 18px 40px rgba(16,24,40,.10);
-  padding: 26px 24px;
+  overflow: hidden;
+
+  border: 1.5px solid transparent; /* 占位，避免 hover 抖动 */
+  box-shadow: none;                /* 阴影先关掉（配合第2点） */
+
+  transition: border-color .18s ease;
 }
 
-.resumeSection + .resumeSection{
-  margin-top: 22px;
-  padding-top: 18px;
-  border-top: 1px solid rgba(17,24,39,.08);
+/* hover 态 */
+.projectCard:hover{
+  border-color: #2f80ff;
 }
 
-.resumeH2{
-  margin:0 0 10px;
-  font-size: 18px;
-  font-weight: 900;
-  letter-spacing: -0.01em;
+
+.projectCard.is-active{
+  border-color: #2f80ff;
+  box-shadow: 0 14px 34px rgba(16,24,40,.08);
 }
 
-.resumeP{
-  margin:0;
-  color:#111827;
-  line-height: 1.7;
-  font-size: 16px;
-}
-
-.resumeItem{
-  padding: 12px 0;
-}
-
-.resumeItemTitle{
-  font-weight: 850;
-  color:#111827;
-}
-
-.resumeItemMeta{
-  margin-top: 4px;
-  color:#6b7280;
-  font-size: 14px;
-}
-
-.resumeBullets{
-  margin: 10px 0 0 18px;
-  color:#111827;
-  line-height: 1.6;
-}
-
-.resumeBullets li{
-  margin: 6px 0;
-}
-
-.resumePdf{
-  position: sticky;
-  top: 110px; /* 给你顶部 nav 留空间 */
-}
-
-.resumePdfTop{
-  display:flex;
-  justify-content:space-between;
-  align-items:baseline;
-  gap: 12px;
-  margin-bottom: 10px;
-}
-
-.resumePdfTitle{
-  font-weight: 900;
-}
-
-.resumePdfHint{
-  color:#6b7280;
-  font-size: 12px;
-}
-
-.resumePdfFrame{
-  border-radius: 20px;
-  overflow:hidden;
-  border: 1px solid rgba(17,24,39,0.08);
-  background:#fff;
-  height: 70vh;
-  min-height: 520px;
-}
-
-.resumePdfFrame iframe{
-  width:100%;
-  height:100%;
-  border:0;
-}
-
-.resumeSkillGrid{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-  margin-top: 10px;
-}
-
-.resumeSkillCard{
-  background: rgba(255,255,255,0.60);
-  border-radius: 18px;
-  padding: 14px 14px 16px;
-  border: 1px solid rgba(17,24,39,0.06);
-}
-
-.resumeSkillTitle{
-  font-weight: 900;
-  margin-bottom: 10px;
-}
-
-.resumeChips{
-  display:flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.resumeChip{
+.tagChip{
   display:inline-flex;
-  padding: 7px 10px;
+  padding: 7px 12px;
   border-radius: 999px;
-  background: rgba(255,255,255,0.78);
-  border: 1px solid rgba(17,24,39,0.08);
-  font-size: 12px;
-  font-weight: 650;
-}
 
-@media (max-width: 980px){
-  .resumeGrid{ grid-template-columns: 1fr; }
-  .resumePdf{ position: static; }
-  .resumePdfFrame{ height: 75vh; }
-  .resumeSkillGrid{ grid-template-columns: 1fr; }
-  .resumeHeader{ align-items:flex-start; flex-direction: column; }
+  background: transparent;
+  color: #2f80ff;
+  font-weight: 650;
+  font-size: 13px;
+
+  border: 1.5px solid rgba(47,128,255,0.45);
 }
