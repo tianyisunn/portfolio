@@ -46,20 +46,28 @@ const data = {
   items: [
     {
       category: "Interaction & UX Design",
-      title: "Looping Narrative (Twine)",
+      title: "Story Narrative (Twine)",
       desc: "Branching story with variable-driven loops and aesthetic customization.",
       tags: ["Twine", "Narrative", "Interaction"],
-      img: "https://picsum.photos/800/500?random=11",
-      href: "#"
+      img: "./media/entry.png",
+      href: "project.html?id=sunday"
     },
     {
-      category: "Product & Interior Design",
-      title: "MODU",
-      id: "block",
-      desc: "Camera movement + lighting tests with optimized render pipeline.",
-      tags: ["Furniture", "3D", "Interior"],
-      img: "./media/thumbnail-block.png",
-      href: "project.html?id=block"
+      category: "Interaction & UX Design",
+      title: "Rosetta Rebrand",
+      desc: "A premium, mastery-focused rebrand system across logo, UI, and social applications.",
+      tags: ["Brand", "Typography", "UI", "Social"],
+      img: "./media/rosetta/thumbnail-rosetta.png",
+      href: "project.html?id=rosetta"
+    },
+
+    {
+      category: "Visual Narratives",
+      title: "Pinocchio",
+      desc: "Graphic layout exploration with strong typographic hierarchy.",
+      tags: ["Animation", "3D Modelling", "Blender"],
+      img: "./media/pinocchio.jpg",
+      href: "project.html?id=pinocchio"
     },
     {
       category: "Product & Interior Design",
@@ -72,6 +80,16 @@ const data = {
     },
     {
       category: "Product & Interior Design",
+      title: "MODUCATE",
+      id: "block",
+      desc: "Camera movement + lighting tests with optimized render pipeline.",
+      tags: ["Furniture", "3D", "Interior"],
+      img: "./media/thumbnail-block.png",
+      href: "project.html?id=block"
+    },
+  
+    {
+      category: "Product & Interior Design",
       title: "UP - A Library for Children",
       id: "library",
       desc: "Camera movement + lighting tests with optimized render pipeline.",
@@ -79,14 +97,7 @@ const data = {
       img: "./media/thumbnail-up.png",
       href: "project.html?id=library"
     },
-    {
-      category: "Visual Narratives",
-      title: "Poster Series",
-      desc: "Graphic layout exploration with strong typographic hierarchy.",
-      tags: ["Visual", "Print", "Layout"],
-      img: "https://picsum.photos/800/500?random=14",
-      href: "#"
-    },
+    
     {
       category: "Product & Interior Design",
       title: "Children's Modular Seating Design",
@@ -123,13 +134,14 @@ function renderSkills() {
   document.getElementById("skillsDesc").innerHTML = data.skills.desc;
 
   const grid = document.getElementById("skillsGrid");
-  grid.innerHTML = data.skills.cards.map(card => `
+  grid.innerHTML = data.skills.cards.map(c => `
     <div class="skillCard">
-      <h3>${card.title}</h3>
-      <p>${card.text}</p>
+      <h4 class="skillName">${c.title}</h4>
+      <p class="skillText">${c.text}</p>
     </div>
   `).join("");
 }
+
 function renderProjects() {
   const container = document.getElementById("projectsMount");
   if (!container) return;
@@ -146,22 +158,27 @@ function renderProjects() {
   `;
 
   const filtersEl = document.getElementById("projectsFilters");
+  const gridEl = document.getElementById("projectsGrid");
+
   filtersEl.innerHTML = data.projects.filters
-    .map((f, idx) => `<button class="filterPill ${idx===0 ? "active" : ""}" data-key="${f.key}">${f.label}</button>`)
+    .map((f, idx) => `
+      <button class="filterPill ${idx === 0 ? "active" : ""}" data-key="${f.key}">
+        ${f.label}
+      </button>
+    `)
     .join("");
 
   function paint(key) {
-    const grid = document.getElementById("projectsGrid");
     const items = (key === "all")
       ? data.projects.items
       : data.projects.items.filter(p => p.category === key);
 
-    grid.innerHTML = items.map(p => `
-      <article class="projectCard" data-id="${p.id || p.title}">
-
+    gridEl.innerHTML = items.map(p => `
+      <a class="projectCard" data-id="${p.id || p.title}" href="${p.href}">
         <div class="projectImg">
           <img src="${p.img}" alt="${p.title}">
         </div>
+
         <div class="projectBody">
           <h4 class="projectName">${p.title}</h4>
           <p class="projectDesc">${p.desc}</p>
@@ -170,11 +187,11 @@ function renderProjects() {
             ${p.tags.map(t => `<span class="tagChip">${t}</span>`).join("")}
           </div>
 
-          <a class="projectLink" href="${p.href}">
+          <div class="projectLink">
             View project <span class="arrow">↗</span>
-          </a>
+          </div>
         </div>
-      </article>
+      </a>
     `).join("");
   }
 
@@ -183,22 +200,22 @@ function renderProjects() {
   filtersEl.addEventListener("click", (e) => {
     const btn = e.target.closest(".filterPill");
     if (!btn) return;
+
     document.querySelectorAll(".filterPill").forEach(b => b.classList.remove("active"));
     btn.classList.add("active");
     paint(btn.dataset.key);
   });
 
-  const gridEl = document.getElementById("projectsGrid");
+  // 可选：只是加“选中态”，不影响跳转
+  gridEl.addEventListener("click", (e) => {
+    const card = e.target.closest(".projectCard");
+    if (!card) return;
 
-gridEl.addEventListener("click", (e) => {
-  const card = e.target.closest(".projectCard");
-  if (!card) return;
-
-  document.querySelectorAll(".projectCard").forEach(c => c.classList.remove("is-active"));
-  card.classList.add("is-active");
-});
-
+    document.querySelectorAll(".projectCard").forEach(c => c.classList.remove("is-active"));
+    card.classList.add("is-active");
+  });
 }
+
 
 
 function renderFooter() {
@@ -227,5 +244,3 @@ const header = document.querySelector(".top");
 window.addEventListener("scroll", () => {
   header.classList.toggle("is-stuck", window.scrollY > 8);
 });
-
-

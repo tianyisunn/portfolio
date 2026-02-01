@@ -10,6 +10,7 @@
 }
 
 *{ box-sizing:border-box; }
+
 body{
   margin:0;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
@@ -17,131 +18,67 @@ body{
   background:var(--bg);
 }
 
+/* =========================
+   NAV (sticky frosted)
+   ========================= */
 .top{
-  padding:22px 18px 0;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  padding: 14px 18px;
 }
 
 .navPill{
-  max-width: 1120px;
+  max-width: 1180px;
   margin: 0 auto;
-  background: #f4f5f7;
+  height: 72px;
+  padding: 12px 14px;
+  gap: 14px;
+
   border-radius: 999px;
-  height: 64px;
+  border: none;
+  background: rgba(255,255,255,0.78);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
   display:flex;
   align-items:center;
-  padding: 10px 12px;
-  gap: 10px;
+
+  box-shadow: 0 18px 50px rgba(16,24,40,0.10);
+}
+
+.top.is-stuck .navPill{
+  background: rgba(255,255,255,0.5);
+  box-shadow: 0 22px 60px rgba(16,24,40,0.14);
 }
 
 .navSpacer{ flex:1; }
 
 .navLinks{
   display:flex;
-  gap: 22px;
-  align-items:center;
-  padding-right: 10px;
-}
-
-.navLinks a{
-  text-decoration:none;
-  color:#1f2937;
-  font-size: 16px;
-}
-
-/* ===== Sticky Frosted Nav ===== */
-/* ===== NAV (wider, borderless, soft shadow) ===== */
-.top{
-  position: sticky;
-  top: 0;
-  z-index: 9999;
-  padding: 14px 18px;             /* 让整体更“厚”一点 */
-}
-
-.navPill{
-  max-width: 1180px;              /* ✅ 更宽一点（你原来1120） */
-  margin: 0 auto;
-
-  height: 72px;                   /* ✅ bar 更厚 */
-  padding: 12px 14px;
-  gap: 14px;
-
-  border-radius: 999px;
-  border: none;                   /* ✅ 无边框 */
-  background: rgba(255,255,255,0.78); /* ✅ 更干净的白 */
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-
-  display: flex;
-  align-items: center;
-
-  box-shadow: 0 18px 50px rgba(16,24,40,0.10); /* ✅ 软阴影 */
-}
-.top.is-stuck .navPill{
-  background: rgba(255,255,255,0.5);
-  box-shadow: 0 22px 60px rgba(16,24,40,0.14);
-}
-
-/* Links area spacing */
-.navLinks{
-  display: flex;
   gap: 10px;
-  align-items: center;
+  align-items:center;
   padding-right: 6px;
 }
 
-/* Each link becomes a pill on hover */
 .navLinks a{
   text-decoration: none;
   color: #111827;
   font-size: 16px;
   font-weight: 500;
-
   padding: 10px 16px;
   border-radius: 999px;
-
   transition: background .18s ease, color .18s ease;
 }
 
-/* ✅ hover 蓝色底（第二张那种感觉） */
 .navLinks a:hover{
   background: rgba(47,128,255,0.16);
   color: #2f80ff;
 }
 
-/* ✅ 可选：当前锚点/激活态（你如果想做“Work 高亮”） */
 .navLinks a.active{
   background: #2f80ff;
   color: #fff;
-}
-
-/* Resume button */
-.btnPill{
-  text-decoration: none;
-  background: #111;
-  color: #fff;
-
-  padding: 12px 18px;
-  border-radius: 999px;
-  font-weight: 650;
-  font-size: 14px;
-
-  transition: background .18s ease, color .18s ease, transform .18s ease;
-}
-
-/* ✅ 你说黑色块 hover 也要有颜色：这里给你两种风格选其一 */
-
-/* 方案A：hover 变蓝（最直观） */
-.btnPill:hover{
-  background: #2f80ff;
-  color: #fff;
-  transform: translateY(-1px);
-}
-
-.sectionPanel{
-  margin-top: 34px;
-  background: var(--panel);
-  border-radius: var(--radius);
-  padding: 44px 34px 34px;
 }
 
 .btnPill{
@@ -150,18 +87,29 @@ body{
   color:#fff;
   padding: 12px 18px;
   border-radius: 999px;
-  font-weight: 600;
+  font-weight: 650;
   font-size: 14px;
+  transition: background .18s ease, color .18s ease, transform .18s ease;
 }
 
+.btnPill:hover{
+  background: #2f80ff;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* =========================
+   LAYOUT CONTAINER
+   ========================= */
 .container{
   max-width:1120px;
   margin: 0 auto;
   padding: 32px 0 60px;
 }
 
-
-/* HERO */
+/* =========================
+   HERO
+   ========================= */
 .heroTitle{
   text-align:center;
   font-weight: 800;
@@ -170,10 +118,11 @@ body{
   margin: 30px 0 28px;
   font-size: clamp(40px, 5vw, 72px);
 }
-
 .heroTitle .blue{ color: var(--blue); }
 
-/* Intro card (text + photo) */
+/* =========================
+   INTRO CARD
+   ========================= */
 .introCard{
   background: var(--card);
   border-radius: var(--radius);
@@ -190,7 +139,6 @@ body{
   line-height: 1.6;
   color: #1f2937;
 }
-
 .introText .blue{ color: var(--blue); }
 .introText strong{ font-weight: 800; }
 
@@ -204,19 +152,15 @@ body{
   align-items:center;
   justify-content:center;
 }
-
 .portrait img{
   width:100%;
   height:100%;
   object-fit: cover;
 }
 
-.skillCard h3{
-  white-space: nowrap;
-  font-size: clamp(22px, 2.2vw, 28px);
-}
-
-/* Section panel like your "Expertise & Skills" background */
+/* =========================
+   SECTION PANEL
+   ========================= */
 .sectionPanel{
   margin-top: 34px;
   background: var(--panel);
@@ -247,14 +191,15 @@ body{
   color: #111827;
   margin: 0 0 26px;
 }
-
 .sectionDesc b{ font-weight: 900; }
 .sectionDesc .quote{
   color: var(--blue);
   font-weight: 800;
 }
 
-/* Skill cards */
+/* =========================
+   SKILLS
+   ========================= */
 .skillGrid{
   display:grid;
   grid-template-columns: repeat(3, 1fr);
@@ -276,9 +221,10 @@ body{
 
 .skillCard h3{
   margin:0 0 10px;
-  font-size: 28px;
+  font-size: clamp(22px, 2.2vw, 28px);
   color: var(--blue);
   letter-spacing:-0.01em;
+  white-space: nowrap;
 }
 
 .skillCard p{
@@ -288,89 +234,9 @@ body{
   font-size: 16px;
 }
 
-
-.footer a{
-  color:#111827;
-  text-decoration:none;
-  border-bottom: 1px solid rgba(17,24,39,.18);
-}
-
-/* Responsive */
-@media (max-width: 900px){
-  .introCard{ grid-template-columns: 1fr; }
-  .skillGrid{ grid-template-columns: 1fr; }
-  .navSpacer{ display:none; }
-  .navPill{ justify-content:space-between; }
-}
-
-.footer {
-  background: #ffffff;
-  padding: 40px 0;
-}
-
-/* ✅ Footer：白底 + 不居中对齐文字(文字由 inner 控制) */
-.footer{
-  background:#fff;
-  padding: 40px 0 28px;
-}
-
-/* ✅ 横线：从浏览器最左到最右（避免 100vw 横向滚动） */
-.footer-line{
-  width: 100%;
-  height: 1px;
-  background: #111;
-}
-
-/* ✅ 内容容器：对齐到版心左边（你想要的“左对齐”其实是版心左对齐） */
-.footer-inner{
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 24px;
-  text-align: left;
-}
-
-/* ✅ 联系方式：不要 flex（你要“全部左对齐”，就别让它横排对齐） */
-.footer-item{
-  display: block;
-  font-size: 18px;
-  color: #111;
-  margin: 0 0 18px 0;
-}
-
-/* ✅ 如果你确实有 icon + 文案一行，才用这个类（可选） */
-.footer-item.row{
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-/* ✅ icon：改成黑色，匹配白底；也更像你截图风格 */
-.icon{
-  width: 32px;
-  height: 32px;
-  background: #111;
-  color: #fff;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 6px;
-  font-weight: 700;
-}
-
-/* ✅ 底部 “Designed by …”：左对齐 + 分割线从头到尾（不是版心线） */
-.footer-bottom{
-  max-width: 1120px;
-  margin: 18px auto 0;
-  padding: 18px 24px 0;
-  font-size: 14px;
-  color: #111;
-  text-align: left;
-}
-
-
-
-
-/* ===== Projects block under Skills ===== */
+/* =========================
+   PROJECTS GRID (index)
+   ========================= */
 .projectsBlock{
   margin-top: 28px;
   padding-top: 10px;
@@ -416,12 +282,10 @@ body{
   cursor: pointer;
   transition: background .18s ease, color .18s ease, transform .18s ease;
 }
-
 .filterPill:hover{
   background: rgba(47,128,255,0.16);
   color: #2f80ff;
 }
-
 .filterPill.active{
   background: #2f80ff;
   color: #fff;
@@ -437,16 +301,20 @@ body{
 .projectCard{
   background: rgba(255,255,255,0.55);
   border-radius: 28px;
-  box-shadow: 0 18px 40px rgba(16,24,40,.10);
   overflow: hidden;
+  border: 1.5px solid transparent;
+  box-shadow: none;
+  transition: border-color .18s ease;
+}
+
+.projectCard:hover{
+  border-color: #2f80ff;
 }
 
 .projectImg{
   background: transparent;
   padding: 18px;
 }
-
-
 .projectImg img{
   width: 100%;
   height: 210px;
@@ -484,11 +352,11 @@ body{
   display:inline-flex;
   padding: 7px 12px;
   border-radius: 999px;
-  background: rgba(255,255,255,0.78);
-  color: #111827;
+  background: transparent;
+  color: #2f80ff;
   font-weight: 650;
   font-size: 13px;
-  border: 1px solid rgba(17,24,39,.08);
+  border: 1.5px solid rgba(47,128,255,0.45);
 }
 
 .projectLink{
@@ -499,7 +367,6 @@ body{
   color: #111827;
   font-weight: 600;
 }
-
 .projectLink .arrow{
   display:inline-flex;
   width: 22px;
@@ -509,52 +376,23 @@ body{
   justify-content:center;
   border: 1px solid rgba(17,24,39,.18);
 }
-
 .projectLink:hover{
   color: #2f80ff;
 }
-
 .projectLink:hover .arrow{
   border-color: rgba(47,128,255,0.35);
 }
-.projectBoardWrap {
-  margin: 80px auto;
-  max-width: 1100px;
-  padding: 0 24px;
-}
 
-.projectBoard {
-  display: flex;
-  flex-direction: column;
-  gap: 48px;
-}
-
-.boardImg {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-
-/* responsive */
-@media (max-width: 1000px){
-  .projectsGrid{ grid-template-columns: 1fr; }
-  .projectImg img{ height: 240px; }
-}
-
-/* =======================
-   PROJECT PAGE (图2排版)
-   ======================= */
-
+/* =========================
+   PROJECT PAGE (header: title left, facts right)
+   ========================= */
 .projectHeader{
   display: grid;
-  grid-template-columns: 1fr 520px; /* 右侧更宽点，像你图2 */
+  grid-template-columns: 1fr 520px;
   gap: 80px;
   align-items: start;
   margin-top: 44px;
 }
-
-.projectHeadLeft{ min-width: 0; }
 
 .projectMeta{
   font-size: 18px;
@@ -564,20 +402,19 @@ body{
 
 .projectTitle{
   margin: 0;
-  font-size: clamp(72px, 7.5vw, 120px); /* 图2那种大 */
+  font-size: clamp(72px, 7.5vw, 120px);
   line-height: 0.95;
   letter-spacing: -0.03em;
 }
 
 .projectHeadRight{
-  justify-self: end;     /* 贴右 */
+  justify-self: end;
   width: 100%;
   display: grid;
-  gap: 34px;             /* 每个fact块之间的距离，像图2 */
+  gap: 34px;
   margin-top: 6px;
 }
 
-/* 让 Tools/Role/Year 变成“上小标题 + 下内容” */
 .factBlock{
   display: grid;
   gap: 10px;
@@ -588,14 +425,12 @@ body{
   font-weight: 500;
   color: #111;
 }
-
 .factValue{
   font-size: 18px;
   color: #111;
   line-height: 1.5;
 }
 
-/* 小屏自动变上下结构 */
 @media (max-width: 980px){
   .projectHeader{
     grid-template-columns: 1fr;
@@ -610,108 +445,218 @@ body{
   }
 }
 
-/* Separate projects panel styling */
-.sectionPanel--projects{
-  margin-top: 22px;          /* 和上一个 panel 拉开 */
+/* =========================
+   PROJECT BOARDS (default)
+   ========================= */
+.projectBoardWrap{
+  margin: 80px auto;
+  max-width: 1100px;
+  padding: 0 24px;
 }
 
-.sectionTag--soft{
-  background: #2f80ff;
-  color: #fff;
+.projectBoard{
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
 }
 
-
-.sectionTitle--sm{
-  font-size: clamp(34px, 3.2vw, 48px);
-  margin-top: 14px;
+.board{
+  margin: 0;
 }
 
-.sectionDesc--sm{
-  font-size: 16px;
-  max-width: 860px;
-  color: #111827;
-  opacity: .9;
-}
-
-/* ===== Projects section (Nova-like: wide, white, airy) ===== */
-.projectsSection{
-  max-width: 1120px;     /* 跟你整体版心一致 */
-  margin: 34px auto 0;
-  padding: 0 8px;       /* 控制两侧留白；想更宽就改小 */
-  background: transparent;
-}
-
-/* 让标题区更像图2那种大气 */
-.projectsSection .sectionTag{
-  background: #2f80ff;   /* 你要的蓝色标签 */
-  color: #fff;
-}
-
-/* 如果你还在用 sectionTitle--sm / sectionDesc--sm，也可以保留 */
-
-.projectCard{
-  background: rgba(255,255,255,0.55);
+.boardImg{
+  width: 100%;
+  height: auto;
+  display: block;
   border-radius: 28px;
-  overflow: hidden;
-
-  border: 1.5px solid transparent; /* 占位，避免 hover 抖动 */
-  box-shadow: none;                /* 阴影先关掉（配合第2点） */
-
-  transition: border-color .18s ease;
-}
-
-/* hover 态 */
-.projectCard:hover{
-  border-color: #2f80ff;
-}
-
-
-.projectCard.is-active{
-  border-color: #2f80ff;
-  box-shadow: 0 14px 34px rgba(16,24,40,.08);
-}
-
-.tagChip{
-  display:inline-flex;
-  padding: 7px 12px;
-  border-radius: 999px;
-
-  background: transparent;
-  color: #2f80ff;
-  font-weight: 650;
-  font-size: 13px;
-
-  border: 1.5px solid rgba(47,128,255,0.45);
 }
 
 /* =========================
-   MOBILE OVERRIDES (<= 600px)
-   Paste at the very bottom
+   NARRATIVE (Sunday) — use nWrap editorial
    ========================= */
+.nWrap{
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 10px 24px 80px;
+}
+
+.nBlock{
+  margin-top: 34px;
+}
+
+.nBlock h2{
+  font-size: 24px;
+  margin: 0 0 12px;
+  letter-spacing: -0.01em;
+}
+
+.nText p{
+  max-width: 860px;
+  font-size: 18px;
+  line-height: 1.75;
+  color: #111827;
+  margin: 0;
+}
+
+
+/* 1️⃣ figure 不要任何视觉样式 */
+.nFigure {
+  background: none;
+  border: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+/* 2️⃣ 圆角只给图片本身 */
+.nFigure img {
+  border-radius: 18px;
+  display: block;
+}
+
+.nFigure figcaption {
+  text-align: center;
+}
+
+.nGallery .nGrid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.nCompareGrid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.nGallery .nGrid {
+  display: flex;
+  align-items: center;   /* 👈 核心：垂直居中 */
+  gap: 64px;             /* 图之间留白 */
+}
+
+.nMiniTitle{
+  font-weight: 750;
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+@media (max-width: 860px){
+  .nWrap{
+    padding: 8px 12px 60px;
+  }
+  .nText p{
+    font-size: 16px;
+  }
+  .nGallery .nGrid{
+    grid-template-columns: 1fr;
+  }
+  .nCompareGrid{
+    grid-template-columns: 1fr;
+  }
+}
+
+body[data-layout="narrative"] .board--cover{
+  margin: 24px auto 40px;
+}
+
+body[data-layout="narrative"] .board--cover .boardImg{
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* 不裁切 */
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+.footer{
+  background:#fff;
+  padding: 40px 0 28px;
+}
+
+.footer-line{
+  width: 100%;
+  height: 1px;
+  background: #111;
+}
+
+.footer-inner{
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 24px;
+  text-align: left;
+}
+
+.footer-item{
+  display: block;
+  font-size: 18px;
+  color: #111;
+  margin: 0 0 18px 0;
+}
+
+.footer-item.row{
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.icon{
+  width: 32px;
+  height: 32px;
+  background: #111;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-weight: 700;
+}
+
+.footer a{
+  color:#111827;
+  text-decoration:none;
+  border-bottom: 1px solid rgba(17,24,39,.18);
+}
+
+.footer-bottom{
+  max-width: 1120px;
+  margin: 18px auto 0;
+  padding: 18px 24px 0;
+  font-size: 14px;
+  color: #111;
+  text-align: left;
+}
+
+/* =========================
+   RESPONSIVE + TOUCH
+   ========================= */
+@media (max-width: 1000px){
+  .projectsGrid{ grid-template-columns: 1fr; }
+  .projectImg img{ height: 240px; }
+}
+
+@media (max-width: 900px){
+  .introCard{ grid-template-columns: 1fr; }
+  .skillGrid{ grid-template-columns: 1fr; }
+  .navSpacer{ display:none; }
+  .navPill{ justify-content:space-between; }
+}
+
 @media (max-width: 600px){
+  .container{ padding: 18px 12px 46px; }
 
-  /* overall page padding */
-  .container{
-    padding: 18px 12px 46px;
-  }
-
-  /* ===== NAV ===== */
-  .top{
-    padding: 10px 10px;
-  }
+  .top{ padding: 10px 10px; }
 
   .navPill{
     height: 56px;
     padding: 10px 10px;
     gap: 8px;
-    border-radius: 18px; /* 手机上别用999，太“胶囊”且占空间 */
+    border-radius: 18px;
   }
 
-  .navLinks{
-    gap: 6px;
-    padding-right: 0;
-  }
-
+  .navLinks{ gap: 6px; padding-right: 0; }
   .navLinks a{
     font-size: 14px;
     padding: 8px 10px;
@@ -724,14 +669,12 @@ body{
     border-radius: 14px;
   }
 
-  /* ===== HERO ===== */
   .heroTitle{
     margin: 18px 0 18px;
     font-size: clamp(34px, 9vw, 44px);
     line-height: 1.05;
   }
 
-  /* ===== INTRO CARD ===== */
   .introCard{
     padding: 18px;
     gap: 14px;
@@ -744,21 +687,17 @@ body{
   }
 
   .portrait{
-    aspect-ratio: 4 / 5; /* 更接近手机视觉 */
+    aspect-ratio: 4 / 5;
     border-radius: 18px;
   }
 
-  /* ===== SECTION PANELS ===== */
   .sectionPanel{
     padding: 22px 16px 18px;
     border-radius: 22px;
     margin-top: 18px;
   }
 
-  .sectionTag{
-    font-size: 12px;
-    padding: 7px 12px;
-  }
+  .sectionTag{ font-size: 12px; padding: 7px 12px; }
 
   .sectionTitle{
     font-size: clamp(30px, 9vw, 40px);
@@ -771,11 +710,6 @@ body{
     margin-bottom: 18px;
   }
 
-  /* skills cards */
-  .skillGrid{
-    gap: 14px;
-  }
-
   .skillCard{
     padding: 18px 14px;
     min-height: auto;
@@ -784,14 +718,11 @@ body{
 
   .skillCard h3{
     font-size: 20px;
-    white-space: normal; /* 手机上别硬不换行 */
+    white-space: normal;
   }
 
-  .skillCard p{
-    font-size: 14px;
-  }
+  .skillCard p{ font-size: 14px; }
 
-  /* ===== PROJECTS ===== */
   .projectsFilters{
     gap: 8px;
     margin: 10px 0 14px;
@@ -799,77 +730,178 @@ body{
     -webkit-overflow-scrolling: touch;
     padding-bottom: 6px;
   }
-
-  .projectsFilters::-webkit-scrollbar{
-    display: none;
-  }
+  .projectsFilters::-webkit-scrollbar{ display: none; }
 
   .filterPill{
     flex: 0 0 auto;
     font-size: 13px;
     padding: 9px 12px;
-    box-shadow: none; /* 手机更干净 */
-  }
-
-  .projectsGrid{
-    gap: 14px;
+    box-shadow: none;
   }
 
   .projectCard{
     border-radius: 22px;
-    box-shadow: none; /* 你要的：去阴影 */
+    box-shadow: none;
   }
 
-  .projectImg{
-    padding: 14px;
-  }
+  .projectImg{ padding: 14px; }
+  .projectImg img{ height: 180px; border-radius: 16px; }
 
-  .projectImg img{
-    height: 180px; /* 手机更合理的图高 */
-    border-radius: 16px;
-  }
+  .projectName{ font-size: 18px; }
+  .projectDesc{ font-size: 14px; margin-bottom: 12px; }
 
-  .projectName{
-    font-size: 18px;
-  }
-
-  .projectDesc{
-    font-size: 14px;
-    margin-bottom: 12px;
-  }
-
-  /* tag chips -> blue outline */
   .tagChip{
-    background: transparent;
-    color: #2f80ff;
-    border: 1.5px solid rgba(47,128,255,0.45);
     font-size: 12px;
     padding: 6px 10px;
   }
 
-  /* ===== FOOTER ===== */
-  .footer-inner{
-    padding: 18px 12px;
-  }
+  .footer-inner{ padding: 18px 12px; }
+  .footer-item{ font-size: 16px; margin-bottom: 14px; }
+  .footer-bottom{ padding: 14px 12px 0; }
 
-  .footer-item{
-    font-size: 16px;
-    margin-bottom: 14px;
-  }
-
-  .footer-bottom{
-    padding: 14px 12px 0;
-  }
-
-  /* ===== touch-friendly hover fallback ===== */
-  .projectCard:hover{
-    border-color: transparent; /* 手机 hover 没意义，避免误闪 */
-  }
+  /* 手机 hover 没意义，避免误闪 */
+  .projectCard:hover{ border-color: transparent; }
 }
-  /* tap feedback */
-  .filterPill:active,
-  .btnPill:active,
-  .projectLink:active{
-    transform: scale(0.98);
-  }
 
+/* tap feedback (all screens) */
+.filterPill:active,
+.btnPill:active,
+.projectLink:active{
+  transform: scale(0.98);
+}
+
+/* ===== Project page: spacing polish ===== */
+.projectMeta{
+  margin-bottom: 18px;  /* ✅ category 和 title 的距离更舒服 */
+}
+
+.projectTitle{
+  margin: 0 0 50px;     /* ✅ 标题下面留更大空 */
+}
+
+.projectHeadRight{
+  margin-top: 14px;     /* ✅ 右侧 facts 下移一点，别贴太近 */
+}
+
+.lightbox{
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(0,0,0,0.72);
+  z-index: 99999;
+}
+.lightbox.is-open{ display:flex; }
+
+.lightboxImg{
+  max-width: min(1100px, 96vw);
+  max-height: 90vh;
+  border-radius: 18px;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.35);
+}
+.lightboxClose{
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 0;
+  background: rgba(255,255,255,0.14);
+  color: #fff;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+/* ✅ 让项目页的图片看起来可点击 */
+.boardImg{
+  cursor: zoom-in;
+}
+
+.projectCard{
+  cursor: pointer;
+}
+
+.projectCard{
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.board{
+  margin: 0 auto;
+}
+
+.boardImg{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.titleMark{
+  width: 500px;        /* 你想更小就 80-120 调 */
+  height: auto;
+  display: block;      /* block 默认左对齐 */
+  margin-top: 28px;    /* 跟标题的距离 */
+  margin-left: 0;      /* 明确不居中 */
+  opacity: 0.9;
+}
+
+.icon{
+  width: 32px;
+  height: 32px;
+  background-color: #111;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 电话 */
+.icon-phone{
+  background-image: url("./icons/phone.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px;
+}
+
+/* 邮箱 */
+.icon-mail{
+  background-image: url("./icons/mail.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px;
+}
+
+/* LinkedIn */
+.icon-linkedin{
+  background-image: url("./icons/linkedin.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px;
+}
+
+/* 1) 所有 narrative 页面里的图片，默认别撑爆 */
+body[data-layout="narrative"] .nFigure img{
+  width: 100%;
+  height: auto;
+  max-width: 860px;   /* 你想更小就改这里：比如 720px */
+  display: block;
+}
+
+/* 2) 让图片居中（你不想居中就删掉 margin） */
+body[data-layout="narrative"] .nFigure{
+  margin: 18px 0 8px;
+}
+body[data-layout="narrative"] .nFigure img{
+  margin: 0 auto;
+}
+
+/* 3) gallery 两列图，控制每张的最大高度，防止某张“巨兽” */
+body[data-layout="narrative"] .nGrid img{
+  max-height: 320px; 
+  object-fit: contain;
+}

@@ -7,6 +7,11 @@
   <link rel="stylesheet" href="index.css">
 </head>
 
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightboxClose" id="lightboxClose" aria-label="Close">×</button>
+  <img class="lightboxImg" id="lightboxImg" alt="">
+</div>
+
 <body>
   <header class="top">
     <div class="navPill">
@@ -19,19 +24,21 @@
 
   <main>
     <section class="container">
+      <!-- HERO / HEADER -->
       <section class="projectHeader">
         <div class="projectHeadLeft">
           <div class="projectMeta" id="projectCategory"></div>
           <h1 class="projectTitle" id="projectTitle"></h1>
+          <!-- NEW: CTA -->
+          <div class="projectCtas" id="projectCtas"></div>
         </div>
         <div class="projectHeadRight" id="projectFacts"></div>
       </section>
-
-      <section class="projectBoardWrap">
+      <!-- CONTENT -->
+      <section class="projectContent">
         <div class="projectBoard" id="projectBoard"></div>
+        <div class="projectText" id="projectText"></div>
       </section>
-
-      <section class="projectText" id="projectText"></section>
     </section>
   </main>
 
