@@ -683,3 +683,193 @@ body{
 
   border: 1.5px solid rgba(47,128,255,0.45);
 }
+
+/* =========================
+   MOBILE OVERRIDES (<= 600px)
+   Paste at the very bottom
+   ========================= */
+@media (max-width: 600px){
+
+  /* overall page padding */
+  .container{
+    padding: 18px 12px 46px;
+  }
+
+  /* ===== NAV ===== */
+  .top{
+    padding: 10px 10px;
+  }
+
+  .navPill{
+    height: 56px;
+    padding: 10px 10px;
+    gap: 8px;
+    border-radius: 18px; /* 手机上别用999，太“胶囊”且占空间 */
+  }
+
+  .navLinks{
+    gap: 6px;
+    padding-right: 0;
+  }
+
+  .navLinks a{
+    font-size: 14px;
+    padding: 8px 10px;
+    white-space: nowrap;
+  }
+
+  .btnPill{
+    padding: 10px 12px;
+    font-size: 13px;
+    border-radius: 14px;
+  }
+
+  /* ===== HERO ===== */
+  .heroTitle{
+    margin: 18px 0 18px;
+    font-size: clamp(34px, 9vw, 44px);
+    line-height: 1.05;
+  }
+
+  /* ===== INTRO CARD ===== */
+  .introCard{
+    padding: 18px;
+    gap: 14px;
+    border-radius: 22px;
+  }
+
+  .introText{
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .portrait{
+    aspect-ratio: 4 / 5; /* 更接近手机视觉 */
+    border-radius: 18px;
+  }
+
+  /* ===== SECTION PANELS ===== */
+  .sectionPanel{
+    padding: 22px 16px 18px;
+    border-radius: 22px;
+    margin-top: 18px;
+  }
+
+  .sectionTag{
+    font-size: 12px;
+    padding: 7px 12px;
+  }
+
+  .sectionTitle{
+    font-size: clamp(30px, 9vw, 40px);
+    margin: 12px 0 10px;
+  }
+
+  .sectionDesc{
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 18px;
+  }
+
+  /* skills cards */
+  .skillGrid{
+    gap: 14px;
+  }
+
+  .skillCard{
+    padding: 18px 14px;
+    min-height: auto;
+    border-radius: 18px;
+  }
+
+  .skillCard h3{
+    font-size: 20px;
+    white-space: normal; /* 手机上别硬不换行 */
+  }
+
+  .skillCard p{
+    font-size: 14px;
+  }
+
+  /* ===== PROJECTS ===== */
+  .projectsFilters{
+    gap: 8px;
+    margin: 10px 0 14px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 6px;
+  }
+
+  .projectsFilters::-webkit-scrollbar{
+    display: none;
+  }
+
+  .filterPill{
+    flex: 0 0 auto;
+    font-size: 13px;
+    padding: 9px 12px;
+    box-shadow: none; /* 手机更干净 */
+  }
+
+  .projectsGrid{
+    gap: 14px;
+  }
+
+  .projectCard{
+    border-radius: 22px;
+    box-shadow: none; /* 你要的：去阴影 */
+  }
+
+  .projectImg{
+    padding: 14px;
+  }
+
+  .projectImg img{
+    height: 180px; /* 手机更合理的图高 */
+    border-radius: 16px;
+  }
+
+  .projectName{
+    font-size: 18px;
+  }
+
+  .projectDesc{
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+
+  /* tag chips -> blue outline */
+  .tagChip{
+    background: transparent;
+    color: #2f80ff;
+    border: 1.5px solid rgba(47,128,255,0.45);
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  /* ===== FOOTER ===== */
+  .footer-inner{
+    padding: 18px 12px;
+  }
+
+  .footer-item{
+    font-size: 16px;
+    margin-bottom: 14px;
+  }
+
+  .footer-bottom{
+    padding: 14px 12px 0;
+  }
+
+  /* ===== touch-friendly hover fallback ===== */
+  .projectCard:hover{
+    border-color: transparent; /* 手机 hover 没意义，避免误闪 */
+  }
+}
+  /* tap feedback */
+  .filterPill:active,
+  .btnPill:active,
+  .projectLink:active{
+    transform: scale(0.98);
+  }
+
