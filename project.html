@@ -7,18 +7,18 @@
   <link rel="stylesheet" href="index.css">
 </head>
 
-<div class="lightbox" id="lightbox" aria-hidden="true">
-  <button class="lightboxClose" id="lightboxClose" aria-label="Close">×</button>
-  <img class="lightboxImg" id="lightboxImg" alt="">
-</div>
-
 <body>
+  <!-- ✅ lightbox 必须在 body 里面 -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightboxClose" id="lightboxClose" aria-label="Close">×</button>
+    <img class="lightboxImg" id="lightboxImg" alt="">
+  </div>
+
   <header class="top">
     <div class="navPill">
       <div class="navSpacer"></div>
       <nav class="navLinks" id="navLinks"></nav>
       <a class="btnPill" href="resume.html" id="resumeBtn">Resume</a>
-
     </div>
   </header>
 
@@ -29,11 +29,11 @@
         <div class="projectHeadLeft">
           <div class="projectMeta" id="projectCategory"></div>
           <h1 class="projectTitle" id="projectTitle"></h1>
-          <!-- NEW: CTA -->
           <div class="projectCtas" id="projectCtas"></div>
         </div>
         <div class="projectHeadRight" id="projectFacts"></div>
       </section>
+
       <!-- CONTENT -->
       <section class="projectContent">
         <div class="projectBoard" id="projectBoard"></div>
@@ -64,10 +64,7 @@
     <div class="footer-bottom" id="footerBottom">Designed by Emma</div>
   </footer>
 
-  <!-- ✅ 注意顺序：先 PROJECTS，再 project.js -->
-   
   <script src="projects-data.js"></script>
   <script src="project.js"></script>
-  
 </body>
 </html>

@@ -55,7 +55,8 @@ function renderSectionBlock(s, fallbackTitle = "") {
 
   if (type === "image") {
     return `
-      <section class="nBlock nImage">
+      <section class="nBlock nImage ${s.role === "cover" ? "is-cover" : ""}">
+
         ${s.h ? `<h2>${escapeHtml(s.h)}</h2>` : ""}
         <figure class="nFigure">
           <img
@@ -94,6 +95,23 @@ function renderSectionBlock(s, fallbackTitle = "") {
       </section>
     `;
   }
+
+  if (type === "links") {
+  const h = escapeHtml(s.h || "");
+  const items = (s.items || []).map(it => `
+    <a class="nLinkBtn" href="${it.href}" target="_blank" rel="noopener">
+      ${escapeHtml(it.label || "Open")}
+    </a>
+  `).join("");
+
+  return `
+    <section class="nBlock nLinks">
+      ${h ? `<h2>${h}</h2>` : ""}
+      <div class="nLinksRow">${items}</div>
+    </section>
+  `;
+}
+
 
   if (type === "compare") {
     const L = s.left || {};
@@ -160,7 +178,9 @@ function renderProject() {
   if (titleEl) titleEl.textContent = project.title || "";
 
   // ✅ cover image under title for narrative projects (Sunday "小花" / Rosetta cover)
-  if ((project.layout || "") === "narrative" && titleEl) {
+  if ((project.layout || "") === "narrative" && titleEl && project.coverPlacement !== "board") {
+  // 原来的插入 titleMark 的代码不变
+
     const cover = (project.boards || []).find(b => b.role === "cover" && b.type === "image");
     const old = document.querySelector(".titleMark");
     if (old) old.remove();
@@ -195,7 +215,8 @@ function renderProject() {
   const boardEl = document.getElementById("projectBoard");
   if (boardEl) {
     boardEl.innerHTML = (project.boards || []).map(b => {
-      if ((project.layout || "") === "narrative" && b.role === "cover") return "";
+      if ((project.layout || "") === "narrative" && b.role === "cover" && project.coverPlacement !== "board") return "";
+
 
       if (b.type === "image") {
         const roleClass = b.role ? `board board--${b.role}` : "board";

@@ -842,13 +842,14 @@ body[data-layout="narrative"] .board--cover .boardImg{
 }
 
 .titleMark{
-  width: 500px;        /* 你想更小就 80-120 调 */
+  width: min(1200px, 100%);   /* ✅ 封面最大 1200px，手机自动缩 */
   height: auto;
-  display: block;      /* block 默认左对齐 */
-  margin-top: 28px;    /* 跟标题的距离 */
-  margin-left: 0;      /* 明确不居中 */
-  opacity: 0.9;
+  display: block;
+  margin-top: 28px;
+  margin-left: 0;
+  opacity: 0.98;       /* 可选：跟页面图片统一 */
 }
+
 
 .icon{
   width: 32px;
@@ -904,4 +905,48 @@ body[data-layout="narrative"] .nFigure img{
 body[data-layout="narrative"] .nGrid img{
   max-height: 320px; 
   object-fit: contain;
+}
+
+/* 只放大封面图，不影响其它段落 */
+.nImage.is-cover {
+  width: 100%;
+}
+
+.nImage.is-cover .nFigure {
+  max-width: 1200px;  /* 你想多大就在这里改 */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nImage.is-cover img {
+  width: 100%;
+  height: auto;
+}
+
+/* ✅ narrative links block */
+.nLinks a{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border-radius: 999px;
+  border: 1.5px solid rgba(17,24,39,.18);
+  text-decoration: none;
+  color: #111827;
+  font-weight: 650;
+}
+.nLinks a:hover{
+  border-color: rgba(47,128,255,.45);
+  color: #2f80ff;
+}
+
+body[data-layout="narrative"] .board--cover{
+  margin: 24px auto 40px;
+  max-width: 1120px;
+  width: 100%;
+}
+body[data-layout="narrative"] .board--cover .boardImg{
+  width: 100%;
+  height: auto;
+  display: block;
 }

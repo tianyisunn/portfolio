@@ -381,7 +381,69 @@ To retain a subtle link to the brand origin without being literal, the final “
 }
 
   ]
-}
+},
+{
+  id: "pinocchio",
+  category: "Visual Narratives",
+  title: "Pinocchio — Workshop Awakening",
+  layout: "narrative",
+  coverPlacement: "board",
+
+  facts: [
+    { label: "Tools", value: "Blender" },
+    { label: "Role", value: "3D Modelling + Animation" },
+    { label: "Year", value: "2026" },
+    { label: "Focus", value: "Camera movement, acting, object interaction" }
+  ],
+
+  boards: [
+    { type: "image", src: "./media/pinocchio.jpg", alt: "Pinocchio cover", role: "cover", maxWidth: 1200}
+  ],
+
+  sections: [
+    {
+      type: "links",
+      h: "Watch",
+      items: [
+        { label: "Watch animation (MP4)", href: "./media/pinocchio.mp4" }
+      ]
+    },
+
+    {
+      type: "text",
+      h: "Story Idea",
+      p:
+`This animation is set in a workshop. Pinocchio sits on the table, suddenly comes alive, and starts observing the surroundings. He interacts with a glass ball next to him. When he notices someone entering the room, he returns to his original posture — as if nothing happened.`
+    },
+
+    {
+      type: "text",
+      h: "Camera Movement",
+      p:
+`Shot 1 — A long camera move from the back of the scene to the front. The camera then centers and focuses on Pinocchio, capturing his interaction with surrounding objects. The shot ends when he notices someone entering and freezes back into position.
+
+Shot 2 — A clear cut. The camera follows the action and quickly hides behind the hat to build tension, suggesting someone has entered. It ends with a high-angle top view that reveals the full workshop environment.`
+    },
+
+    {
+      type: "text",
+      h: "Object Animation",
+      p:
+`• Pinocchio’s head — facial expressions and eye movement as he looks around.
+• Pinocchio’s body — hands, arms, and torso motion to mimic puppet-like movement.
+• Glass balls — one ball is rolled by Pinocchio and collides with another, creating a chain reaction.`
+    },
+
+    {
+      type: "text",
+      h: "Technical Notes",
+      p:
+`The entire piece was built and animated in Blender, including both camera animation and object animation. I avoided external video-editing filters — all motion, timing, and effects come directly from the 3D scene setup and animation.`
+    }
+  ]
+},
+
+
 
 
 ];
