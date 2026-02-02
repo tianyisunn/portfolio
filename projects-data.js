@@ -90,8 +90,8 @@ const PROJECTS = [
   layout: "narrative",
   facts: [
     { label: "Tools", value: "Twine, JavaScript, HTML/CSS" },
-    { label: "Role", value: "Interactive Designer" },
-    { label: "Year", value: "2024" }
+    { label: "Role", value: "Interactive Designer, Narrative Designer" },
+    { label: "Year", value: "2026" }
   ],
 
   // 这个作业没展板，所以 boards 可以留空或放一张封面
@@ -101,40 +101,123 @@ const PROJECTS = [
 
   // ✅ 新闻式图文排版从这里开始
   sections: [
-    {
-      type: "text",
-      h: "Overview",
-      p: "A looping interactive story where the same Sunday repeats until the player accumulates enough ‘resolve’ to break the cycle. The experience uses branching choices, variable-driven progression, and atmosphere-led visual design."
-    },
-    {
-      type: "gallery",
-      h: "Key Screens",
-      items: [
-        { src: "./media/entry.png", alt: "Title screen", cap: "Entry screen — establishes tone and setting." },
-        { src: "./media/branch.png", alt: "Twine map", cap: "Structure map — multiple branches fold back into the loop." }
-      ]
-    },
-    {
-      type: "text",
-      h: "Loop Design",
-      p: "The narrative is intentionally repetitive, but the player’s interpretation changes. Small choices increment hidden variables, creating the feeling of progress even when the day resets."
-    },
-    {
-      type: "compare",
-      h: "Same Node, Different Loops",
-      left: {
-        title: "Loop 1 (first time seeing it)",
-        src: "./media/sunset-loop1.png",
-        alt: "Sunset - loop 1",
-        cap: "A calmer reading — the player still believes the day is normal."
+  {
+    type: "text",
+    h: "Overview",
+    p:
+`This is a looping interactive story about a 12-year-old girl who does not speak English well.
+She has been sent far from her hometown to an English-speaking summer camp, where she struggles to express herself and connect with others.
+
+The player experiences her final day at the camp—Sunday—repeatedly.
+Rather than focusing on performance or fluency, the story centers on emotional presence, self-acceptance, and the quiet process of letting go.`
+  },
+
+  {
+    type: "gallery",
+    h: "Key Screens",
+    items: [
+      {
+        src: "./media/entry.png",
+        alt: "Entry screen",
+        cap: "Entry screen — establishes tone, isolation, and emotional distance."
       },
-      right: {
-        title: "Loop 2 (after realizing the loop)",
-        src: "./media/sunset-loop2.png",
-        alt: "Sunset - loop 2",
-        cap: "The same moment becomes heavier — awareness changes meaning."
+      {
+        src: "./media/branch.png",
+        alt: "Narrative structure map",
+        cap: "Structure map — multiple branches fold back into a single recurring day."
       }
+    ]
+  },
+
+  {
+    type: "text",
+    h: "Narrative Structure — Why a Loop?",
+    p:
+`The looping structure functions as a metaphor for social anxiety and emotional paralysis.
+Sunday repeats not as a physical event, but as a mental state of being stuck—where self-judgment prevents emotional movement.
+
+Progression is not driven by external plot changes, but by subtle internal shifts.
+The static environment allows even the smallest changes in perception—such as how a moment is described—to become emotionally meaningful.`
+  },
+
+  {
+    type: "text",
+    h: "Loop Exit Mechanism",
+    p:
+`Exiting the loop is governed by an invisible point-based system that tracks emotional openness rather than success or failure.
+Points are accumulated through small, everyday choices such as pausing, observing, remaining present, or choosing reflection over avoidance.
+
+The loop does not end because the player makes a single correct decision.
+Instead, it ends when emotional readiness quietly reaches a threshold, reframing progress as an internal process rather than a goal-oriented task.`
+  },
+
+  {
+    type: "image",
+    h: "Shifting Emotional Climax Across Loops",
+    src: "./media/climax.jpg",
+    alt: "Different emotional climaxes across loops",
+    cap:
+"Although the environment remains the same, emotional tension shifts across playthroughs as awareness increases."
+  },
+
+  {
+    type: "text",
+    p:
+`In the first playthrough, the conversation with Bob functions as the emotional climax.
+It provides a clear explanation for the protagonist’s discomfort, revealing how linguistic and cultural misunderstanding leads to withdrawal.
+
+In subsequent loops, this confrontation loses intensity.
+Once the player anticipates the encounter, emotional tension shifts earlier—to the moment the loop itself is recognized.
+Repetition replaces uncertainty, creating a deeper, quieter form of unease rooted in awareness rather than conflict.`
+  },
+
+  {
+    type: "compare",
+    h: "Same Moment, Different Meaning",
+    left: {
+      title: "Loop 1 — Before Awareness",
+      src: "./media/sunset-loop1.png",
+      alt: "Sunset scene, first loop",
+      cap: "A calm, surface-level reading — the day still feels ordinary."
     },
+    right: {
+      title: "Loop 2 — After Awareness",
+      src: "./media/sunset-loop2.png",
+      alt: "Sunset scene, later loop",
+      cap: "The same scene becomes heavier — meaning shifts through awareness."
+    }
+  },
+
+  {
+    type: "text",
+    h: "Perspective — Why Second Person?",
+    p:
+`The use of second-person narration (“you”) removes distance between the player and the protagonist. The player does not observe anxiety from the outside, but inhabits it—sharing hesitation, shame, and relief moment by moment.
+
+This perspective prioritizes emotional fluctuation over plot progression, allowing acceptance to feel personal rather than observed.`
+  },
+
+  {
+    type: "text",
+    h: "Language as Emotional Feedback",
+    p:
+`Language complexity functions as emotional feedback rather than reward. In low-resolve states, sentences are shorter and vocabulary remains simple, reflecting restraint and self-protection.
+
+As emotional openness increases, the same scenes shift linguistically. Sentences become longer, more fluid, and descriptive, suggesting internal freedom rather than improved language skill.
+
+The sunset scene serves as an emotional release regardless of score— a moment of calm that exists outside success or failure.`
+  },
+
+  {
+    type: "text",
+    h: "Core Theme",
+    p:
+`The protagonist's struggle is not poor English, but the self-judgment that emerges from it.
+Rather than overcoming this flaw through performance, the narrative resolves through acceptance.
+
+The player does not “win” by speaking correctly, but by choosing to stop judging themselves. In this story, acceptance becomes the true form of progress.`
+  }
+
     
 
   ]

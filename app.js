@@ -55,7 +55,7 @@ const data = {
     {
       category: "Interaction & UX Design",
       title: "Rosetta Rebrand",
-      desc: "A premium, mastery-focused rebrand system across logo, UI, and social applications.",
+      desc: "A mastery-focused rebranding project toward brand Rosetta language learning system, across logo, UI, and social applications.",
       tags: ["Brand", "Typography", "UI", "Social"],
       img: "./media/rosetta/thumbnail-rosetta.png",
       href: "project.html?id=rosetta"
