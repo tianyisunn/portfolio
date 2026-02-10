@@ -1,246 +1,46 @@
-const data = {
-  nav: [
-    { label: "Work", href: "#work" },
-    { label: "Contact", href: "#contact" }
-  ],
-  hero: {
-    titleTop: "I turn ideas into clear, usable",
-    titleBlue: "digital experiences.",
-    intro: `I design and prototype interactive experiences — combining
-      <span class="blue">UX thinking</span>, <span class="blue">visual design</span>, and
-      <span class="blue">front-end implementation</span> to make content intuitive and engaging.
-      Currently pursuing an M.Sc. at Trinity College Dublin.`
-  },
-  skills: {
-    tag: "What I do",
-    title: "Expertise & Skills",
-    desc: `I am fascinated by <b>user psychology</b> and how human behavior shapes digital interactions.
-      My design philosophy centers on creating intuitive, inclusive, and aesthetically grounded solutions.
-      I believe in <span class="quote">"Design to create a better world"</span>, where technology serves as a bridge, not a barrier.
-      By blending research-driven <b>UX thinking</b> with high-fidelity <b>3D visualization</b>, I strive to build experiences that are not only functional but emotionally resonant.`,
-    cards: [
-      {
-        title: "Interaction & UX",
-        text: "Crafting seamless digital interfaces through user research, wireframing, and prototyping for intelligent, accessible systems."
-      },
-      {
-        title: "3D & Spatial",
-        text: "Creating high-fidelity 3D assets and spatial layouts using 3ds Max/Blender with professional CAD documentation."
-      },
-      {
-        title: "Visual Narratives",
-        text: "Crafting high-quality print, posters, and graphic layouts with strong hand-drawing and visual storytelling skills."
-      }
-    ]
-  },
-//Add the new projects here!!
- projects:{
-  title: "Selected Projects",
-  filters: [
-  { key: "all", label: "All" },
-  { key: "Interaction & UX Design", label: "Interaction & UX Design" },
-  { key: "Product & Interior Design", label: "Product & Interior Design" },
-  { key: "Visual Narratives", label: "Visual Narratives" }
-],
+/* PORTFOLIO INTERACTION LOGIC
+  Content is now managed directly in index.html to prevent overwriting.
+  JS only handles filtering and UI effects.
+*/
 
-  items: [
-    {
-      category: "Interaction & UX Design",
-      title: "Story Narrative (Twine)",
-      desc: "Branching story with variable-driven loops and aesthetic customization.",
-      tags: ["Twine", "Narrative", "Interaction"],
-      img: "./media/entry.png",
-      href: "project.html?id=sunday"
-    },
-    {
-      category: "Interaction & UX Design",
-      title: "Rosetta Rebrand",
-      desc: "A mastery-focused rebranding project toward brand Rosetta language learning system, across logo, UI, and social applications.",
-      tags: ["Brand", "Typography", "UI", "Social"],
-      img: "./media/rosetta/thumbnail-rosetta.png",
-      href: "project.html?id=rosetta"
-    },
+document.addEventListener('DOMContentLoaded', () => {
+    // --- 1. Project Filtering Logic ---
+    const filters = document.querySelectorAll('.filterPill');
+    const projects = document.querySelectorAll('.projectCard');
 
-    {
-      category: "Visual Narratives",
-      title: "Pinocchio",
-      desc: "Graphic layout exploration with strong typographic hierarchy.",
-      tags: ["Animation", "3D Modelling", "Blender"],
-      img: "./media/pinocchio.jpg",
-      href: "project.html?id=pinocchio"
-    },
-    {
-      category: "Product & Interior Design",
-      title: "Blossom",
-      id: "blossom",
-      desc: "Camera movement + lighting tests with optimized render pipeline.",
-      tags: ["Furniture", "3D", "Interior"],
-      img: "./media/thumbnail-blossom.png",
-      href: "project.html?id=blossom"
-    },
-    {
-      category: "Product & Interior Design",
-      title: "MODUCATE",
-      id: "block",
-      desc: "Camera movement + lighting tests with optimized render pipeline.",
-      tags: ["Furniture", "3D", "Interior"],
-      img: "./media/thumbnail-block.png",
-      href: "project.html?id=block"
-    },
-  
-    {
-      category: "Product & Interior Design",
-      title: "UP - A Library for Children",
-      id: "library",
-      desc: "Camera movement + lighting tests with optimized render pipeline.",
-      tags: ["Furniture", "3D", "Interior"],
-      img: "./media/thumbnail-up.png",
-      href: "project.html?id=library"
-    },
-    
-    {
-      category: "Product & Interior Design",
-      title: "Children's Modular Seating Design",
-      desc: "Graphic layout exploration with strong typographic hierarchy.",
-      tags: ["Visual", "Print", "Layout"],
-      img: "./media/thumbnail-kidchair.png",
-      href: "project.html?id=kidchair"
-    }
-  ],
-  viewAllHref: "#"
-},
+    filters.forEach(button => {
+        button.addEventListener('click', () => {
+            // Update active button style
+            filters.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
 
-  footer: {
-    linkedin: { label: "LinkedIn", href: "https://www.linkedin.com/in/emma-sun-138798325" },
-    phone: "+353 87 039 2996",
-    email: "tianyi_sun0611@163.com"
-  }
-};
+            // Get selected category from data-key
+            const selectedCategory = button.getAttribute('data-key');
+            
+            projects.forEach(card => {
+                const cardCategory = card.getAttribute('data-category');
+                // Show project if 'all' or if category matches
+                if (selectedCategory === 'all' || cardCategory === selectedCategory) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
 
-function renderNav() {
-  const nav = document.getElementById("navLinks");
-  nav.innerHTML = data.nav.map(item => `<a href="${item.href}">${item.label}</a>`).join("");
-}
-
-function renderHero() {
-  document.getElementById("heroTop").textContent = data.hero.titleTop;
-  document.getElementById("heroBlue").textContent = data.hero.titleBlue;
-  document.getElementById("heroIntro").innerHTML = data.hero.intro;
-}
-
-function renderSkills() {
-  document.getElementById("skillsTag").textContent = data.skills.tag;
-  document.getElementById("skillsTitle").textContent = data.skills.title;
-  document.getElementById("skillsDesc").innerHTML = data.skills.desc;
-
-  const grid = document.getElementById("skillsGrid");
-  grid.innerHTML = data.skills.cards.map(c => `
-    <div class="skillCard">
-      <h4 class="skillName">${c.title}</h4>
-      <p class="skillText">${c.text}</p>
-    </div>
-  `).join("");
-}
-
-function renderProjects() {
-  const container = document.getElementById("projectsMount");
-  if (!container) return;
-
-  container.innerHTML = `
-    <div class="projectsBlock" id="projects">
-      <div class="projectsTop">
-        <h3 class="projectsTitle">${data.projects.title}</h3>
-      </div>
-
-      <div class="projectsFilters" id="projectsFilters"></div>
-      <div class="projectsGrid" id="projectsGrid"></div>
-    </div>
-  `;
-
-  const filtersEl = document.getElementById("projectsFilters");
-  const gridEl = document.getElementById("projectsGrid");
-
-  filtersEl.innerHTML = data.projects.filters
-    .map((f, idx) => `
-      <button class="filterPill ${idx === 0 ? "active" : ""}" data-key="${f.key}">
-        ${f.label}
-      </button>
-    `)
-    .join("");
-
-  function paint(key) {
-    const items = (key === "all")
-      ? data.projects.items
-      : data.projects.items.filter(p => p.category === key);
-
-    gridEl.innerHTML = items.map(p => `
-      <a class="projectCard" data-id="${p.id || p.title}" href="${p.href}">
-        <div class="projectImg">
-          <img src="${p.img}" alt="${p.title}">
-        </div>
-
-        <div class="projectBody">
-          <h4 class="projectName">${p.title}</h4>
-          <p class="projectDesc">${p.desc}</p>
-
-          <div class="projectTags">
-            ${p.tags.map(t => `<span class="tagChip">${t}</span>`).join("")}
-          </div>
-
-          <div class="projectLink">
-            View project <span class="arrow">↗</span>
-          </div>
-        </div>
-      </a>
-    `).join("");
-  }
-
-  paint("all");
-
-  filtersEl.addEventListener("click", (e) => {
-    const btn = e.target.closest(".filterPill");
-    if (!btn) return;
-
-    document.querySelectorAll(".filterPill").forEach(b => b.classList.remove("active"));
-    btn.classList.add("active");
-    paint(btn.dataset.key);
-  });
-
-  // 可选：只是加“选中态”，不影响跳转
-  gridEl.addEventListener("click", (e) => {
-    const card = e.target.closest(".projectCard");
-    if (!card) return;
-
-    document.querySelectorAll(".projectCard").forEach(c => c.classList.remove("is-active"));
-    card.classList.add("is-active");
-  });
-}
-
-
-
-function renderFooter() {
-  const linkedinLink = document.getElementById("linkedinLink");
-  linkedinLink.textContent = data.footer.linkedin.label;
-  linkedinLink.href = data.footer.linkedin.href;
-
-  document.getElementById("phoneText").textContent = data.footer.phone;
-
-  const emailLink = document.getElementById("emailLink");
-  emailLink.textContent = data.footer.email;
-  emailLink.href = `mailto:${data.footer.email}`;
-}
-
-// Boot
-renderNav();
-renderHero();
-renderSkills();
-renderProjects();
-renderFooter();
-
-
-// 👇👇👇【就在这里加！！】👇👇👇
-const header = document.querySelector(".top");
-
-window.addEventListener("scroll", () => {
-  header.classList.toggle("is-stuck", window.scrollY > 8);
+    // --- 2. Header Sticky Effect ---
+    const header = document.querySelector(".top");
+    window.addEventListener("scroll", () => {
+        // Adds 'is-stuck' class for glass effect when scrolling > 8px
+        if (header) {
+            header.classList.toggle("is-stuck", window.scrollY > 8);
+        }
+    });
 });
+
+/* NOTE: 
+  The old renderNav(), renderHero(), renderSkills(), and renderProjects() 
+  are removed. Please make sure your index.html contains all the text 
+  for these sections.
+*/

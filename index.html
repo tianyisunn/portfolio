@@ -11,85 +11,160 @@
 </head>
 
 <body>
-  <!-- Top pill nav -->
   <header class="top">
     <div class="navPill">
       <div class="navSpacer"></div>
-      <nav class="navLinks" id="navLinks"></nav>
+      <nav class="navLinks" id="navLinks">
+        <a href="index.html#projectsPanel">Work</a>
+        <a href="#contact">Contact</a>
+      </nav>
       <a class="btnPill" href="resume.html" id="resumeBtn">Resume</a>
     </div>
   </header>
 
   <main>
     <section class="container">
-      <h1 class="heroTitle" id="heroTitle">
-        <span id="heroTop"></span><br/>
-        <span class="blue" id="heroBlue"></span>
+      <h1 class="heroTitle">
+        I turn ideas into clear, usable<br/>
+        <span class="blue">digital experiences.</span>
       </h1>
 
       <div class="introCard" id="work">
-        <div class="introText" id="heroIntro"></div>
+        <div class="introText">
+          I design and prototype interactive experiences — combining
+          <span class="blue">UX thinking</span>, <span class="blue">visual design</span>, and
+          <span class="blue">front-end implementation</span> to make content intuitive and engaging.
+          Currently pursuing an M.Sc. at Trinity College Dublin.
+        </div>
 
-        <!-- ✅ 图片放在 HTML，不再从 JS/data.hero.imageSrc 读取 -->
         <div class="portrait" aria-label="Portrait">
           <img src="./media/IMG_2459.jpeg" alt="Portrait" class="hero-image"/>
         </div>
       </div>
-<br>
-<br>
 
-            <!-- Skills panel -->
+      <br><br>
+
       <div class="sectionPanel" id="skillsPanel">
-        <span class="sectionTag" id="skillsTag"></span>
-        <h2 class="sectionTitle" id="skillsTitle"></h2>
-        <p class="sectionDesc" id="skillsDesc"></p>
-
-        <div class="skillGrid" id="skillsGrid"></div>
-      </div>
-
-    <br>
-
-      <!-- NEW: Projects panel (separated) -->
-      <div class="projectsSection" id="projectsPanel">
-
-      <br>
-        <span class="sectionTag sectionTag--soft">Selected work</span>
-        <h2 class="sectionTitle sectionTitle--sm">Projects that show my thinking</h2>
-        <p class="sectionDesc sectionDesc--sm">
-          A small set of projects across interaction design, spatial exploration, and visual storytelling.
-          Each one is a proof point. Less talk, more evidence.
+        <span class="sectionTag">What I do</span>
+        <h2 class="sectionTitle">Expertise & Skills</h2>
+        <p class="sectionDesc">
+          I am fascinated by <b>user psychology</b> and how human behavior shapes digital interactions.
+          My design philosophy centers on creating intuitive, inclusive, and aesthetically grounded solutions.
+          I believe in <span class="quote">"Design to create a better world"</span>, where technology serves as a bridge, not a barrier.
         </p>
 
-        <!-- JS will mount projects here -->
-        <div id="projectsMount"></div>
+        <div class="skillGrid">
+          <div class="skillCard">
+            <h4 class="skillName">Interaction & UX</h4>
+            <p class="skillText">Crafting seamless digital interfaces through user research, wireframing, and prototyping.</p>
+          </div>
+          <div class="skillCard">
+            <h4 class="skillName">3D & Spatial</h4>
+            <p class="skillText">Creating high-fidelity 3D assets and spatial layouts using 3ds Max/Blender.</p>
+          </div>
+          <div class="skillCard">
+            <h4 class="skillName">Visual Narratives</h4>
+            <p class="skillText">Crafting high-quality print, posters, and graphic layouts with storytelling skills.</p>
+          </div>
+        </div>
       </div>
 
+      <br>
+
+      <div class="projectsSection" id="projectsPanel">
+        <br>
+        <span class="sectionTag sectionTag--soft">Selected work</span>
+        <h2 class="sectionTitle sectionTitle--sm">Projects that show my thinking</h2>
+        
+        <div class="projectsFilters" id="projectsFilters">
+          <button class="filterPill active" data-key="all">All</button>
+          <button class="filterPill" data-key="Interaction & UX Design">Interaction & UX</button>
+          <button class="filterPill" data-key="Product & Interior Design">Interior</button>
+          <button class="filterPill" data-key="Visual Narratives">Narratives</button>
+        </div>
+
+        <div class="projectsGrid" id="projectsGrid">
+          <a class="projectCard" href="project.html?id=sunday" data-category="Interaction & UX Design">
+            <div class="projectImg"><img src="./media/entry.png" alt="Story Narrative"></div>
+            <div class="projectBody">
+              <h4 class="projectName">Story Narrative (Twine)</h4>
+              <p class="projectDesc">An interactive branching story built with complex variable-driven logic.</p>
+              <div class="projectTags"><span class="tagChip">Interaction</span></div>
+              <div class="projectLink">View project <span class="arrow">↗</span></div>
+            </div>
+          </a>
+
+          <a class="projectCard" href="project.html?id=rosetta" data-category="Interaction & UX Design">
+            <div class="projectImg"><img src="./media/rosetta/thumbnail-rosetta.png" alt="Rosetta"></div>
+            <div class="projectBody">
+              <h4 class="projectName">Rosetta Rebrand</h4>
+              <p class="projectDesc">A comprehensive brand identity overhaul across digital and social platforms.</p>
+              <div class="projectTags"><span class="tagChip">Branding</span></div>
+              <div class="projectLink">View project <span class="arrow">↗</span></div>
+            </div>
+          </a>
+
+          <a class="projectCard" href="project.html?id=pinocchio" data-category="Visual Narratives">
+            <div class="projectImg"><img src="./media/pinocchio.jpg" alt="Pinocchio"></div>
+            <div class="projectBody">
+              <h4 class="projectName">Pinocchio</h4>
+              <p class="projectDesc">Exploring graphic hierarchy through 3D modeling and typographic layout.</p>
+              <div class="projectTags"><span class="tagChip">Visual</span></div>
+              <div class="projectLink">View project <span class="arrow">↗</span></div>
+            </div>
+          </a>
+
+          <a class="projectCard" href="project.html?id=blossom" data-category="Product & Interior Design">
+            <div class="projectImg"><img src="./media/thumbnail-blossom.png" alt="Blossom"></div>
+            <div class="projectBody">
+              <h4 class="projectName">Blossom</h4>
+              <p class="projectDesc">High-fidelity interior rendering focused on optimized lighting and camera movement.</p>
+              <div class="projectTags"><span class="tagChip">Spatial</span></div>
+              <div class="projectLink">View project <span class="arrow">↗</span></div>
+            </div>
+          </a>
+
+          <a class="projectCard" href="project.html?id=block" data-category="Product & Interior Design">
+            <div class="projectImg"><img src="./media/thumbnail-block.png" alt="MODUCATE"></div>
+            <div class="projectBody">
+              <h4 class="projectName">MODUCATE</h4>
+              <p class="projectDesc">A modular educational seating system designed for flexible learning environments.</p>
+              <div class="projectTags"><span class="tagChip">Product</span></div>
+              <div class="projectLink">View project <span class="arrow">↗</span></div>
+            </div>
+          </a>
+
+          <a class="projectCard" href="project.html?id=library" data-category="Product & Interior Design">
+            <div class="projectImg"><img src="./media/thumbnail-up.png" alt="Library"></div>
+            <div class="projectBody">
+              <h4 class="projectName">UP - A Library for Children</h4>
+              <p class="projectDesc">Child-centric spatial design prioritizing accessibility and natural daylighting.</p>
+              <div class="projectTags"><span class="tagChip">Interior</span></div>
+              <div class="projectLink">View project <span class="arrow">↗</span></div>
+            </div>
+          </a>
+
+          <a class="projectCard" href="project.html?id=kidchair" data-category="Product & Interior Design">
+            <div class="projectImg"><img src="./media/thumbnail-kidchair.png" alt="Seating Design"></div>
+            <div class="projectBody">
+              <h4 class="projectName">Modular Seating</h4>
+              <p class="projectDesc">Ergonomic furniture exploration focused on modularity and educational utility.</p>
+              <div class="projectTags"><span class="tagChip">Ergonomics</span></div>
+              <div class="projectLink">View project <span class="arrow">↗</span></div>
+            </div>
+          </a>
+        </div>
     </section>
   </main>
 
-  <!-- ✅ Footer 只保留一个，并且在 body 里 -->
   <footer class="footer" id="contact">
-    
-
     <div class="footer-inner">
-      <div class="footer-item">
-        <span class="icon">in</span>
-        <a id="linkedinLink" target="_blank" rel="noreferrer">LinkedIn</a>
-      </div>
-
-      <div class="footer-item">
-        <span class="icon">☎</span>
-        <span id="phoneText"></span>
-      </div>
-
-      <div class="footer-item">
-        <span class="icon">@</span>
-        <a id="emailLink"></a>
-      </div>
-</div>
-      <div class="footer-line"></div>
-      <div class="footer-bottom" id="footerBottom">Designed by Emma</div>
-    
+      <div class="footer-item"><span class="icon">in</span><a href="https://www.linkedin.com/in/emma-sun-138798325" target="_blank">LinkedIn</a></div>
+      <div class="footer-item"><span class="icon">☎</span><span>+353 87 039 2996</span></div>
+      <div class="footer-item"><span class="icon">@</span><a href="mailto:tianyi_sun0611@163.com">tianyi_sun0611@163.com</a></div>
+    </div>
+    <div class="footer-line"></div>
+    <div class="footer-bottom">Designed by Emma</div>
   </footer>
 
   <script src="app.js"></script>
