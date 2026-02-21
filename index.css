@@ -950,3 +950,19 @@ body[data-layout="narrative"] .board--cover .boardImg{
   height: auto;
   display: block;
 }
+
+/* 确保 gallery 是并排的 */
+.nGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 强制两列排列 */
+  gap: 20px;
+  margin: 20px 0;
+}
+
+/* 限制图片不要在并排时变得太高 */
+.nGrid img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px; /* 让你的截图看起来更精致 */
+}

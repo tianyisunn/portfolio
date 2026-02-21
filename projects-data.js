@@ -442,8 +442,100 @@ Shot 2 — A clear cut. The camera follows the action and quickly hides behind t
     }
   ]
 },
-
-
-
-
+{
+  id: "portfolio-dev",
+  category: "Web Development",
+  title: "Dynamic Portfolio Engine: A Native JS Implementation",
+  layout: "narrative",
+  facts: [
+    { 
+      label: "Project URL", 
+      value: '<a href="https://tianyisunn.github.io/website/index.html" target="_blank" style="color:#2f80ff; text-decoration:underline; font-weight:600;">Live Preview ↗</a>' 
+    },
+    { 
+      label: "Github", 
+      value: '<a href="https://github.com/tianyisunn/website" target="_blank" style="color:#2f80ff; text-decoration:underline; font-weight:600;">View Repository ↗</a>' 
+    },
+    { label: "Tech Stack", value: "Vanilla JS (ES6), OpenWeather API, LocalStorage" },
+  ],
+  boards: [], 
+  sections: [
+      {
+      type: "text",
+      h: "Description",
+      p: "This project is a fully independent creation, built from scratch using HTML, CSS, and JavaScript. Moving beyond static templates, I developed a custom engine to handle everything from data rendering to interactive features. To push the project’s technical depth, I integrated the OpenWeather API to fetch real-time data and used LocalStorage to ensure the site remembers user preferences. I also prioritized Inclusive Design by conducting a contrast audit for the dual-theme system (Light/Dark mode) to ensure readability for all users. This project is a direct result of my journey in bridging the gap between raw code and thoughtful, accessible user experiences."
+    },
+    {
+      type: "gallery",
+      h: "Interface Themes & Adaptive Systems",
+      // 第一组：深浅模式预览
+      items: [
+        {
+          src: "./media/portfolio-light.png",
+          alt: "Light Mode",
+          cap: "Light Mode: Prioritizing clarity and a 'clean' reading environment."
+        },
+        {
+          src: "./media/portfolio-dark.png",
+          alt: "Dark Mode",
+          cap: "Dark Mode: Reducing light emission for prolonged browsing sessions."
+        }
+      ]
+    },
+    {
+      type: "gallery",
+      h: "Color Contrast & Accessibility Audit",
+      // 第二组：新增的两张色卡对比图，紧跟在上面，水平排列
+      items: [
+        {
+          src: "./media/color-swatch-light.png", // 亮色调色卡图名
+          alt: "Light Mode Color Palette",
+          cap: "Light Theme Palette: Ensuring WCAG AAA text contrast ratios."
+        },
+        {
+          src: "./media/color-swatch-dark.png",  // 暗色调色卡图名
+          alt: "Dark Mode Color Palette",
+          cap: "Dark Theme Palette: Strategic use of #2f80ff to avoid visual vibration."
+        }
+      ]
+    },
+    {
+      type: "text",
+      h: "The Core Programming Architecture",
+      p: "The 'Engine' of this portfolio is built with modularity in mind. By separating functionality into four specific scripts, the codebase remains maintainable and scalable:\n\n" +
+         "1. Index.js (State Management): I implemented theme-persistence logic. By storing the user's preference in LocalStorage, the site prevents the 'flash of unstyled content' (FOUC) and respects the user's environmental needs.\n\n" +
+         "2. weather.js (Contextual API): Using the Fetch API, the site retrieves live meteorological data, demonstrating my ability to handle asynchronous JavaScript and JSON parsing.\n\n" +
+         "3. filter.js (Data-Driven UI): This module functions as a mini-CMS, mapping through a project database to render UI components dynamically.\n\n" +
+         "4. scroll-video.js (Performance Optimization): I used `requestAnimationFrame` to create a smooth video scrubbing effect, which is more efficient than standard scroll events."
+    },
+    {
+      type: "gallery",
+      h: "Programming Execution & Logic",
+      items: [
+        {
+          src: "./media/code-weather.png", // 第一张代码截图
+          alt: "Weather API Implementation",
+          cap: "WEATHER.JS: Implementing asynchronous fetching with error handling."
+        },
+        {
+          src: "./media/code-scroll.png", // 第二张代码截图
+          alt: "Scroll-Video Engine",
+          cap: "SCROLL-VIDEO.JS: Frame-accurate video control using requestAnimationFrame."
+        }
+      ]
+    },
+    {
+      type: "text",
+      h: "Critical Reflection: ",
+      p: "In this project, I identified a conflict between Visual Impact and Universal Accessibility regarding the homepage video.\n\n" +
+         "The Problem: Currently, the hero video is set to autoplay to create an immediate immersive experience. From an accessibility standpoint, this is a flaw—it can be disorienting for users with motion sensitivity or those using screen readers, and it violates the user's autonomy over their bandwidth and focus.\n\n" +
+         "The Solution: In future iterations, I plan to implement the `prefers-reduced-motion` media query to automatically disable autoplay for users with specific system settings. Furthermore, adding a manual 'Play/Pause' toggle is essential to return control to the user, moving the project toward a truly inclusive standard."
+    },
+    {
+      type: "text",
+      h: "Conclusion",
+      p: "Through this project, I have proven my ability to build a complex, data-driven system from scratch. It represents a balance between design precision and technical robustness, showing that I can think critically about code as much as I do about visual interfaces."
+    }
+  ]
+},
 ];

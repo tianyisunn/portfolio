@@ -206,7 +206,7 @@ function renderProject() {
     factsEl.innerHTML = (project.facts || []).map(f => `
       <div class="factBlock">
         <div class="factLabel">${escapeHtml(f.label || "")}</div>
-        <div class="factValue">${escapeHtml(f.value || "")}</div>
+        <div class="factValue">${f.value || ""}</div> 
       </div>
     `).join("");
   }
