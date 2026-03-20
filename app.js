@@ -1,5 +1,4 @@
-/* Emma's Portfolio Interaction Logic
-  Content is managed in index.html for better maintainability.
+/* 
   This script handles: 1. Filter Buttons, 2. Sticky Header.
 */
 
