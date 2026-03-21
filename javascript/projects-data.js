@@ -11,7 +11,7 @@ const PROJECTS = [
     ],
     boards: [
       // 长展板
-      { type: "image", src: "./media/blossom.jpg", alt: "Blossom board" }
+      { type: "image", src: "../media/blossom.jpg", alt: "Blossom board" }
     ],
     
   },
@@ -28,7 +28,7 @@ const PROJECTS = [
       { label: "Description", value: "2024" }
     ],
     boards: [
-      { type: "image", src: "./media/library.jpg", alt: "Library board" }
+      { type: "image", src: "../media/library.jpg", alt: "Library board" }
     ],
     sections: [
   
@@ -49,7 +49,7 @@ const PROJECTS = [
       { label: "Description", value: "2024" }
     ],
     boards: [
-      { type: "image", src: "./media/kidchair.jpg", alt: "Chair board" }
+      { type: "image", src: "../media/kidchair.jpg", alt: "Chair board" }
     ],
     sections: [
       
@@ -72,7 +72,7 @@ const PROJECTS = [
       { label: "Description", value: "Modular + Educate = MODUCATE," }
     ],
     boards: [
-      { type: "image", src: "./media/block.jpg", alt: "Modular system board" }
+      { type: "image", src: "../media/block.jpg", alt: "Modular system board" }
     ],
     sections: [
       
@@ -96,7 +96,7 @@ const PROJECTS = [
 
   // 这个作业没展板，所以 boards 可以留空或放一张封面
   boards: [
-    { type: "image", src: "./media/passages.png", alt: "Cover of Sunday", role: "cover", maxWidth: 600}
+    { type: "image", src: "../media/passages.png", alt: "Cover of Sunday", role: "cover", maxWidth: 600}
   ],
 
   // ✅ 新闻式图文排版从这里开始
@@ -117,12 +117,12 @@ Rather than focusing on performance or fluency, the story centers on emotional p
     h: "Key Screens",
     items: [
       {
-        src: "./media/entry.png",
+        src: "../media/entry.png",
         alt: "Entry screen",
         cap: "Entry screen — establishes tone, isolation, and emotional distance."
       },
       {
-        src: "./media/branch.png",
+        src: "../media/branch.png",
         alt: "Narrative structure map",
         cap: "Structure map — multiple branches fold back into a single recurring day."
       }
@@ -176,13 +176,13 @@ Repetition replaces uncertainty, creating a deeper, quieter form of unease roote
     h: "Same Moment, Different Meaning",
     left: {
       title: "Loop 1 — Before Awareness",
-      src: "./media/sunset-loop1.png",
+      src: "../media/sunset-loop1.png",
       alt: "Sunset scene, first loop",
       cap: "A calm, surface-level reading — the day still feels ordinary."
     },
     right: {
       title: "Loop 2 — After Awareness",
-      src: "./media/sunset-loop2.png",
+      src: "../media/sunset-loop2.png",
       alt: "Sunset scene, later loop",
       cap: "The same scene becomes heavier — meaning shifts through awareness."
     }
@@ -237,7 +237,7 @@ The player does not “win” by speaking correctly, but by choosing to stop jud
   boards: [
     {
       type: "image",
-      src: "./media/rosetta/thumbnail-rosetta.png",
+      src: "../media/rosetta/thumbnail-rosetta.png",
       alt: "Rosetta Rebrand cover",
       role: "cover"
     }
@@ -264,9 +264,9 @@ This led us to a contemporary, minimal system designed for “serious learning, 
   type: "gallery",
   h: "Rebranding Timeline",
   items: [
-    { src: "./media/rosetta/timeline-1992-2007.png", alt: "Rosetta Stone logo 1992-2007", cap: "1992–2007 — early identity with globe metaphor." },
-    { src: "./media/rosetta/timeline-2007-2012.png", alt: "Rosetta Stone logo 2007-2012", cap: "2007–2012 — shift toward a stone icon and brighter palette." },
-    { src: "./media/rosetta/timeline-2012-now.png", alt: "Rosetta Stone logo 2012-now", cap: "2012–now — 3D stone mark paired with wordmark." }
+    { src: "../media/rosetta/timeline-1992-2007.png", alt: "Rosetta Stone logo 1992-2007", cap: "1992–2007 — early identity with globe metaphor." },
+    { src: "../media/rosetta/timeline-2007-2012.png", alt: "Rosetta Stone logo 2007-2012", cap: "2007–2012 — shift toward a stone icon and brighter palette." },
+    { src: "../media/rosetta/timeline-2012-now.png", alt: "Rosetta Stone logo 2012-now", cap: "2012–now — 3D stone mark paired with wordmark." }
   ]
 },
 {
@@ -286,7 +286,7 @@ These visual cues informed our decisions around typography, colour palette, and 
 },
 {
   type: "image",
-  src: "./media/rosetta/moodboard.png",
+  src: "../media/rosetta/moodboard.png",
   alt: "Rosetta Stone rebrand moodboard",
   cap: "Moodboard defining the emotional tone and visual language of the rebrand.",
   maxWidth: 1000
@@ -311,8 +311,8 @@ To retain a subtle link to the brand origin without being literal, the final “
       type: "gallery",
       h: "Logo System",
       items: [
-        { src: "./media/rosetta/rosetta-wordmark-black.png", alt: "Wordmark", cap: "Primary wordmark — simplified typographic identity." },
-        { src: "./media/rosetta/rosetta-icon.png", alt: "App icon", cap: "App icon — bold, minimal, and scalable." }
+        { src: "../media/rosetta/rosetta-wordmark-black.png", alt: "Wordmark", cap: "Primary wordmark — simplified typographic identity." },
+        { src: "../media/rosetta/rosetta-icon.png", alt: "App icon", cap: "App icon — bold, minimal, and scalable." }
       ],
       maxWidth: 260
     },
@@ -332,15 +332,15 @@ To retain a subtle link to the brand origin without being literal, the final “
   h: "Core Message Posters",
   items: [
     {
-      src: "./media/rosetta/serious-learning-poster2.png",
+      src: "../media/rosetta/serious-learning-poster2.png",
       alt: "Rosetta poster — abstract"
     },
     {
-      src: "./media/rosetta/serious-learning-poster3.png",
+      src: "../media/rosetta/serious-learning-poster3.png",
       alt: "Serious Learning — text-led"
     },
     {
-      src: "./media/rosetta/serious-learning-poster.png",
+      src: "../media/rosetta/serious-learning-poster.png",
       alt: "Serious Learning — outlined house"
     }
   ]
@@ -357,9 +357,9 @@ To retain a subtle link to the brand origin without being literal, the final “
       type: "gallery",
       h: "Social & UI Mockups",
       items: [
-        { src: "./media/rosetta/ad-insta.jpg", alt: "Instagram ads", cap: "Instagram ad concept — consistent diagonal structure + typography." },
-        { src: "./media/rosetta/facebook-mockup.jpg", alt: "Facebook page mockup", cap: "Facebook page mockup — banner + post template working together." },
-        { src: "./media/rosetta/rosetta-rebrand-02.png", alt: "Mobile UI screens", cap: "Mobile UI set — structured, readable, and brand-consistent." }
+        { src: "../media/rosetta/ad-insta.jpg", alt: "Instagram ads", cap: "Instagram ad concept — consistent diagonal structure + typography." },
+        { src: "../media/rosetta/facebook-mockup.jpg", alt: "Facebook page mockup", cap: "Facebook page mockup — banner + post template working together." },
+        { src: "../media/rosetta/rosetta-rebrand-02.png", alt: "Mobile UI screens", cap: "Mobile UI set — structured, readable, and brand-consistent." }
       ]
     },
 
@@ -367,15 +367,15 @@ To retain a subtle link to the brand origin without being literal, the final “
       type: "gallery",
       h: "Brand Guidelines Highlights",
       items: [
-        { src: "./media/rosetta/rosetta-rebrand-04.png", alt: "Merch mockups", cap: "Merchandise mockups — wordmark scalability test." },
-        { src: "./media/rosetta/rosetta-rebrand-05.png", alt: "Outdoor posters", cap: "Outdoor applications — high contrast + editorial voice." }
+        { src: "../media/rosetta/rosetta-rebrand-04.png", alt: "Merch mockups", cap: "Merchandise mockups — wordmark scalability test." },
+        { src: "../media/rosetta/rosetta-rebrand-05.png", alt: "Outdoor posters", cap: "Outdoor applications — high contrast + editorial voice." }
       ]
     },
 
     {
   type: "image",
   h: "Iconography",
-  src: "./media/rosetta/icon.png",
+  src: "../media/rosetta/icon.png",
   alt: "Rosetta iconography sheet",
   cap: "A consistent icon set designed to support navigation and learning modes across the platform."
 }
@@ -397,7 +397,7 @@ To retain a subtle link to the brand origin without being literal, the final “
   ],
 
   boards: [
-    { type: "image", src: "./media/pinocchio.jpg", alt: "Pinocchio cover", role: "cover", maxWidth: 1200}
+    { type: "image", src: "../media/pinocchio.jpg", alt: "Pinocchio cover", role: "cover", maxWidth: 1200}
   ],
 
   sections: [
@@ -405,7 +405,7 @@ To retain a subtle link to the brand origin without being literal, the final “
       type: "links",
       h: "Watch",
       items: [
-        { label: "Watch animation (MP4)", href: "./media/pinocchio.mp4" }
+        { label: "Watch animation (MP4)", href: "../media/pinocchio.mp4" }
       ]
     },
 
@@ -471,12 +471,12 @@ Shot 2 — A clear cut. The camera follows the action and quickly hides behind t
       // 第一组：深浅模式预览
       items: [
         {
-          src: "./media/portfolio-light.png",
+          src: "../media/portfolio-light.png",
           alt: "Light Mode",
           cap: "Light Mode: Prioritizing clarity and a 'clean' reading environment."
         },
         {
-          src: "./media/portfolio-dark.png",
+          src: "../media/portfolio-dark.png",
           alt: "Dark Mode",
           cap: "Dark Mode: Reducing light emission for prolonged browsing sessions."
         }
@@ -488,12 +488,12 @@ Shot 2 — A clear cut. The camera follows the action and quickly hides behind t
       // 第二组：新增的两张色卡对比图，紧跟在上面，水平排列
       items: [
         {
-          src: "./media/color-swatch-light.png", // 亮色调色卡图名
+          src: "../media/color-swatch-light.png", // 亮色调色卡图名
           alt: "Light Mode Color Palette",
           cap: "Light Theme Palette: Ensuring WCAG AAA text contrast ratios."
         },
         {
-          src: "./media/color-swatch-dark.png",  // 暗色调色卡图名
+          src: "../media/color-swatch-dark.png",  // 暗色调色卡图名
           alt: "Dark Mode Color Palette",
           cap: "Dark Theme Palette: Strategic use of #2f80ff to avoid visual vibration."
         }
@@ -513,12 +513,12 @@ Shot 2 — A clear cut. The camera follows the action and quickly hides behind t
       h: "Programming Execution & Logic",
       items: [
         {
-          src: "./media/code-weather.png", // 第一张代码截图
+          src: "../media/code-weather.png", // 第一张代码截图
           alt: "Weather API Implementation",
           cap: "WEATHER.JS: Implementing asynchronous fetching with error handling."
         },
         {
-          src: "./media/code-scroll.png", // 第二张代码截图
+          src: "../media/code-scroll.png", // 第二张代码截图
           alt: "Scroll-Video Engine",
           cap: "SCROLL-VIDEO.JS: Frame-accurate video control using requestAnimationFrame."
         }
@@ -567,7 +567,7 @@ Shot 2 — A clear cut. The camera follows the action and quickly hides behind t
       // 第一组：深浅模式预览
       items: [
         {
-          src: "./media/portfolio-light.png",
+          src: "../media/portfolio-light.png",
           alt: "Light Mode",
           cap: "Light Mode: Prioritizing clarity and a 'clean' reading environment."
         },
@@ -584,12 +584,12 @@ Shot 2 — A clear cut. The camera follows the action and quickly hides behind t
       // 第二组：新增的两张色卡对比图，紧跟在上面，水平排列
       items: [
         {
-          src: "./media/color-swatch-light.png", // 亮色调色卡图名
+          src: "../media/color-swatch-light.png", // 亮色调色卡图名
           alt: "Light Mode Color Palette",
           cap: "Light Theme Palette: Ensuring WCAG AAA text contrast ratios."
         },
         {
-          src: "./media/color-swatch-dark.png",  // 暗色调色卡图名
+          src: "../media/color-swatch-dark.png",  // 暗色调色卡图名
           alt: "Dark Mode Color Palette",
           cap: "Dark Theme Palette: Strategic use of #2f80ff to avoid visual vibration."
         }
@@ -609,12 +609,12 @@ Shot 2 — A clear cut. The camera follows the action and quickly hides behind t
       h: "Programming Execution & Logic",
       items: [
         {
-          src: "./media/code-weather.png", // 第一张代码截图
+          src: "../media/code-weather.png", // 第一张代码截图
           alt: "Weather API Implementation",
           cap: "WEATHER.JS: Implementing asynchronous fetching with error handling."
         },
         {
-          src: "./media/code-scroll.png", // 第二张代码截图
+          src: "../media/code-scroll.png", // 第二张代码截图
           alt: "Scroll-Video Engine",
           cap: "SCROLL-VIDEO.JS: Frame-accurate video control using requestAnimationFrame."
         }
