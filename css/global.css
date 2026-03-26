@@ -1,0 +1,67 @@
+/* =========================
+   FOOTER (Horizontal Layout)
+   ========================= */
+.footer {
+  background: #fff;
+  padding: 60px 0 40px;
+}
+
+
+.footer-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 24px;
+  justify-content: space-between;
+  
+  /* 关键：开启 Flex 让子元素横向排列 */
+  display: flex; 
+  align-items: center; 
+  gap: 40px; /* 控制三个联系方式之间的间距 */
+  flex-wrap: wrap; /* 保证手机端排不下时会自动换行 */
+}
+
+.footer-item {
+  /* 关键：取消 block，改为 flex 让图标和文字并排 */
+  align-items: center;
+  gap: 10px; 
+  font-size: 16px;
+  color: whitesmoke;
+}
+
+/* 彻底去掉黑背景，只保留蓝色文字 */
+.icon {
+  background: none; 
+  color: white; 
+  font-weight: 800;
+  font-size: 14px;
+  width: auto;
+  height: auto;
+}
+
+.footer a {
+  color: #111;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer a:hover {
+  color: var(--blue);
+}
+
+.footer-bottom {
+  max-width: 1120px;
+  margin: 40px auto 0;
+  padding: 20px 24px 0;
+  border-top: 1px solid #f5f5f5;
+  font-size: 13px;
+  color: #999;
+}
+
+/* 移动端适配：手机上还是竖着排比较好点 */
+@media (max-width: 600px) {
+  .footer-inner {
+    flex-direction: column; 
+    align-items: flex-start;
+    gap: 20px;
+  }
+}

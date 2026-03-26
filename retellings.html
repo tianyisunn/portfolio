@@ -3,70 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Retellings - Dubliners</title>
+    <title>Retellings - Dubliners | Case Study</title>
     <link rel="stylesheet" href="css/retellings.css">
-    <!-- favicon -->
     <link rel="icon" type="image/png" href="media/logo-v2.png">
 </head>
 
 <body>
     <header class="top">
-    <div class="navPill">
-      <div class="navSpacer"></div>
-      <nav class="navLinks" id="navLinks">
-        <a href="index.html#projectsPanel">Work</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <a class="btnPill" href="/html/resume.html" id="resumeBtn">Resume</a>
-    </div>
-  </header>
+        <div class="navPill">
+            <div class="navSpacer"></div>
+            <nav class="navLinks" id="navLinks">
+                <a href="index.html#projectsPanel">Work</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <a class="btnPill" href="/html/resume.html" id="resumeBtn">Resume</a>
+        </div>
+    </header>
 
-    <main>
-    <section class="container">
-      <!-- HERO / HEADER -->
-       <main class="container"> <section class="projectHeader">
+    <main class="container"> 
+        <section class="projectHeader">
             <div class="projectHeadLeft">
-                <div class="projectMeta" id="projectCategory">Web Development</div>
-                    <h1 class="projectTitle" id="projectTitle">Retellings - Dubliners</h1>
+                <div class="projectMeta" id="projectCategory">Web Development & UX Design</div>
+                <h1 class="projectTitle" id="projectTitle">Retellings - Dubliners</h1>
             </div>
             
-            <div class="projectHeadRight"id="projectFacts">
+            <div class="projectHeadRight" id="projectFacts">
                 <div class="factBlock"> 
                     <div class="factLabel">Tools</div>
-                    <div class="factValue">Blender</div>
+                    <div class="factValue">Figma, Blender, VS Code (HTML/CSS)</div>
                 </div>
 
                 <div class="factBlock"> 
                     <div class="factLabel">Role</div>
-                    <div class="factValue">3D Modelling + Animation</div>
+                    <div class="factValue">
+                        Collaborated in a 5-member cross-functional team.<br>
+                        <strong>Key Contributions:</strong> Field Investigation, Information Architecture, Sitemap & Wireframing, Lead Front-end Development (HTML/CSS), and Debugging.
+                    </div>
                 </div>
 
                 <div class="factBlock">
-                    <div class="factLabel">Year</div>
-                    <div class="factValue">2026</div>
+                    <div class="factLabel">Project Timeline</div>
+                    <div class="factValue">Feb - Apr, 2026</div>
                 </div>
 
                 <div class="factBlock">
                     <div class="factLabel">Focus</div>
-                    <div class="factValue">Camera movement, acting, objectinteraction</div>
+                    <div class="factValue">UI/UX, Accessibility, Interaction Design, Responsive Front-end</div>
+                </div>
+
+                <div class="factBlock">
+                    <div class="factLabel">Project Link</div>
+                    <div class="factValue">
+                        <a href="retellingdubliners.com">Retelling Dubliners</a>
+                        <a href="https://github.com/ldulski/cs7026-group7">Github Repository</a>
+                    </div>
+                    
                 </div>
             </div>
-        
-            </section>
+        </section>
 
-            <!-- CONTENT -->
-            <section class="projectContent">
-                <div class="projectBoard" id="projectBoard"></div>
-                <div class="projectText" id="projectText"></div>
-            </section>
-            </section>
-        </main>
+        <section class="projectBody">
+            
+            <div class="projectProblem">
+                <h3>01. The Problem</h3>
+                <p>
+                    James Joyce is a cornerstone of Irish heritage, yet a significant <strong>engagement gap</strong> exists in physical exhibitions. 
+                    Traditional museum displays often rely on static text and artifacts, which can feel inaccessible to younger, non-expert audiences. 
+                    The challenge was: How might we transform the action viewing into active literary interaction for the modern traveler, book worm, and history lover?
+                </p>
+            </div>
+
+            <div class="projectInsight">
+                <h3>02. The Insight: "The Context Switching Barrier"</h3>
+                <p>
+                    Through field investigations at the Dublin Writers Museum and user interviews, we discovered that <strong>80% of visitors felt "cognitive overload."</strong> 
+                    The barrier wasn't the complexity of Joyce's prose, but the constant need to switch attention between a physical plaque and their imagination. 
+                    <strong>The Insight:</strong> To make literature "stick," we needed to remove the friction between the physical city ac
+                <p>
+                    We then interview 3 people that refers to 3 different kind of user, they refer to: traveler, book worm, and history lover.
+                </p>
+                <a href="https://docs.google.com/document/d/1ir_iPGzZfzeWl5rvViVyuu2Kk7ZkEJZzEXxeSKLicA4/edit?usp=sharing" alt="surveynote">Our survey note</a>
+            </div>
+
+            <div class="projectIdea">
+                <h3>03. The Idea: A Living Narrative Overlay</h3>
+                <p>
+                    We proposed <strong>"Retellings"</strong>—a mobile-first web experience that uses minimalist visual metaphors and location-aware triggers. 
+                    By simplifying complex stream-of-consciousness into "glanceable" UI, we aimed to lower the barrier to entry for Joyce’s <i>Dubliners</i> and turn the city into a gallery.
+                </p>
+            </div>
+
+            <div class="projectTest">
+                <h3>04. Testing: Balancing Safety & Immersion</h3>
+                <p>
+                    During our initial testing phase with low-fidelity wireframes, we found that heavy Augmented Reality (AR) visual overlays distracted users from the physical beauty of Dublin. 
+                    Users reported safety concerns while navigating busy streets. This feedback was a crucial turning point for our design direction.
+                </p>
+            </div>
+
+            <div class="projectIterate">
+                <h3>05. Iterate: Shifting to Audio-First</h3>
+                <p>
+                    We iterated by <strong>shifting to an "Audio-First, Visual-Second" approach.</strong> 
+                    I refactored the front-end to prioritize clean, accessible interfaces that complement the surroundings rather than competing with them. 
+                    The result was a 30% increase in user dwell time during our pilot walkthrough, proving that "less is more" in environmental UX.
+                </p>
+            </div>
+
+            <div class="projectTechnical">
+                <h3>Technical Implementation</h3>
+                <p>
+                    As the primary front-end developer, I ensured all code comments and documentation were written in <strong>English</strong> to maintain professional standards. 
+                    I focused on <strong>Responsive Design</strong> and <strong>Clean Code</strong> principles, ensuring the web interface remained performant across various mobile devices during field use.
+                </p>
+            </div>
+        </section>
+    </main>
 
     <footer class="footer" id="contact">
         <div class="footer-inner">
-        <div class="footer-item"><span class="icon">in</span><a href="https://www.linkedin.com/in/emma-sun-138798325" target="_blank">LinkedIn</a></div>
-        <div class="footer-item"><span class="icon">☎</span><span>+353 87 039 2996</span></div>
-        <div class="footer-item"><span class="icon">@</span><a href="mailto:tianyi_sun0611@163.com">tianyi_sun0611@163.com</a></div>
+            <div class="footer-item"><span class="icon">in</span><a href="https://www.linkedin.com/in/emma-sun-138798325" target="_blank">LinkedIn</a></div>
+            <div class="footer-item"><span class="icon">☎</span><span>+353 87 039 2996</span></div>
+            <div class="footer-item"><span class="icon">@</span><a href="mailto:tianyi_sun0611@163.com">tianyi_sun0611@163.com</a></div>
         </div>
         <div class="footer-line"></div>
         <div class="footer-bottom">Designed by Emma</div>
