@@ -3,12 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Retellings - Dubliners | Case Study</title>
+    <title>Retellings — Dubliners | Case Study</title>
     <link rel="stylesheet" href="css/retellings.css">
     <link rel="icon" type="image/png" href="media/logo-v2.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 
+
+
 <body>
+    <!-- ── NAVBAR (original structure) ── -->
     <header class="top">
         <div class="navPill">
             <div class="navSpacer"></div>
@@ -20,114 +26,384 @@
         </div>
     </header>
 
-    <main class="container"> 
-        <section class="projectHeader">
-            <div class="projectHeadLeft">
-                <div class="projectMeta" id="projectCategory">Web Development & UX Design</div>
-                <h1 class="projectTitle" id="projectTitle">Retellings - Dubliners</h1>
-            </div>
-            
-            <div class="projectHeadRight" id="projectFacts">
-                <div class="factBlock"> 
-                    <div class="factLabel">Tools</div>
-                    <div class="factValue">Figma, Blender, VS Code (HTML/CSS)</div>
-                </div>
+    <!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+    <div class="lightboxOverlay" id="lightboxOverlay"></div>
+    <button class="lightboxClose" id="lightboxClose">✕</button>
+    <img class="lightboxImg" id="lightboxImg" src="" alt="">
+</div>
 
-                <div class="factBlock"> 
-                    <div class="factLabel">Role</div>
-                    <div class="factValue">
-                        Collaborated in a 5-member cross-functional team.<br>
-                        <strong>Key Contributions:</strong> Field Investigation, Information Architecture, Sitemap & Wireframing, Lead Front-end Development (HTML/CSS), and Debugging.
-                    </div>
-                </div>
-
+    <!-- ── HERO ── -->
+    <section class="projectHero">
+        <div class="heroBgText">Dubliners</div>
+        <div class="heroLeft">
+            <div class="heroTag">Case Study · Web Dev &amp; UX</div>
+            <h1 class="heroTitle">
+                Retelling<br><em>Dublin</em>
+            </h1>
+            <p class="heroSubtitle">
+                How do you make a 20th-century stream-of-consciousness 
+                novel feel alive on a busy Dublin street in 2026?
+            </p>
+            <b><a class="heroCta" href="https://retellingdubliners.com" target="_blank">Visit Live Site</a></b>
+        </div>
+        <div class="heroRight">
+            <div class="metaGrid" id="projectFacts">
                 <div class="factBlock">
-                    <div class="factLabel">Project Timeline</div>
-                    <div class="factValue">Feb - Apr, 2026</div>
+                    <div class="factLabel">Timeline</div>
+                    <div class="factValue">Feb — Apr 2026</div>
                 </div>
-
+                <div class="factBlock">
+                    <div class="factLabel">Team</div>
+                    <div class="factValue">5-member cross-functional</div>
+                    <div class="factValue">Logan Dulski, Nashwa H, Ge You, Yayi Liu, Emma Sun</div>
+                </div>
+                <div class="factBlock">
+                    <div class="factLabel">Tools</div>
+                    <div class="factValue">Figma · JavaScript · HTML/CSS</div>
+                </div>
+                <div class="factBlock">
+                    <div class="factLabel">My Role</div>
+                    <div class="factValue">UX Research · Illustrator · Lead Front-end Dev</div>
+                </div>
                 <div class="factBlock">
                     <div class="factLabel">Focus</div>
-                    <div class="factValue">UI/UX, Accessibility, Interaction Design, Responsive Front-end</div>
+                    <div class="factValue">UI/UX · Accessibility · Responsive Design</div>
                 </div>
-
                 <div class="factBlock">
-                    <div class="factLabel">Project Link</div>
+                    <div class="factLabel">Links</div>
                     <div class="factValue">
-                        <a href="retellingdubliners.com">Retelling Dubliners</a>
-                        <a href="https://github.com/ldulski/cs7026-group7">Github Repository</a>
+                        <a href="https://retellingdubliners.com" target="_blank">Live Site</a> ·
+                        <a href="https://github.com/ldulski/cs7026-group7" target="_blank">GitHub</a>
                     </div>
-                    
                 </div>
             </div>
-        </section>
-
-        <section class="projectBody">
-            
-            <div class="projectProblem">
-                <h3>01. The Problem</h3>
+        </div>
+    </section>
+    <!-- ── CASE BODY ── -->
+    <main class="container">
+        <!-- 01 PROBLEM -->
+        <article class="projectChapter reveal" id="projectProblem">
+            <div class="chapterIndex">
+                <div class="chapterNum">01</div>
+                <div class="chapterLabel">The Problem</div>
+            </div>
+            <div class="chapterContent">
+                <h2>There's an <em>engagement gap</em> at the heart of Irish literary heritage</h2>
                 <p>
-                    James Joyce is a cornerstone of Irish heritage, yet a significant <strong>engagement gap</strong> exists in physical exhibitions. 
-                    Traditional museum displays often rely on static text and artifacts, which can feel inaccessible to younger, non-expert audiences. 
-                    The challenge was: How might we transform the action viewing into active literary interaction for the modern traveler, book worm, and history lover?
+                    James Joyce is a cornerstone of Dublin's identity — yet standing before a plaque 
+                    at 7 Eccles Street, most visitors feel nothing. Traditional museum and street 
+                    exhibits rely on static text and bronze markers that speak to historians, not 
+                    to the curious traveler pulling out their phone.
+                </p>
+                <p>
+                    <strong>Our design brief:</strong> How might we transform passive monument viewing 
+                    into active literary interaction — for the modern traveler, the bookworm, and the history lover?
+                </p>
+                <div class="pullQuote">
+                    <p>"How do we make a 110-year-old short story feel urgent on a busy Dublin street?"</p>
+                </div>
+                <!-- SCREENSHOT SLOT A -->
+                <figure class="imgFull">
+                    <a class="imgZoom" href="media/01-field-visit.jpg" target="_blank">
+                        <img src="media/01-field-visit.jpg" alt="Field visit at James Joyce Center">
+                    </a>
+                    <figcaption>Field visit at James Joyce Center.</figcaption>
+                </figure>
+            </div>
+        </article>
+        <!-- 02 RESEARCH -->
+        <article class="projectChapter reveal" id="projectInsight">
+            <div class="chapterIndex">
+                <div class="chapterNum">02</div>
+                <div class="chapterLabel">The Research</div>
+            </div>
+            <div class="chapterContent">
+                <h2>Field investigation uncovered the real barrier: <em>context switching</em></h2>
+                <div class="statRow">
+                    <div class="statBlock">
+                        <div class="statNum">80%</div>
+                        <div class="statDesc">of visitors reported cognitive overload at exhibits</div>
+                    </div>
+                    <div class="statBlock">
+                        <div class="statNum">3</div>
+                        <div class="statDesc">distinct user personas identified through interviews</div>
+                    </div>
+                    <div class="statBlock">
+                        <div class="statNum">2</div>
+                        <div class="statDesc">site visits to Dublin Writers Museum &amp; Joyce landmarks</div>
+                    </div>
+                </div>
+                <p>
+                    Through field investigations at the Dublin Writers Museum and in-depth user interviews, 
+                    we found the problem wasn't Joyce's prose being too complex — it was the 
+                    <strong>constant attention-switching</strong> between a physical sign and the reader's imagination.
+                </p>
+                <div class="insightCard">
+                    <p>The friction isn't literary. It's spatial. People can't hold a mental image of Eveline's 
+                    parlour while simultaneously reading about it on a rain-streaked plaque.</p>
+                </div>
+                <p>
+                    We interviewed three participants representing our core personas: the <strong>Traveler</strong> 
+                    (cultural curiosity, limited literary background), the <strong>Bookworm</strong> (deep textual 
+                    knowledge, wants contextual depth), and the <strong>History Lover</strong> (place-driven, 
+                    archival mindset). Each revealed a different failure mode of the current experience.
+                </p>
+                <!-- SCREENSHOT SLOT B -->
+                <figure class="imgGrid2">
+                    <div class="imgGridItem">
+                        <a class="imgZoom" href="media/02a-user-persona.png" target="_blank">
+                            <img src="media/02a-user-persona.png" alt="Three user personas: Traveler, Bookworm, History Lover">
+                        </a>
+                        <figcaption>Three user personas: Traveler, Bookworm, History Lover.</figcaption>
+                    </div>
+                    <div class="imgGridItem">
+                        <a class="imgZoom" href="media/02b-interview-notes.png" target="_blank">
+                            <img src="media/02b-interview-notes.png" alt="Interview notes and affinity mapping">
+                        </a>
+                        <figcaption>Affinity mapping from user interviews.</figcaption>
+                    </div>
+                </figure>
+                <a class="chapterLink" href="https://docs.google.com/document/d/1ir_iPGzZfzeWl5rvViVyuu2Kk7ZkEJZzEXxeSKLicA4/edit?usp=sharing" target="_blank">↗ Read Full Survey Notes</a>
+            </div>
+        </article>
+        <!-- 03 IDEA -->
+        <article class="projectChapter reveal" id="projectIdea">
+            <div class="chapterIndex">
+                <div class="chapterNum">03</div>
+                <div class="chapterLabel">The Idea</div>
+            </div>
+            <div class="chapterContent">
+                <h2>A <em>living narrative overlay</em> — the city as the gallery</h2>
+                <p>
+                    We proposed <strong>Retellings</strong> — a mobile-first web experience that uses 
+                    location-aware triggers and minimalist visual metaphors to layer Joyce's 
+                    <em>Dubliners</em> directly onto the streets that inspired it.
+                </p>
+                <p>
+                    The design principle: <strong>bring the story to the user's feet</strong>, 
+                    not make them travel mentally to reach it. Each landmark becomes a chapter entrance.
+                    The UI disappears into the city rather than competing with it.
+                </p>
+                <!-- SCREENSHOT SLOT C -->
+                <figure class="imgFull">
+                    <a class="imgZoom" href="media/03-sitemap-ia.png" target="_blank">
+                        <img src="media/03-sitemap-ia.png" alt="Sitemap and information architecture diagram">
+                    </a>
+                    <figcaption>Information architecture and sitemap — my contribution to the planning phase.</figcaption>
+                </figure>
+                <!-- SCREENSHOT SLOT D -->
+                <figure class="imgGrid2">
+                    <div class="imgGridItem">
+                        <a class="imgZoom" href="media/03b-wireframe-lo.png" target="_blank">
+                            <img src="media/03b-wireframe-lo.png" alt="Low-fidelity wireframes">
+                        </a>
+                        <figcaption>Lo-fi wireframes, mobile-first layout.</figcaption>
+                    </div>
+                    <div class="imgGridItem">
+                        <a class="imgZoom" href="media/03c-wireframe-hi.png" target="_blank">
+                            <img src="media/03c-wireframe-hi.png" alt="High-fidelity Figma mockups">
+                        </a>
+                        <figcaption>Hi-fi Figma mockups before build.</figcaption>
+                    </div>
+                </figure>
+                <div class="tagRow">
+                    <span class="tagPill">Mobile-First</span>
+                    <span class="tagPill">Location-Aware</span>
+                    <span class="tagPill">Glanceable UI</span>
+                    <span class="tagPill">Literary Overlay</span>
+                    <span class="tagPill">Accessibility</span>
+                </div>
+            </div>
+        </article>
+        <!-- 04 TESTING -->
+        <article class="projectChapter reveal" id="projectTest">
+            <div class="chapterIndex">
+                <div class="chapterNum">04</div>
+                <div class="chapterLabel">Testing</div>
+            </div>
+            <div class="chapterContent">
+                <h2>Our first instinct was wrong — and the users told us immediately</h2>
+                <p>
+                    Our initial low-fidelity prototypes leaned heavily on 
+                    <strong>Augmented Reality visual overlays</strong>. In walkthroughs on Grafton Street 
+                    and along the Liffey, users quickly flagged two critical problems:
+                </p>
+                <div class="processList">
+                    <div class="processStep">
+                        <div class="processNum">01</div>
+                        <div class="processBody">
+                            <div class="processTitle">Visual Competition</div>
+                            <p>Heavy AR overlays blocked the physical beauty of Dublin itself — the very thing users came to experience.</p>
+                        </div>
+                    </div>
+                    <div class="processStep">
+                        <div class="processNum">02</div>
+                        <div class="processBody">
+                            <div class="processTitle">Safety Concerns</div>
+                            <p>Navigating busy city streets while looking through an AR lens created real anxiety. Users chose phone safety over engagement.</p>
+                        </div>
+                    </div>
+                    <div class="processStep">
+                        <div class="processNum">03</div>
+                        <div class="processBody">
+                            <div class="processTitle">Cognitive Load — Again</div>
+                            <p>We'd solved one context-switching problem only to create another. The AR had become its own kind of plaque.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- SCREENSHOT SLOT E -->
+                <figure class="imgGrid2">
+                    <div class="imgGridItem">
+                        <a class="imgZoom" href="media/04a-ar-prototype-test.png" target="_blank">
+                            <img src="media/04a-ar-prototype-test.png" alt="User testing with AR prototype on Dublin streets">
+                        </a>
+                        <figcaption>User testing on-site route on Retelling.</figcaption>
+                    </div>
+                    <div class="imgGridItem">
+                        <a class="imgZoom" href="media/04b-ar-prototype-test.png" target="_blank">
+                            <img src="media/04b-ar-prototype-test.png" alt="User testing with AR prototype on Dublin streets">
+                        </a>
+                        <figcaption>User testing on-site route on Google Map.</figcaption>
+                    </div>
+                </figure>
+               
+                <p>
+                    This was a crucial pivot point. <strong>User feedback directly drove our next iteration</strong> 
+                    rather than technical ambition.
                 </p>
             </div>
-
-            <div class="projectInsight">
-                <h3>02. The Insight: "The Context Switching Barrier"</h3>
-                <p>
-                    Through field investigations at the Dublin Writers Museum and user interviews, we discovered that <strong>80% of visitors felt "cognitive overload."</strong> 
-                    The barrier wasn't the complexity of Joyce's prose, but the constant need to switch attention between a physical plaque and their imagination. 
-                    <strong>The Insight:</strong> To make literature "stick," we needed to remove the friction between the physical city ac
-                <p>
-                    We then interview 3 people that refers to 3 different kind of user, they refer to: traveler, book worm, and history lover.
-                </p>
-                <a href="https://docs.google.com/document/d/1ir_iPGzZfzeWl5rvViVyuu2Kk7ZkEJZzEXxeSKLicA4/edit?usp=sharing" alt="surveynote">Our survey note</a>
+        </article>
+        <!-- 05 ITERATE -->
+        <article class="projectChapter reveal" id="projectIterate">
+            <div class="chapterIndex">
+                <div class="chapterNum">05</div>
+                <div class="chapterLabel">Iteration</div>
             </div>
-
-            <div class="projectIdea">
-                <h3>03. The Idea: A Living Narrative Overlay</h3>
+            <div class="chapterContent">
+                <h2>Shifting to <em>Audio-First</em> — less is more in environmental UX</h2>
                 <p>
-                    We proposed <strong>"Retellings"</strong>—a mobile-first web experience that uses minimalist visual metaphors and location-aware triggers. 
-                    By simplifying complex stream-of-consciousness into "glanceable" UI, we aimed to lower the barrier to entry for Joyce’s <i>Dubliners</i> and turn the city into a gallery.
+                    We made a bold call: <strong>deprioritize visuals entirely</strong>. The new model 
+                    was "Audio-First, Visual-Second" — let your ears carry Joyce while your eyes carry 
+                    you safely through the city.
                 </p>
-            </div>
-
-            <div class="projectTest">
-                <h3>04. Testing: Balancing Safety & Immersion</h3>
                 <p>
-                    During our initial testing phase with low-fidelity wireframes, we found that heavy Augmented Reality (AR) visual overlays distracted users from the physical beauty of Dublin. 
-                    Users reported safety concerns while navigating busy streets. This feedback was a crucial turning point for our design direction.
+                    As lead front-end developer, I refactored the entire interface around this principle. 
+                    The visual layer became a calm, typographic companion — ambient rather than immersive. 
+                    Clean accessible markup, performant across all mobile devices.
                 </p>
+                <div class="pullQuote">
+                    <p>30% increase in user dwell time after the pivot. Removing friction, not adding features, drove the improvement.</p>
+                </div>
+                <!-- SCREENSHOT SLOT F -->
+                <figure class="imgGrid3">
+                    <div class="imgGridItem">
+                        <a class="imgZoom" href="media/05a-final-home.png" target="_blank">
+                            <img src="media/05a-final-home.png" alt="Final homepage on mobile">
+                        </a>
+                        <figcaption>Home screen</figcaption>
+                    </div>
+                    <div class="imgGridItem">
+                        <a class="imgZoom" href="media/05b-final-story.png" target="_blank">
+                            <img src="media/05b-final-story.png" alt="Story view with audio player UI">
+                        </a>
+                        <figcaption>Story + audio player</figcaption>
+                    </div>
+                    <div class="imgGridItem">
+                        <a class="imgZoom" href="media/05c-final-map.png" target="_blank">
+                            <img src="media/05c-final-map.png" alt="Map view showing Joyce landmark locations">
+                        </a>
+                        <figcaption>Location map view</figcaption>
+                    </div>
+                </figure>
+                <!-- SCREENSHOT SLOT G -->
+                <figure class="imgFull">
+                    <a class="imgZoom" href="media/05d-code-snippet.png" target="_blank">
+                        <img src="media/05d-code-snippet.png" alt="VS Code screenshot showing clean HTML/CSS code with comments">
+                    </a>
+                    <figcaption>Code snapshot — Throughout for team-wide readability.</figcaption>
+                </figure>
+                <div class="tagRow">
+                    <span class="tagPill">Audio-First UX</span>
+                    <span class="tagPill">Responsive HTML/CSS</span>
+                    <span class="tagPill">Clean Code</span>
+                    <span class="tagPill">Performance</span>
+                    <span class="tagPill">WCAG Accessibility</span>
+                </div>
             </div>
-
-            <div class="projectIterate">
-                <h3>05. Iterate: Shifting to Audio-First</h3>
-                <p>
-                    We iterated by <strong>shifting to an "Audio-First, Visual-Second" approach.</strong> 
-                    I refactored the front-end to prioritize clean, accessible interfaces that complement the surroundings rather than competing with them. 
-                    The result was a 30% increase in user dwell time during our pilot walkthrough, proving that "less is more" in environmental UX.
-                </p>
-            </div>
-
-            <div class="projectTechnical">
-                <h3>Technical Implementation</h3>
-                <p>
-                    As the primary front-end developer, I ensured all code comments and documentation were written in <strong>English</strong> to maintain professional standards. 
-                    I focused on <strong>Responsive Design</strong> and <strong>Clean Code</strong> principles, ensuring the web interface remained performant across various mobile devices during field use.
-                </p>
-            </div>
-        </section>
+        </article>
     </main>
-
+    <!-- ── OUTCOME BANNER ── -->
+    <section class="outcomeBanner reveal">
+        <div class="outcomeBannerInner">
+            <h2>Turning a city street<br>into a <em>reading room</em></h2>
+            <ul class="outcomeList">
+                <li>30% increase in user dwell time after audio-first pivot</li>
+                <li>Full responsive delivery across mobile devices for field use</li>
+                <li>Validated problem–research–iteration cycle across 3 personas</li>
+                <li>Live deployment at retellingdubliners.com</li>
+                <li>Open-source codebase with professional documentation standards</li>
+            </ul>
+        </div>
+    </section>
+    <!-- ── FOOTER ── -->
     <footer class="footer" id="contact">
         <div class="footer-inner">
-            <div class="footer-item"><span class="icon">in</span><a href="https://www.linkedin.com/in/emma-sun-138798325" target="_blank">LinkedIn</a></div>
-            <div class="footer-item"><span class="icon">☎</span><span>+353 87 039 2996</span></div>
-            <div class="footer-item"><span class="icon">@</span><a href="mailto:tianyi_sun0611@163.com">tianyi_sun0611@163.com</a></div>
+            <div class="footer-item">
+                <span class="icon">LN</span> 
+                <a href="https://www.linkedin.com/in/emma-sun-138798325" target="_blank">LinkedIn</a>
+            </div>
+            <div class="footer-item">
+                <span class="icon">M</span>
+                <a href="tel:+353870392996">087 039 2996</a>
+            </div>
+            <div class="footer-item">
+                <span class="icon">@</span>
+                <a href="mailto:tianyi_sun0611@163.com">tianyi_sun0611@163.com</a>
+            </div>
         </div>
-        <div class="footer-line"></div>
-        <div class="footer-bottom">Designed by Emma</div>
+        <div class="footer-bottom">
+            <span>© 2026 Emma Tianyi Sun</span>
+        </div>
     </footer>
+   <script>
+    // Scroll reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                e.target.classList.add('visible');
+                observer.unobserve(e.target);
+            }
+        });
+    }, { threshold: 0.08 });
+    reveals.forEach(r => observer.observe(r));
+
+    // Lightbox
+    const lightbox    = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const overlay     = document.getElementById('lightboxOverlay');
+    const closeBtn    = document.getElementById('lightboxClose');
+
+    document.querySelectorAll('.imgZoom').forEach(link => {
+        link.addEventListener('click', e => {
+            e.preventDefault();
+            lightboxImg.src = link.href;
+            lightbox.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    function closeLightbox() {
+        lightbox.classList.remove('open');
+        document.body.style.overflow = '';
+    }
+
+    overlay.addEventListener('click', closeLightbox);
+    closeBtn.addEventListener('click', closeLightbox);
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape') closeLightbox();
+    });
+</script>
 </body>
 </html>
