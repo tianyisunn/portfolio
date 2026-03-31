@@ -1220,3 +1220,21 @@ border-radius: 12px;
     padding: 10px;
   }
 }
+
+/* 初始状态：透明且向下偏移 30px */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out; /* 动画持续 0.8 秒 */
+}
+
+/* 激活状态：回到原位并显示 */
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 也可以在 HTML 里给不同的卡片加内联样式，或者用 nth-child */
+.projectsGrid .reveal:nth-child(1) { transition-delay: 0.1s; }
+.projectsGrid .reveal:nth-child(2) { transition-delay: 0.2s; }
+.projectsGrid .reveal:nth-child(3) { transition-delay: 0.3s; }

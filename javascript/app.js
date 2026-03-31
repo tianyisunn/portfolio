@@ -43,3 +43,23 @@ document.addEventListener('DOMContentLoaded', () => {
 /* Note: renderProjects() and other data-rendering functions are removed 
   to prevent overwriting your custom HTML text. 
 */
+
+document.addEventListener('DOMContentLoaded', () => {
+  const revealElements = document.querySelectorAll('.reveal');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // When element enters the viewport, add the 'visible' class
+        entry.target.classList.add('visible');
+        // Stop observing once the animation is triggered
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1, // Trigger when 10% of the element is visible
+    rootMargin: '0px 0px -50px 0px' // Slightly offset the trigger point for better feel
+  });
+
+  revealElements.forEach(el => observer.observe(el));
+});
