@@ -7,7 +7,7 @@
     <link rel="icon" type="image/png" href="media/logo-v2.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Playwrite+IE:wght@100..400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Playwrite+IE:wght@100..400&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
    
     @import url('https://fonts.googleapis.com/css2?family=Playwrite+IE:wght@100..400&display=swap');
@@ -81,14 +81,14 @@
         .btnPill:hover { background: var(--brown); }
 
         /* ── HERO ── */
-        .ad-hero {
+        .artsy-hero {
             position: relative;
             background: var(--cream);
             padding: 6rem 2.5rem 4rem;
             border-bottom: 1px solid var(--divider);
             overflow: hidden;
         }
-        .ad-hero-bg-text {
+        .artsy-hero-bg-text {
             position: absolute;
             top: 50%; left: 50%;
             transform: translate(-50%, -50%);
@@ -104,7 +104,7 @@
             font-optical-sizing: auto;
         
         }
-        .ad-hero-inner {
+        .artsy-hero-inner {
             max-width: 1100px;
             margin: 0 auto;
             display: grid;
@@ -114,7 +114,7 @@
             position: relative;
             z-index: 2;
         }
-        .ad-eyebrow {
+        .artsy-eyebrow {
             font-family: 'DM Mono', monospace;
             font-size: 0.7rem;
             letter-spacing: 0.15em;
@@ -125,14 +125,14 @@
             align-items: center;
             gap: 0.75rem;
         }
-        .ad-eyebrow::before {
+        .artsy-eyebrow::before {
             content: '';
             display: inline-block;
             width: 2rem;
             height: 1px;
             background: var(--green);
         }
-        .ad-title {
+        .artsy-title {
             font-family: "Caveat", cursive;
             font-size: clamp(6rem, 12vw, 8rem);
             font-weight: 700;
@@ -141,16 +141,16 @@
             color: var(--ink);
             margin: 0 0 1.5rem;
         }
-        .ad-title em { font-style: italic; color: var(--brown); }
-        .ad-subtitle {
+        .artsy-title em { font-style: italic; color: var(--brown); }
+        .artsy-subtitle {
             font-size: 1.05rem;
             color: var(--muted);
             max-width: 38ch;
             line-height: 1.65;
             margin: 0 0 1.5rem;
         }
-        .ad-badges { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
-        .ad-badge {
+        .artsy-badges { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+        .artsy-badge {
             font-family: 'DM Mono', monospace;
             font-size: 0.7rem;
             letter-spacing: 0.08em;
@@ -159,12 +159,12 @@
             color: var(--cream);
             border-radius: 999px;
         }
-        .ad-badge-note {
+        .artsy-badge-note {
             font-family: 'DM Mono', monospace;
             font-size: 0.7rem;
             color: var(--light);
         }
-        .ad-meta-grid {
+        .artsy-meta-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 1.5rem 2rem;
@@ -181,32 +181,32 @@
         .fact-value { font-size: 0.85rem; color: var(--muted); }
 
         /* ── BODY ── */
-        .ad-body { max-width: 1100px; margin: 0 auto; padding: 0 2.5rem; }
+        .artsy-body { max-width: 1100px; margin: 0 auto; padding: 0 2.5rem; }
 
         /* ── CHAPTERS ── */
-        .ad-chapter {
+        .artsy-chapter {
             display: grid;
             grid-template-columns: 200px 1fr;
             gap: 4rem;
             padding: 5rem 0;
             border-bottom: 1px solid var(--divider);
         }
-        .ad-ch-index { position: sticky; top: 6rem; align-self: start; }
-        .ad-ch-num {
+        .artsy-ch-index { position: sticky; top: 6rem; align-self: start; }
+        .artsy-ch-num {
             font-family: 'DM Mono', monospace;
             font-size: 0.65rem;
             letter-spacing: 0.15em;
             text-transform: uppercase;
             color: var(--light);
         }
-        .ad-ch-label {
+        .artsy-ch-label {
             font-family: 'Lora', serif;
             font-size: 1.3rem;
             font-weight: 600;
             color: var(--brown);
             margin-top: 0.5rem;
         }
-        .ad-ch-content h2 {
+        .artsy-ch-content h2 {
             font-family: 'Lora', serif;
             font-size: clamp(1.8rem, 3vw, 2.5rem);
             font-weight: 700;
@@ -214,23 +214,23 @@
             color: var(--ink);
             margin-bottom: 1.5rem;
         }
-        .ad-ch-content h2 em { font-style: italic; color: var(--brown); }
-        .ad-ch-content p {
+        .artsy-ch-content h2 em { font-style: italic; color: var(--brown); }
+        .artsy-ch-content p {
             font-size: 1rem;
             color: #4a3520;
             max-width: 64ch;
             margin-bottom: 1.2rem;
             line-height: 1.75;
         }
-        .ad-ch-content strong { font-weight: 500; color: var(--ink); }
+        .artsy-ch-content strong { font-weight: 500; color: var(--ink); }
 
         /* ── Pull Quote ── */
-        .ad-pull-quote {
+        .artsy-pull-quote {
             border-left: 3px solid var(--brown);
             padding: 1.2rem 0 1.2rem 2rem;
             margin: 2rem 0;
         }
-        .ad-pull-quote p {
+        .artsy-pull-quote p {
             font-family: 'Lora', serif;
             font-size: 1.2rem;
             font-style: italic;
@@ -241,8 +241,8 @@
         }
 
         /* ── Problem List ── */
-        .ad-problem-list { margin: 2rem 0; }
-        .ad-problem-item {
+        .artsy-problem-list { margin: 2rem 0; }
+        .artsy-problem-item {
             display: grid;
             grid-template-columns: 2.5rem 1fr;
             gap: 1.2rem;
@@ -252,15 +252,15 @@
             color: #4a3520;
             line-height: 1.6;
         }
-        .ad-problem-item:last-child { border-bottom: 1px solid var(--divider); }
-        .ad-problem-icon {
+        .artsy-problem-item:last-child { border-bottom: 1px solid var(--divider); }
+        .artsy-problem-icon {
             font-family: 'Lora', serif;
             font-size: 1.2rem;
             color: var(--brown);
         }
 
         /* ── Feature Grid ── */
-        .ad-feature-grid {
+        .artsy-feature-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 1px;
@@ -268,22 +268,22 @@
             border: 1px solid var(--divider);
             margin: 2rem 0;
         }
-        .ad-feature-card { background: var(--cream); padding: 1.75rem; }
-        .ad-feature-num {
+        .artsy-feature-card { background: var(--cream); padding: 1.75rem; }
+        .artsy-feature-num {
             font-family: 'DM Mono', monospace;
             font-size: 0.65rem;
             letter-spacing: 0.15em;
             color: var(--green);
             margin-bottom: 0.75rem;
         }
-        .ad-feature-card h4 {
+        .artsy-feature-card h4 {
             font-family: 'Lora', serif;
             font-size: 1rem;
             font-weight: 600;
             color: var(--brown);
             margin: 0 0 0.6rem;
         }
-        .ad-feature-card p {
+        .artsy-feature-card p {
             font-size: 0.88rem;
             color: var(--muted);
             margin: 0;
@@ -292,18 +292,18 @@
         }
 
         /* ── Persona Grid ── */
-        .ad-persona-grid {
+        .artsy-persona-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 1.5rem;
             margin: 2rem 0;
         }
-        .ad-persona {
+        .artsy-persona {
             background: var(--tan);
             padding: 2rem;
             border: 1px solid var(--divider);
         }
-        .ad-persona-label {
+        .artsy-persona-label {
             font-family: 'DM Mono', monospace;
             font-size: 0.62rem;
             letter-spacing: 0.15em;
@@ -311,14 +311,14 @@
             color: var(--green);
             margin-bottom: 0.75rem;
         }
-        .ad-persona h4 {
+        .artsy-persona h4 {
             font-family: 'Lora', serif;
             font-size: 1.1rem;
             font-weight: 600;
             color: var(--brown);
             margin: 0 0 0.75rem;
         }
-        .ad-persona p {
+        .artsy-persona p {
             font-size: 0.9rem;
             color: #5a4530;
             margin: 0 0 1rem;
@@ -327,8 +327,8 @@
         }
 
         /* ── Tag Pills ── */
-        .ad-tag-row { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-        .ad-tag-pill {
+        .artsy-tag-row { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .artsy-tag-pill {
             font-family: 'DM Mono', monospace;
             font-size: 0.62rem;
             letter-spacing: 0.08em;
@@ -340,15 +340,15 @@
         }
 
         /* ── Color Swatches ── */
-        .ad-color-row { display: flex; gap: 1.5rem; margin: 2rem 0; flex-wrap: wrap; }
-        .ad-swatch { display: flex; flex-direction: column; gap: 0.4rem; }
-        .ad-swatch-block { width: 80px; height: 80px; border-radius: 4px; }
-        .ad-swatch-hex { font-family: 'DM Mono', monospace; font-size: 0.75rem; font-weight: 500; }
-        .ad-swatch-name { font-family: 'DM Mono', monospace; font-size: 0.65rem; color: var(--muted); }
+        .artsy-color-row { display: flex; gap: 1.5rem; margin: 2rem 0; flex-wrap: wrap; }
+        .artsy-swatch { display: flex; flex-direction: column; gap: 0.4rem; }
+        .artsy-swatch-block { width: 80px; height: 80px; border-radius: 4px; }
+        .artsy-swatch-hex { font-family: 'DM Mono', monospace; font-size: 0.75rem; font-weight: 500; }
+        .artsy-swatch-name { font-family: 'DM Mono', monospace; font-size: 0.65rem; color: var(--muted); }
 
         /* ── Tech List ── */
-        .ad-tech-list { margin: 2rem 0; }
-        .ad-tech-item {
+        .artsy-tech-list { margin: 2rem 0; }
+        .artsy-tech-item {
             display: grid;
             grid-template-columns: 180px 1fr;
             gap: 2rem;
@@ -356,8 +356,8 @@
             border-top: 1px solid var(--divider);
             align-items: start;
         }
-        .ad-tech-item:last-child { border-bottom: 1px solid var(--divider); }
-        .ad-tech-label {
+        .artsy-tech-item:last-child { border-bottom: 1px solid var(--divider); }
+        .artsy-tech-label {
             font-family: 'DM Mono', monospace;
             font-size: 0.72rem;
             letter-spacing: 0.08em;
@@ -365,10 +365,10 @@
             color: var(--brown);
             padding-top: 0.15rem;
         }
-        .ad-tech-item p { font-size: 0.9rem; color: var(--muted); margin: 0; max-width: none; line-height: 1.65; }
+        .artsy-tech-item p { font-size: 0.9rem; color: var(--muted); margin: 0; max-width: none; line-height: 1.65; }
 
         /* ── Placeholder ── */
-        .ad-placeholder {
+        .artsy-placeholder {
             width: 100%;
             min-height: 240px;
             background: var(--tan);
@@ -384,17 +384,17 @@
             color: var(--light);
             margin: 2rem 0;
         }
-        .ad-placeholder-grid2 {
+        .artsy-placeholder-grid2 {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 1rem;
             margin: 2rem 0;
         }
-        .ad-placeholder-grid2 .ad-placeholder { margin: 0; min-height: 180px; }
+        .artsy-placeholder-grid2 .artsy-placeholder { margin: 0; min-height: 180px; }
 
         /* ── Status Banner ── */
-        .ad-status-banner { background: var(--brown); padding: 5rem 2.5rem; margin-top: 5rem; }
-        .ad-status-inner {
+        .artsy-status-banner { background: var(--brown); padding: 5rem 2.5rem; margin-top: 5rem; }
+        .artsy-status-inner {
             max-width: 1100px;
             margin: 0 auto;
             display: grid;
@@ -402,7 +402,7 @@
             gap: 4rem;
             align-items: center;
         }
-        .ad-status-banner h2 {
+        .artsy-status-banner h2 {
             font-family: 'Lora', serif;
             font-size: clamp(2rem, 4vw, 3rem);
             font-weight: 700;
@@ -410,10 +410,10 @@
             color: var(--cream);
             margin: 0;
         }
-        .ad-status-banner h2 em { color: var(--tan); font-style: italic; }
-        .ad-status-list { list-style: none; display: flex; flex-direction: column; gap: 1rem; }
-        .ad-status-list li { display: flex; gap: 1rem; font-size: 0.95rem; color: #c4a882; line-height: 1.5; }
-        .ad-status-list li::before { content: '→'; color: var(--tan); flex-shrink: 0; }
+        .artsy-status-banner h2 em { color: var(--tan); font-style: italic; }
+        .artsy-status-list { list-style: none; display: flex; flex-direction: column; gap: 1rem; }
+        .artsy-status-list li { display: flex; gap: 1rem; font-size: 0.95rem; color: #c4a882; line-height: 1.5; }
+        .artsy-status-list li::before { content: '→'; color: var(--tan); flex-shrink: 0; }
 
         /* ── Footer ── */
         .footer { border-top: 1px solid var(--divider); padding: 2.5rem; background: var(--cream); }
@@ -436,19 +436,19 @@
 
         /* ── Responsive ── */
         @media (max-width: 900px) {
-            .ad-hero-inner { grid-template-columns: 1fr; gap: 2.5rem; }
-            .ad-hero-bg-text { display: none; }
-            .ad-meta-grid { grid-template-columns: 1fr 1fr; }
-            .ad-chapter { grid-template-columns: 1fr; gap: 1.5rem; padding: 3rem 0; }
-            .ad-ch-index { position: static; }
-            .ad-body { padding: 0 1.5rem; }
-            .ad-feature-grid { grid-template-columns: 1fr; }
-            .ad-persona-grid { grid-template-columns: 1fr; }
-            .ad-placeholder-grid2 { grid-template-columns: 1fr; }
-            .ad-status-inner { grid-template-columns: 1fr; gap: 2.5rem; }
-            .ad-status-banner { padding: 3rem 1.5rem; margin-top: 3rem; }
-            .ad-tech-item { grid-template-columns: 1fr; gap: 0.5rem; }
-            .ad-hero { padding: 5rem 1.5rem 3rem; }
+            .artsy-hero-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+            .artsy-hero-bg-text { display: none; }
+            .artsy-meta-grid { grid-template-columns: 1fr 1fr; }
+            .artsy-chapter { grid-template-columns: 1fr; gap: 1.5rem; padding: 3rem 0; }
+            .artsy-ch-index { position: static; }
+            .artsy-body { padding: 0 1.5rem; }
+            .artsy-feature-grid { grid-template-columns: 1fr; }
+            .artsy-persona-grid { grid-template-columns: 1fr; }
+            .artsy-placeholder-grid2 { grid-template-columns: 1fr; }
+            .artsy-status-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+            .artsy-status-banner { padding: 3rem 1.5rem; margin-top: 3rem; }
+            .artsy-tech-item { grid-template-columns: 1fr; gap: 0.5rem; }
+            .artsy-hero { padding: 5rem 1.5rem 3rem; }
         }
     </style>
 </head>
@@ -467,20 +467,20 @@
     </header>
 
     <!-- ── HERO ── -->
-    <section class="ad-hero">
-        <div class="ad-hero-bg-text">Artsy Dublin</div>
-        <div class="ad-hero-inner">
+    <section class="artsy-hero">
+        <div class="artsy-hero-bg-text">Artsy Dublin</div>
+        <div class="artsy-hero-inner">
             <div>
-                <div class="ad-eyebrow">Case Study · Web Platform & UX</div>
-                <h1 class="ad-title">Artsy<br><em>Dublin</em></h1>
-                <p class="ad-subtitle">Discovering art events and finding event buddies — a tailored platform for Dublin's cultural scene.</p>
-                <div class="ad-badges">
-                    <span class="ad-badge"> In Progress</span>
-                    <span class="ad-badge-note">React front-end · Backend integration pending</span>
+                <div class="artsy-eyebrow">Case Study · Web Platform & UX</div>
+                <h1 class="artsy-title">Artsy<br><em>Dublin</em></h1>
+                <p class="artsy-subtitle">Discovering art events and finding event buddies — a tailored platform for Dublin's cultural scene.</p>
+                <div class="artsy-badges">
+                    <span class="artsy-badge"> In Progress</span>
+                    <span class="artsy-badge-note">React front-end · Backend integration pending</span>
                 </div>
             </div>
             <div>
-                <div class="ad-meta-grid">
+                <div class="artsy-meta-grid">
                     <div>
                         <div class="fact-label">Timeline</div>
                         <div class="fact-value">2026 (on-going)</div>
@@ -511,191 +511,191 @@
     </section>
 
     <!-- ── BODY ── -->
-    <main class="ad-body">
+    <main class="artsy-body">
 
         <!-- 01 -->
-        <article class="ad-chapter" id="adOverview">
-            <div class="ad-ch-index">
-                <div class="ad-ch-num">01</div>
-                <div class="ad-ch-label">Overview</div>
+        <article class="artsy-chapter" id="adOverview">
+            <div class="artsy-ch-index">
+                <div class="artsy-ch-num">01</div>
+                <div class="artsy-ch-label">Overview</div>
             </div>
-            <div class="ad-ch-content">
+            <div class="artsy-ch-content">
                 <h2>A platform built for <em>Dublin's living art scene</em></h2>
                 <p>Artsy Dublin is a web platform for discovering local performance and arts events in Dublin — music, theatre, film, ballet and beyond — tailored to your interests. It also connects you with people who share those interests, so you never have to go alone.</p>
                 <p>The project sits at the intersection of <strong>event discovery</strong>, <strong>personalised recommendation</strong>, and <strong>lightweight social connection</strong> — three things existing platforms handle poorly when combined.</p>
-                <div class="ad-placeholder">Platform overview — homepage mockup</div>
+                <div class="artsy-placeholder">Platform overview — homepage mockup</div>
             </div>
         </article>
 
         <!-- 02 -->
-        <article class="ad-chapter" id="adProblem">
-            <div class="ad-ch-index">
-                <div class="ad-ch-num">02</div>
-                <div class="ad-ch-label">The Problem</div>
+        <article class="artsy-chapter" id="adProblem">
+            <div class="artsy-ch-index">
+                <div class="artsy-ch-num">02</div>
+                <div class="artsy-ch-label">The Problem</div>
             </div>
-            <div class="ad-ch-content">
+            <div class="artsy-ch-content">
                 <h2>Existing platforms aren't built for <em>art people</em></h2>
                 <p>Platforms like Eventbrite have reasonable event categorisation — but they're general-purpose. Anyone can create an event and tag it however they like, leading to <strong>unreliable, polluted category data</strong>.</p>
-                <div class="ad-problem-list">
-                    <div class="ad-problem-item">
-                        <div class="ad-problem-icon">①</div>
+                <div class="artsy-problem-list">
+                    <div class="artsy-problem-item">
+                        <div class="artsy-problem-icon">①</div>
                         <div><strong>Inaccurate tagging</strong> — user-generated events frequently carry wrong or misleading category labels.</div>
                     </div>
-                    <div class="ad-problem-item">
-                        <div class="ad-problem-icon">②</div>
+                    <div class="artsy-problem-item">
+                        <div class="artsy-problem-icon">②</div>
                         <div><strong>Weak recommendation algorithms</strong> — existing platforms don't build a nuanced interest profile; suggestions feel random.</div>
                     </div>
-                    <div class="ad-problem-item">
-                        <div class="ad-problem-icon">③</div>
+                    <div class="artsy-problem-item">
+                        <div class="artsy-problem-icon">③</div>
                         <div><strong>No spontaneous social layer</strong> — social features focus on long-term groups, not lightweight, event-specific buddy-finding.</div>
                     </div>
                 </div>
-                <div class="ad-pull-quote">
+                <div class="artsy-pull-quote">
                     <p>"I want to find someone to go to a jazz night with — not join a Facebook group about jazz."</p>
                 </div>
             </div>
         </article>
 
         <!-- 03 -->
-        <article class="ad-chapter" id="adSolution">
-            <div class="ad-ch-index">
-                <div class="ad-ch-num">03</div>
-                <div class="ad-ch-label">The Solution</div>
+        <article class="artsy-chapter" id="adSolution">
+            <div class="artsy-ch-index">
+                <div class="artsy-ch-num">03</div>
+                <div class="artsy-ch-label">The Solution</div>
             </div>
-            <div class="ad-ch-content">
+            <div class="artsy-ch-content">
                 <h2>Curated sources + social layer + <em>personal diary</em></h2>
                 <p>Rather than relying on user-generated tags, Artsy Dublin sources event data <strong>directly from reputable venues and institutions</strong> — concert halls, cinemas, galleries — keeping quality high and noise low.</p>
-                <div class="ad-feature-grid">
-                    <div class="ad-feature-card">
-                        <div class="ad-feature-num">A</div>
+                <div class="artsy-feature-grid">
+                    <div class="artsy-feature-card">
+                        <div class="artsy-feature-num">A</div>
                         <h4>Event Buddy Matching</h4>
                         <p>See who else is going to an event and send a lightweight "join me" request. No long-term commitment required until you want one.</p>
                     </div>
-                    <div class="ad-feature-card">
-                        <div class="ad-feature-num">B</div>
+                    <div class="artsy-feature-card">
+                        <div class="artsy-feature-num">B</div>
                         <h4>Art Event Diary</h4>
                         <p>Log events you've attended. Add a short reflection, a rating, a photo. Your diary becomes both a keepsake and the basis for your recommendation profile.</p>
                     </div>
-                    <div class="ad-feature-card">
-                        <div class="ad-feature-num">C</div>
+                    <div class="artsy-feature-card">
+                        <div class="artsy-feature-num">C</div>
                         <h4>Tailored "For You" Feed</h4>
                         <p>Recommendations built from your interest profile, diary history, and what your connections are attending — not generic "popular in Dublin" filler.</p>
                     </div>
-                    <div class="ad-feature-card">
-                        <div class="ad-feature-num">D</div>
+                    <div class="artsy-feature-card">
+                        <div class="artsy-feature-num">D</div>
                         <h4>Playful Events</h4>
                         <p>User-created "crazy event" ideas — PowerPoint nights on art topics, debate clubs, collaborative viewing parties.</p>
                     </div>
                 </div>
-                <div class="ad-placeholder">Core features mapped to user needs</div>
+                <div class="artsy-placeholder">Core features mapped to user needs</div>
             </div>
         </article>
 
         <!-- 04 -->
-        <article class="ad-chapter" id="adUsers">
-            <div class="ad-ch-index">
-                <div class="ad-ch-num">04</div>
-                <div class="ad-ch-label">Target Users</div>
+        <article class="artsy-chapter" id="adUsers">
+            <div class="artsy-ch-index">
+                <div class="artsy-ch-num">04</div>
+                <div class="artsy-ch-label">Target Users</div>
             </div>
-            <div class="ad-ch-content">
+            <div class="artsy-ch-content">
                 <h2>Two audiences, <em>one platform</em></h2>
-                <div class="ad-persona-grid">
-                    <div class="ad-persona">
-                        <div class="ad-persona-label">Primary</div>
+                <div class="artsy-persona-grid">
+                    <div class="artsy-persona">
+                        <div class="artsy-persona-label">Primary</div>
                         <h4>The Dublin Art-Goer</h4>
                         <p>People living in or visiting Dublin who want to stay in the loop on art and performance that actually matches their taste — without trawling five different websites.</p>
-                        <div class="ad-tag-row">
-                            <span class="ad-tag-pill">Local resident</span>
-                            <span class="ad-tag-pill">Tourist</span>
-                            <span class="ad-tag-pill">Student</span>
+                        <div class="artsy-tag-row">
+                            <span class="artsy-tag-pill">Local resident</span>
+                            <span class="artsy-tag-pill">Tourist</span>
+                            <span class="artsy-tag-pill">Student</span>
                         </div>
                     </div>
-                    <div class="ad-persona">
-                        <div class="ad-persona-label">Secondary</div>
+                    <div class="artsy-persona">
+                        <div class="artsy-persona-label">Secondary</div>
                         <h4>The Solo Attendee</h4>
                         <p>People who want to share art experiences with others — but don't have a ready-made group. They want spontaneous, low-commitment connection around shared events.</p>
-                        <div class="ad-tag-row">
-                            <span class="ad-tag-pill">New to Dublin</span>
-                            <span class="ad-tag-pill">Introvert-friendly</span>
-                            <span class="ad-tag-pill">Interest-driven</span>
+                        <div class="artsy-tag-row">
+                            <span class="artsy-tag-pill">New to Dublin</span>
+                            <span class="artsy-tag-pill">Introvert-friendly</span>
+                            <span class="artsy-tag-pill">Interest-driven</span>
                         </div>
                     </div>
                 </div>
-                <div class="ad-placeholder-grid2">
-                    <div class="ad-placeholder">Primary persona — The Art-Goer</div>
-                    <div class="ad-placeholder">Secondary persona — The Solo Attendee</div>
+                <div class="artsy-placeholder-grid2">
+                    <div class="artsy-placeholder">Primary persona — The Art-Goer</div>
+                    <div class="artsy-placeholder">Secondary persona — The Solo Attendee</div>
                 </div>
             </div>
         </article>
 
         <!-- 05 -->
-        <article class="ad-chapter" id="adDesign">
-            <div class="ad-ch-index">
-                <div class="ad-ch-num">05</div>
-                <div class="ad-ch-label">Design</div>
+        <article class="artsy-chapter" id="adDesign">
+            <div class="artsy-ch-index">
+                <div class="artsy-ch-num">05</div>
+                <div class="artsy-ch-label">Design</div>
             </div>
-            <div class="ad-ch-content">
+            <div class="artsy-ch-content">
                 <h2>Warm, tactile, <em>cultural</em> — not another cold tech app</h2>
                 <p>The visual direction was deliberate: Dublin's art scene feels warm, textured, analogue. We committed to <strong>cream and deep brown</strong> — like aged paper, like a theatre programme, like the wood panelling of a jazz venue.</p>
-                <div class="ad-color-row">
-                    <div class="ad-swatch">
-                        <div class="ad-swatch-block" style="background:#FBF4EA; border:1px solid #d4c4a8;"></div>
-                        <span class="ad-swatch-hex">#FBF4EA</span>
-                        <span class="ad-swatch-name">Background / Cream</span>
+                <div class="artsy-color-row">
+                    <div class="artsy-swatch">
+                        <div class="artsy-swatch-block" style="background:#FBF4EA; border:1px solid #d4c4a8;"></div>
+                        <span class="artsy-swatch-hex">#FBF4EA</span>
+                        <span class="artsy-swatch-name">Background / Cream</span>
                     </div>
-                    <div class="ad-swatch">
-                        <div class="ad-swatch-block" style="background:#5A3713;"></div>
-                        <span class="ad-swatch-hex" style="color:#5A3713;">#5A3713</span>
-                        <span class="ad-swatch-name">Primary / Deep Brown</span>
+                    <div class="artsy-swatch">
+                        <div class="artsy-swatch-block" style="background:#5A3713;"></div>
+                        <span class="artsy-swatch-hex" style="color:#5A3713;">#5A3713</span>
+                        <span class="artsy-swatch-name">Primary / Deep Brown</span>
                     </div>
-                    <div class="ad-swatch">
-                        <div class="ad-swatch-block" style="background:#10755A;"></div>
-                        <span class="ad-swatch-hex" style="color:#10755A;">#10755A</span>
-                        <span class="ad-swatch-name">Accent / Forest Green</span>
+                    <div class="artsy-swatch">
+                        <div class="artsy-swatch-block" style="background:#10755A;"></div>
+                        <span class="artsy-swatch-hex" style="color:#10755A;">#10755A</span>
+                        <span class="artsy-swatch-name">Accent / Forest Green</span>
                     </div>
                 </div>
-                <div class="ad-placeholder">Lo-fi wireframes — information architecture</div>
-                <div class="ad-placeholder-grid2">
-                    <div class="ad-placeholder">Discover page — hi-fi mockup</div>
-                    <div class="ad-placeholder">Art Event Diary — hi-fi mockup</div>
+                <div class="artsy-placeholder">Lo-fi wireframes — information architecture</div>
+                <div class="artsy-placeholder-grid2">
+                    <div class="artsy-placeholder">Discover page — hi-fi mockup</div>
+                    <div class="artsy-placeholder">Art Event Diary — hi-fi mockup</div>
                 </div>
             </div>
         </article>
 
         <!-- 06 -->
-        <article class="ad-chapter" id="adTech">
-            <div class="ad-ch-index">
-                <div class="ad-ch-num">06</div>
-                <div class="ad-ch-label">Technical Stack</div>
+        <article class="artsy-chapter" id="adTech">
+            <div class="artsy-ch-index">
+                <div class="artsy-ch-num">06</div>
+                <div class="artsy-ch-label">Technical Stack</div>
             </div>
-            <div class="ad-ch-content">
+            <div class="artsy-ch-content">
                 <h2>Backend-heavy, <em>React front-end</em> — integration in progress</h2>
                 <p>This is primarily a backend project. The core technical challenges live in data sourcing, recommendation logic, and user state management — not the UI layer.</p>
-                <div class="ad-tech-list">
-                    <div class="ad-tech-item">
-                        <div class="ad-tech-label">Event Sourcing</div>
+                <div class="artsy-tech-list">
+                    <div class="artsy-tech-item">
+                        <div class="artsy-tech-label">Event Sourcing</div>
                         <p>API integration pulling event data directly from verified Dublin venues and cultural institutions — bypassing user-generated noise.</p>
                     </div>
-                    <div class="ad-tech-item">
-                        <div class="ad-tech-label">Recommendation Engine</div>
+                    <div class="artsy-tech-item">
+                        <div class="artsy-tech-label">Recommendation Engine</div>
                         <p>Algorithm built on user interest profiles, diary history, and social connections. Personalisation deepens with use.</p>
                     </div>
-                    <div class="ad-tech-item">
-                        <div class="ad-tech-label">Front-end</div>
+                    <div class="artsy-tech-item">
+                        <div class="artsy-tech-label">Front-end</div>
                         <p>React — component-driven, responsive. Currently being built independently from backend; integration phase next.</p>
                     </div>
-                    <div class="ad-tech-item">
-                        <div class="ad-tech-label">Content Management</div>
+                    <div class="artsy-tech-item">
+                        <div class="artsy-tech-label">Content Management</div>
                         <p>User profiles, diary entries, event logs, social connections — all managed through a structured backend data layer.</p>
                     </div>
                 </div>
-                <div class="ad-placeholder">System architecture — event sourcing & recommendation engine</div>
-                <div class="ad-tag-row" style="margin-top:1.5rem;">
-                    <span class="ad-tag-pill">React</span>
-                    <span class="ad-tag-pill">Node.js</span>
-                    <span class="ad-tag-pill">REST API</span>
-                    <span class="ad-tag-pill">Recommendation Algorithm</span>
-                    <span class="ad-tag-pill">Figma</span>
+                <div class="artsy-placeholder">System architecture — event sourcing & recommendation engine</div>
+                <div class="artsy-tag-row" style="margin-top:1.5rem;">
+                    <span class="artsy-tag-pill">React</span>
+                    <span class="artsy-tag-pill">Node.js</span>
+                    <span class="artsy-tag-pill">REST API</span>
+                    <span class="artsy-tag-pill">Recommendation Algorithm</span>
+                    <span class="artsy-tag-pill">Figma</span>
                 </div>
             </div>
         </article>
@@ -703,10 +703,10 @@
     </main>
 
     <!-- ── STATUS BANNER ── -->
-    <section class="ad-status-banner">
-        <div class="ad-status-inner">
+    <section class="artsy-status-banner">
+        <div class="artsy-status-inner">
             <h2>Currently <em>in development</em></h2>
-            <ul class="ad-status-list">
+            <ul class="artsy-status-list">
                 <li>React front-end components built and styled</li>
                 <li>Backend architecture planned — API sourcing, recommendation logic, user data</li>
                 <li>Backend ↔ frontend integration: next milestone</li>
