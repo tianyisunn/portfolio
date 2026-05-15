@@ -17,8 +17,9 @@ function renderNavSimple() {
   if (!nav) return;
 
   nav.innerHTML = `
-    <a href="index.html#work">Work</a>
-    <a href="index.html#contact">Contact</a>
+    <a href="../index.html#projectsPanel">Work</a>
+    <a href="about.html">About Me</a>
+    <a href="../index.html#contact">Contact</a>
   `;
 }
 

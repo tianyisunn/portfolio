@@ -2,6 +2,7 @@
 const data = {
   nav: [
     { label: "Work", href: "index.html#work" },
+    { label: "About Me", href: "html/about.html" },
     { label: "Contact", href: "index.html#contact" }
   ],
   footer: {
