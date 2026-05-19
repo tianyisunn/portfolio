@@ -1176,6 +1176,36 @@ border-radius: 18px;
 display:block;
 }
 
+.processingPreview{
+  position: relative;
+  min-height: 210px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 34% 24%, rgba(47,128,255,.28), transparent 26%),
+    radial-gradient(circle at 70% 70%, rgba(255,201,87,.42), transparent 28%),
+    linear-gradient(135deg, #101827, #244b8f 58%, #f2c14e);
+}
+
+.processingPreviewOrb{
+  width: 104px;
+  aspect-ratio: 1;
+  border: 2px solid rgba(255,255,255,.72);
+  border-radius: 50%;
+}
+
+.processingPreviewLabel{
+  position: absolute;
+  bottom: 22px;
+  left: 24px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
 
 
 #cardGrid .projectImgSmall {

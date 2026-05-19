@@ -1,0 +1,294 @@
+@import "./index.css";
+
+@font-face{
+  font-family: "Fredericka the Great";
+  src: url("../media/processing/almond-blossom/FrederickatheGreat-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+.processingWrap{
+  width: min(1280px, calc(100% - 56px));
+  max-width: none;
+  margin: 0 auto;
+  padding: 24px 0 72px;
+}
+
+.breadcrumb{
+  margin: 12px 0 34px;
+}
+
+.breadcrumb a{
+  color: #4b5563;
+  font-size: 15px;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover{
+  color: var(--blue);
+}
+
+.processingHero{
+  max-width: 840px;
+  margin-bottom: 34px;
+}
+
+.processingHero h1{
+  margin: 16px 0 14px;
+  color: var(--text);
+  font-size: clamp(46px, 6vw, 84px);
+  line-height: 0.98;
+  letter-spacing: 0;
+}
+
+.processingHero p{
+  max-width: 760px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.processingGrid{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 72px;
+}
+
+.processingCard{
+  display: block;
+  min-height: 100%;
+}
+
+.processingMedia{
+  width: 100%;
+  min-height: auto;
+  margin: 0 0 22px;
+  overflow: visible;
+  border-radius: 0;
+  background:
+    radial-gradient(circle at 28% 24%, rgba(47,128,255,.34), transparent 28%),
+    radial-gradient(circle at 72% 64%, rgba(255,201,87,.4), transparent 30%),
+    linear-gradient(135deg, #101827, #244b8f 52%, #f2c14e);
+}
+
+.processingMedia img{
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  display: block;
+  object-fit: contain;
+}
+
+.processingCanvasWrap{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.processingCanvas{
+  position: relative;
+  width: min(100%, 1040px, calc((100vh - 210px) * 4 / 3));
+  margin: 0 auto;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 0;
+  background: #080a0e;
+}
+
+.processingCanvas canvas{
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
+
+.canvasOverlay{
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  color: #fff;
+}
+
+.canvasTitle{
+  position: absolute;
+  top: 24px;
+  left: 28px;
+  display: grid;
+  gap: 2px;
+  font-family: "Fredericka the Great", Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-shadow: 0 2px 12px rgba(0,0,0,.26);
+}
+
+.canvasTitle strong{
+  color: #fff;
+  font-size: clamp(22px, 3.8vw, 40px);
+  line-height: .95;
+  font-weight: 400;
+}
+
+.canvasTitle span{
+  color: rgba(255,255,255,.78);
+  font-size: clamp(13px, 1.8vw, 20px);
+  line-height: 1;
+  font-weight: 400;
+}
+
+.canvasModes{
+  position: absolute;
+  right: 28px;
+  top: 50%;
+  display: grid;
+  gap: 24px;
+  transform: translateY(-50%);
+  pointer-events: auto;
+}
+
+.canvasModeButton{
+  width: 132px;
+  min-height: 50px;
+  border: none;
+  border-radius: 999px;
+  background: rgba(255,255,255,.32);
+  color: rgba(20,20,20,.78);
+  font-family: "Fredericka the Great", Georgia, "Times New Roman", serif;
+  font-size: 17px;
+  font-weight: 400;
+  font-style: normal;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.canvasModeButton.active{
+  background: rgba(255,255,255,.86);
+  color: #202020;
+}
+
+.canvasHint{
+  position: absolute;
+  right: 24px;
+  bottom: 20px;
+  left: 24px;
+  margin: 0;
+  color: rgba(255,255,255,.86);
+  font-family: "Fredericka the Great", Georgia, "Times New Roman", serif;
+  font-size: clamp(12px, 1.35vw, 16px);
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.25;
+  text-align: center;
+  text-shadow: 0 2px 10px rgba(0,0,0,.32);
+}
+
+.processingContent{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 760px;
+  padding: 0 0 8px;
+}
+
+.processingCount{
+  display: inline-flex;
+  width: fit-content;
+  margin-bottom: 14px;
+  color: var(--blue);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.processingContent h2{
+  margin: 0 0 12px;
+  color: #111827;
+  font-size: clamp(24px, 3vw, 36px);
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+
+.processingContent p{
+  margin: 0 0 18px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.processingTags{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.processingTags span{
+  display: inline-flex;
+  padding: 7px 12px;
+  border: 1.5px solid rgba(47,128,255,0.45);
+  border-radius: 999px;
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.processingPreview{
+  position: relative;
+  min-height: 210px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 34% 24%, rgba(47,128,255,.28), transparent 26%),
+    radial-gradient(circle at 70% 70%, rgba(255,201,87,.42), transparent 28%),
+    linear-gradient(135deg, #101827, #244b8f 58%, #f2c14e);
+}
+
+.processingPreviewOrb{
+  width: 104px;
+  aspect-ratio: 1;
+  border: 2px solid rgba(255,255,255,.72);
+  border-radius: 50%;
+}
+
+.processingPreviewLabel{
+  position: absolute;
+  bottom: 22px;
+  left: 24px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 900px){
+  .processingWrap{
+    width: min(100% - 36px, 1280px);
+    padding: 24px 0 56px;
+  }
+}
+
+@media (max-width: 600px){
+  .processingHero h1{
+    font-size: 42px;
+  }
+
+  .processingHero p{
+    font-size: 17px;
+  }
+
+  .processingMedia{
+    min-height: 0;
+    margin: 0 0 18px;
+  }
+
+  .processingMedia img{
+    min-height: 0;
+  }
+}

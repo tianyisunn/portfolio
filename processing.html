@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Processing Works | Emma Sun</title>
+  <link rel="stylesheet" href="css/processing.css">
+  <link rel="icon" type="image/png" href="media/logo-v2.png">
+</head>
+
+<body>
+  <header class="top">
+    <div class="navPill">
+      <div class="navSpacer"></div>
+      <nav class="navLinks" id="navLinks">
+        <a class="active" href="index.html#projectsPanel">Work</a>
+        <a href="html/about.html">About Me</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btnPill" href="html/resume.html" id="resumeBtn">Resume</a>
+    </div>
+  </header>
+
+  <main class="processingWrap">
+    <nav class="breadcrumb">
+      <a href="index.html#projectsPanel">← Back to Work</a>
+    </nav>
+
+    <section class="processingHero">
+      <span class="sectionTag sectionTag--soft">Creative coding</span>
+      <h1>Processing Works</h1>
+      <p>
+        Five small experiments made with Processing, exploring how code can remix images,
+        motion, interaction, and visual storytelling into playful digital sketches.
+      </p>
+    </section>
+
+    <section class="processingGrid" aria-label="Processing project collection">
+      <article class="processingCard">
+        <div class="processingMedia processingCanvasWrap">
+          <div id="almond-blossom-sketch" class="processingCanvas" aria-label="Interactive Almond Blossom Processing sketch">
+            <div class="canvasOverlay">
+              <div class="canvasTitle">
+                <strong>Almond Blossom</strong>
+                <span>Vincent van Gogh · 1890</span>
+              </div>
+              <div class="canvasModes" aria-label="Almond Blossom mode controls">
+                <button class="canvasModeButton active" type="button" data-almond-scene="0">Reality</button>
+                <button class="canvasModeButton" type="button" data-almond-scene="1">Synthetic</button>
+              </div>
+              <p class="canvasHint" id="almond-blossom-hint">move mouse to create wind and shake branches, click to release petals</p>
+            </div>
+          </div>
+        </div>
+        <div class="processingContent">
+          <span class="processingCount">01</span>
+          <h2>Almond Blossom</h2>
+          <p>
+            An interactive Processing sketch inspired by Van Gogh's Almond Blossom.
+            Move the mouse to shake the branches, click to release petals, then switch
+            into Synthetic mode to explore the blossom as a 3D point cloud.
+          </p>
+          <div class="processingTags">
+            <span>Processing</span>
+            <span>Image Study</span>
+            <span>Creative Coding</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="processingCard">
+        <div class="processingMedia">
+          <img src="media/processing/work-02.png" alt="Processing work 02 preview" onerror="this.style.display='none'">
+        </div>
+        <div class="processingContent">
+          <span class="processingCount">02</span>
+          <h2>Sketch Title</h2>
+          <p>Add a short description for your second Processing work here.</p>
+          <div class="processingTags">
+            <span>Processing</span>
+            <span>Interaction</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="processingCard">
+        <div class="processingMedia">
+          <img src="media/processing/work-03.png" alt="Processing work 03 preview" onerror="this.style.display='none'">
+        </div>
+        <div class="processingContent">
+          <span class="processingCount">03</span>
+          <h2>Sketch Title</h2>
+          <p>Add a short description for your third Processing work here.</p>
+          <div class="processingTags">
+            <span>Processing</span>
+            <span>Generative</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="processingCard">
+        <div class="processingMedia">
+          <img src="media/processing/work-04.png" alt="Processing work 04 preview" onerror="this.style.display='none'">
+        </div>
+        <div class="processingContent">
+          <span class="processingCount">04</span>
+          <h2>Sketch Title</h2>
+          <p>Add a short description for your fourth Processing work here.</p>
+          <div class="processingTags">
+            <span>Processing</span>
+            <span>Motion</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="processingCard">
+        <div class="processingMedia">
+          <img src="media/processing/work-05.png" alt="Processing work 05 preview" onerror="this.style.display='none'">
+        </div>
+        <div class="processingContent">
+          <span class="processingCount">05</span>
+          <h2>Sketch Title</h2>
+          <p>Add a short description for your fifth Processing work here.</p>
+          <div class="processingTags">
+            <span>Processing</span>
+            <span>Experiment</span>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="footer-inner">
+      <div class="footer-item">
+        <span class="icon">LN</span>
+        <a href="https://www.linkedin.com/in/emma-sun-138798325" target="_blank" rel="noreferrer">LinkedIn</a>
+      </div>
+
+      <div class="footer-item">
+        <span class="icon">M</span>
+        <a href="tel:+353870392996">087 039 2996</a>
+      </div>
+
+      <div class="footer-item">
+        <span class="icon">@</span>
+        <a href="mailto:tianyi_sun0611@163.com">tianyi_sun0611@163.com</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Emma Tianyi Sun</span>
+    </div>
+  </footer>
+
+  <script src="javascript/app.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
+  <script src="javascript/almond-blossom-p5.js"></script>
+</body>
+</html>
