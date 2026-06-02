@@ -108,6 +108,99 @@
   display: block;
 }
 
+.processingWorkRow{
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 340px);
+  gap: 18px;
+  align-items: stretch;
+  margin: 0 0 22px;
+}
+
+.processingWorkRow .processingMedia{
+  min-width: 0;
+  margin: 0;
+}
+
+.processingWorkRow .processingCanvas{
+  width: min(100%, calc((100vh - 210px) * 4 / 3));
+  max-width: none;
+}
+
+.processingCodePanel{
+  min-width: 0;
+  min-height: 0;
+  height: var(--processing-code-height, 520px);
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  overflow: hidden;
+  border: 1px solid rgba(17, 24, 39, .14);
+  border-radius: 8px;
+  background: #111827;
+  color: #dbeafe;
+  box-shadow: 0 12px 28px rgba(17, 24, 39, .12);
+}
+
+.codeHeader{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(219, 234, 254, .14);
+  color: rgba(219, 234, 254, .74);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: 11px;
+  line-height: 1.2;
+}
+
+.codeHeader span{
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.codeHeader strong{
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.processingCodePanel pre{
+  min-height: 0;
+  margin: 0;
+  padding: 14px;
+  overflow: auto;
+  color: #dbeafe;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: 12px;
+  line-height: 1.55;
+  tab-size: 2;
+  white-space: pre;
+}
+
+.processingCodePanel code{
+  font: inherit;
+}
+
+.processingCodePanel--almond{
+  border-color: rgba(18, 83, 98, .26);
+  background: #64afbe;
+  color: #143944;
+  box-shadow: 0 12px 28px rgba(18, 83, 98, .18);
+}
+
+.processingCodePanel--almond .codeHeader{
+  border-bottom-color: rgba(20, 57, 68, .2);
+  color: rgba(20, 57, 68, .76);
+}
+
+.processingCodePanel--almond .codeHeader strong{
+  color: #0f2f38;
+}
+
+.processingCodePanel--almond pre{
+  color: #0f2f38;
+}
+
 .canvasOverlay{
   position: absolute;
   inset: 0;
@@ -271,6 +364,15 @@
   .processingWrap{
     width: min(100% - 36px, 1280px);
     padding: 24px 0 56px;
+  }
+
+  .processingWorkRow{
+    grid-template-columns: 1fr;
+  }
+
+  .processingCodePanel{
+    height: auto;
+    max-height: 360px;
   }
 }
 

@@ -62,6 +62,7 @@ const almondBlossomSketch = (p) => {
     petals = Array.from({ length: PETAL_COUNT }, () => new Petal());
     buildPointCloud();
     setupOverlayControls();
+    setupCodePanelHeightSync();
   };
 
   function setupOverlayControls() {
@@ -351,6 +352,27 @@ const almondBlossomSketch = (p) => {
 
   function isInsideCanvas() {
     return p.mouseX >= 0 && p.mouseX <= p.width && p.mouseY >= 0 && p.mouseY <= p.height;
+  }
+
+  function setupCodePanelHeightSync() {
+    const canvasHost = document.getElementById("almond-blossom-sketch");
+    const row = canvasHost && canvasHost.closest(".processingWorkRow");
+    const codePanel = row && row.querySelector(".processingCodePanel");
+    if (!canvasHost || !codePanel) return;
+
+    const syncHeight = () => {
+      if (window.matchMedia("(max-width: 900px)").matches) {
+        codePanel.style.removeProperty("--processing-code-height");
+        return;
+      }
+      codePanel.style.setProperty("--processing-code-height", `${canvasHost.getBoundingClientRect().height}px`);
+    };
+
+    syncHeight();
+    window.addEventListener("resize", syncHeight);
+    if ("ResizeObserver" in window) {
+      new ResizeObserver(syncHeight).observe(canvasHost);
+    }
   }
 
   function getWarpOffset(wx, wy) {

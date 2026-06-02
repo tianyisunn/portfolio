@@ -30,27 +30,36 @@
       <span class="sectionTag sectionTag--soft">Creative coding</span>
       <h1>Processing Works</h1>
       <p>
-        Five small experiments made with Processing, exploring how code can remix images,
+        Some of the small experiments made with Processing, exploring how code can remix images,
         motion, interaction, and visual storytelling into playful digital sketches.
       </p>
     </section>
 
     <section class="processingGrid" aria-label="Processing project collection">
       <article class="processingCard">
-        <div class="processingMedia processingCanvasWrap">
-          <div id="almond-blossom-sketch" class="processingCanvas" aria-label="Interactive Almond Blossom Processing sketch">
-            <div class="canvasOverlay">
-              <div class="canvasTitle">
-                <strong>Almond Blossom</strong>
-                <span>Vincent van Gogh · 1890</span>
+        <div class="processingWorkRow">
+          <div class="processingMedia processingCanvasWrap">
+            <div id="almond-blossom-sketch" class="processingCanvas" aria-label="Interactive Almond Blossom Processing sketch">
+              <div class="canvasOverlay">
+                <div class="canvasTitle">
+                  <strong>Almond Blossom</strong>
+                  <span>Vincent van Gogh · 1890</span>
+                </div>
+                <div class="canvasModes" aria-label="Almond Blossom mode controls">
+                  <button class="canvasModeButton active" type="button" data-almond-scene="0">Reality</button>
+                  <button class="canvasModeButton" type="button" data-almond-scene="1">Synthetic</button>
+                </div>
+                <p class="canvasHint" id="almond-blossom-hint">move mouse to create wind and shake branches, click to release petals</p>
               </div>
-              <div class="canvasModes" aria-label="Almond Blossom mode controls">
-                <button class="canvasModeButton active" type="button" data-almond-scene="0">Reality</button>
-                <button class="canvasModeButton" type="button" data-almond-scene="1">Synthetic</button>
-              </div>
-              <p class="canvasHint" id="almond-blossom-hint">move mouse to create wind and shake branches, click to release petals</p>
             </div>
           </div>
+          <aside class="processingCodePanel processingCodePanel--almond" aria-label="Almond Blossom p5 code">
+            <div class="codeHeader">
+              <span>p5.js</span>
+              <strong>almond-blossom-p5.js</strong>
+            </div>
+            <pre><code data-code-src="javascript/almond-blossom-p5.js">Loading code...</code></pre>
+          </aside>
         </div>
         <div class="processingContent">
           <span class="processingCount">01</span>
@@ -69,15 +78,37 @@
       </article>
 
       <article class="processingCard">
-        <div class="processingMedia">
-          <img src="media/processing/work-02.png" alt="Processing work 02 preview" onerror="this.style.display='none'">
+        <div class="processingWorkRow">
+          <div class="processingMedia processingCanvasWrap">
+            <div id="starry-night-sketch" class="processingCanvas starryNightCanvas" aria-label="Interactive Starry Night Processing sketch">
+              <div class="canvasOverlay">
+                <div class="canvasTitle">
+                  <strong>Starry Night</strong>
+                  <span>particle image study</span>
+                </div>
+                <p class="canvasHint">move mouse to scatter particles, watch them fade and return</p>
+              </div>
+            </div>
+          </div>
+          <aside class="processingCodePanel" aria-label="Starry Night Processing code">
+            <div class="codeHeader">
+              <span>Processing</span>
+              <strong>starynight.pde</strong>
+            </div>
+            <pre><code data-code-src="media/processing/starynight.pde">Loading code...</code></pre>
+          </aside>
         </div>
         <div class="processingContent">
           <span class="processingCount">02</span>
-          <h2>Sketch Title</h2>
-          <p>Add a short description for your second Processing work here.</p>
+          <h2>Starry Night</h2>
+          <p>
+            A particle-based image transformation sketch. The painting is rebuilt from
+            thousands of glowing dots that repel from the cursor, fade through time,
+            and spring gently back into place.
+          </p>
           <div class="processingTags">
             <span>Processing</span>
+            <span>Particles</span>
             <span>Interaction</span>
           </div>
         </div>
@@ -154,7 +185,9 @@
   </footer>
 
   <script src="javascript/app.js"></script>
+  <script src="javascript/code-panel-loader.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
   <script src="javascript/almond-blossom-p5.js"></script>
+  <script src="javascript/starry-night-p5.js"></script>
 </body>
 </html>
