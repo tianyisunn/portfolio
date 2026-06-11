@@ -149,21 +149,23 @@
             line-height: 1.65;
             margin: 0 0 1.5rem;
         }
-        .artsy-badges { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
-        .artsy-badge {
+        .artsy-hero-cta {
+            margin-top: 2.35rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
             font-family: 'DM Mono', monospace;
-            font-size: 0.7rem;
-            letter-spacing: 0.08em;
-            padding: 0.4rem 1rem;
-            background: var(--brown);
-            color: var(--cream);
-            border-radius: 999px;
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--ink);
+            text-decoration: none;
+            border-bottom: 1px solid var(--ink);
+            padding-bottom: 0.2rem;
+            transition: color 0.2s, border-color 0.2s;
         }
-        .artsy-badge-note {
-            font-family: 'DM Mono', monospace;
-            font-size: 0.7rem;
-            color: var(--light);
-        }
+        .artsy-hero-cta::after { content: '↗'; }
+        .artsy-hero-cta:hover { color: var(--green); border-color: var(--green); }
         .artsy-meta-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -367,30 +369,51 @@
         }
         .artsy-tech-item p { font-size: 0.9rem; color: var(--muted); margin: 0; max-width: none; line-height: 1.65; }
 
-        /* ── Placeholder ── */
-        .artsy-placeholder {
+        /* ── Images & Outcome ── */
+        .artsy-img-full {
+            margin: 2.2rem 0;
+            border: 1px solid var(--divider);
+            background: #fffaf2;
+        }
+        .artsy-img-full img {
+            display: block;
             width: 100%;
-            min-height: 240px;
-            background: var(--tan);
-            border: 1.5px dashed var(--light);
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            height: auto;
+        }
+        .artsy-img-full figcaption {
+            padding: 0.8rem 1rem;
             font-family: 'DM Mono', monospace;
-            font-size: 0.72rem;
-            letter-spacing: 0.1em;
+            font-size: 0.68rem;
+            letter-spacing: 0.06em;
             text-transform: uppercase;
-            color: var(--light);
-            margin: 2rem 0;
+            color: var(--muted);
+            border-top: 1px solid var(--divider);
         }
-        .artsy-placeholder-grid2 {
+        .artsy-outcome-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background: var(--divider);
+            border: 1px solid var(--divider);
             margin: 2rem 0;
         }
-        .artsy-placeholder-grid2 .artsy-placeholder { margin: 0; min-height: 180px; }
+        .artsy-outcome-card {
+            background: var(--cream);
+            padding: 1.5rem;
+        }
+        .artsy-outcome-card strong {
+            display: block;
+            font-family: 'Lora', serif;
+            font-size: 1rem;
+            color: var(--brown);
+            margin-bottom: 0.4rem;
+        }
+        .artsy-outcome-card span {
+            display: block;
+            font-size: 0.86rem;
+            color: var(--muted);
+            line-height: 1.55;
+        }
 
         /* ── Status Banner ── */
         .artsy-status-banner { background: var(--brown); padding: 5rem 2.5rem; margin-top: 5rem; }
@@ -414,6 +437,21 @@
         .artsy-status-list { list-style: none; display: flex; flex-direction: column; gap: 1rem; }
         .artsy-status-list li { display: flex; gap: 1rem; font-size: 0.95rem; color: #c4a882; line-height: 1.5; }
         .artsy-status-list li::before { content: '→'; color: var(--tan); flex-shrink: 0; }
+        .artsy-status-cta {
+            display: inline-flex;
+            width: fit-content;
+            margin-top: 1.6rem;
+            font-family: 'DM Mono', monospace;
+            font-size: 0.72rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--cream);
+            text-decoration: none;
+            border-bottom: 1px solid var(--cream);
+            padding-bottom: 0.2rem;
+        }
+        .artsy-status-cta::after { content: '↗'; margin-left: 0.75rem; }
+        .artsy-status-cta:hover { color: var(--tan); border-color: var(--tan); }
 
         /* ── Footer ── */
         .footer { border-top: 1px solid var(--divider); padding: 2.5rem; background: var(--cream); }
@@ -444,7 +482,7 @@
             .artsy-body { padding: 0 1.5rem; }
             .artsy-feature-grid { grid-template-columns: 1fr; }
             .artsy-persona-grid { grid-template-columns: 1fr; }
-            .artsy-placeholder-grid2 { grid-template-columns: 1fr; }
+            .artsy-outcome-grid { grid-template-columns: 1fr; }
             .artsy-status-inner { grid-template-columns: 1fr; gap: 2.5rem; }
             .artsy-status-banner { padding: 3rem 1.5rem; margin-top: 3rem; }
             .artsy-tech-item { grid-template-columns: 1fr; gap: 0.5rem; }
@@ -474,17 +512,14 @@
             <div>
                 <div class="artsy-eyebrow">Case Study · Web Platform & UX</div>
                 <h1 class="artsy-title">Artsy<br><em>Dublin</em></h1>
-                <p class="artsy-subtitle">Discovering art events and finding event buddies — a tailored platform for Dublin's cultural scene.</p>
-                <div class="artsy-badges">
-                    <span class="artsy-badge"> In Progress</span>
-                    <span class="artsy-badge-note">React front-end · Backend integration pending</span>
-                </div>
+                <p class="artsy-subtitle">A live web platform for discovering Dublin arts events and finding people to experience them with.</p>
+                <a class="artsy-hero-cta" href="https://artsy-dublin-website.vercel.app/" target="_blank" rel="noopener">Visit Live Site</a>
             </div>
             <div>
                 <div class="artsy-meta-grid">
                     <div>
                         <div class="fact-label">Timeline</div>
-                        <div class="fact-value">2026</div>
+                        <div class="fact-value">Spring 2026</div>
                     </div>
                     <div>
                         <div class="fact-label">Team</div>
@@ -522,9 +557,14 @@
             </div>
             <div class="artsy-ch-content">
                 <h2>A platform built for <em>Dublin's living art scene</em></h2>
-                <p>Artsy Dublin is a web platform for discovering local performance and arts events in Dublin — music, theatre, film, ballet and beyond — tailored to your interests. It also connects you with people who share those interests, so you never have to go alone.</p>
-                <p>The project sits at the intersection of <strong>event discovery</strong>, <strong>personalised recommendation</strong>, and <strong>lightweight social connection</strong> — three things existing platforms handle poorly when combined.</p>
-                <div class="artsy-placeholder">Platform overview — homepage mockup</div>
+                <p>Artsy Dublin is a live web platform for discovering local performance and arts events in Dublin — music, theatre, film, ballet and beyond — with recommendations shaped around personal interests.</p>
+                <p>The project combines <strong>event discovery</strong>, <strong>personalised recommendation</strong>, and <strong>lightweight social connection</strong>. Instead of presenting culture as another long list of listings, the platform helps users decide what is worth seeing and who they might want to go with.</p>
+                <figure class="artsy-img-full">
+                    <a href="https://artsy-dublin-website.vercel.app/" target="_blank" rel="noopener">
+                        <img src="media/thumbnail-artsydublin.png" alt="Artsy Dublin live website preview">
+                    </a>
+                    <figcaption>Live platform preview — Artsy Dublin, deployed on Vercel.</figcaption>
+                </figure>
             </div>
         </article>
 
@@ -566,6 +606,7 @@
             <div class="artsy-ch-content">
                 <h2>Curated sources + social layer + <em>personal diary</em></h2>
                 <p>Rather than relying on user-generated tags, Artsy Dublin sources event data <strong>directly from reputable venues and institutions</strong> — concert halls, cinemas, galleries — keeping quality high and noise low.</p>
+                <p>The final product turns that data into a calmer browsing experience: users can explore cultural events, keep track of what they have attended, and use social features only when they are useful.</p>
                 <div class="artsy-feature-grid">
                     <div class="artsy-feature-card">
                         <div class="artsy-feature-num">A</div>
@@ -584,11 +625,24 @@
                     </div>
                     <div class="artsy-feature-card">
                         <div class="artsy-feature-num">D</div>
-                        <h4>Playful Events</h4>
-                        <p>User-created "crazy event" ideas — PowerPoint nights on art topics, debate clubs, collaborative viewing parties.</p>
+                        <h4>Community-Led Events</h4>
+                        <p>Informal cultural gatherings such as art-topic presentation nights, debate clubs, and collaborative viewing parties.</p>
                     </div>
                 </div>
-                <div class="artsy-placeholder">Core features mapped to user needs</div>
+                <div class="artsy-outcome-grid">
+                    <div class="artsy-outcome-card">
+                        <strong>Find</strong>
+                        <span>Browse Dublin arts events through clearer categories and interest-led discovery.</span>
+                    </div>
+                    <div class="artsy-outcome-card">
+                        <strong>Remember</strong>
+                        <span>Turn attended events into a personal cultural record through the art diary.</span>
+                    </div>
+                    <div class="artsy-outcome-card">
+                        <strong>Connect</strong>
+                        <span>Meet around specific events instead of joining broad, long-term social groups.</span>
+                    </div>
+                </div>
             </div>
         </article>
 
@@ -622,9 +676,19 @@
                         </div>
                     </div>
                 </div>
-                <div class="artsy-placeholder-grid2">
-                    <div class="artsy-placeholder">Primary persona — The Art-Goer</div>
-                    <div class="artsy-placeholder">Secondary persona — The Solo Attendee</div>
+                <div class="artsy-outcome-grid">
+                    <div class="artsy-outcome-card">
+                        <strong>Save time</strong>
+                        <span>Browse trusted cultural options in one place instead of checking multiple venue sites.</span>
+                    </div>
+                    <div class="artsy-outcome-card">
+                        <strong>Choose confidently</strong>
+                        <span>Clear categories and recommendations help users find events that match their taste.</span>
+                    </div>
+                    <div class="artsy-outcome-card">
+                        <strong>Avoid going alone</strong>
+                        <span>Buddy matching offers solo attendees a low-pressure way to share an experience.</span>
+                    </div>
                 </div>
             </div>
         </article>
@@ -637,7 +701,7 @@
             </div>
             <div class="artsy-ch-content">
                 <h2>Warm, tactile, <em>cultural</em> — not another cold tech app</h2>
-                <p>The visual direction was deliberate: Dublin's art scene feels warm, textured, analogue. We committed to <strong>cream and deep brown</strong> — like aged paper, like a theatre programme, like the wood panelling of a jazz venue.</p>
+                <p>The visual direction was deliberate: Dublin's art scene feels warm, textured, and human. We used <strong>cream, deep brown, and forest green</strong> to echo printed programmes, gallery labels, and the atmosphere of small cultural venues.</p>
                 <div class="artsy-color-row">
                     <div class="artsy-swatch">
                         <div class="artsy-swatch-block" style="background:#FBF4EA; border:1px solid #d4c4a8;"></div>
@@ -655,10 +719,19 @@
                         <span class="artsy-swatch-name">Accent / Forest Green</span>
                     </div>
                 </div>
-                <div class="artsy-placeholder">Lo-fi wireframes — information architecture</div>
-                <div class="artsy-placeholder-grid2">
-                    <div class="artsy-placeholder">Discover page — hi-fi mockup</div>
-                    <div class="artsy-placeholder">Art Event Diary — hi-fi mockup</div>
+                <div class="artsy-outcome-grid">
+                    <div class="artsy-outcome-card">
+                        <strong>Readable first</strong>
+                        <span>Event details are arranged for quick scanning across mobile and desktop.</span>
+                    </div>
+                    <div class="artsy-outcome-card">
+                        <strong>Soft social cues</strong>
+                        <span>Buddy-finding supports the event journey without overpowering it.</span>
+                    </div>
+                    <div class="artsy-outcome-card">
+                        <strong>Consistent tone</strong>
+                        <span>The interface feels like a cultural guide rather than a generic ticketing product.</span>
+                    </div>
                 </div>
             </div>
         </article>
@@ -670,27 +743,26 @@
                 <div class="artsy-ch-label">Technical Stack</div>
             </div>
             <div class="artsy-ch-content">
-                <h2>Backend-heavy, <em>React front-end</em> — integration in progress</h2>
-                <p>This is primarily a backend project. The core technical challenges live in data sourcing, recommendation logic, and user state management — not the UI layer.</p>
+                <h2>A data-driven concept with a <em>responsive React front-end</em></h2>
+                <p>The project required the team to think beyond static screens: event sourcing, recommendation logic, profile state, and responsive interaction all had to work together as a coherent product.</p>
                 <div class="artsy-tech-list">
                     <div class="artsy-tech-item">
                         <div class="artsy-tech-label">Event Sourcing</div>
-                        <p>API integration pulling event data directly from verified Dublin venues and cultural institutions — bypassing user-generated noise.</p>
+                        <p>Structured around verified Dublin venues and cultural institutions, reducing the noise of open user-generated listings.</p>
                     </div>
                     <div class="artsy-tech-item">
                         <div class="artsy-tech-label">Recommendation Engine</div>
-                        <p>Algorithm built on user interest profiles, diary history, and social connections. Personalisation deepens with use.</p>
+                        <p>Designed around user interests, diary history, and social connections so personalisation can improve over time.</p>
                     </div>
                     <div class="artsy-tech-item">
                         <div class="artsy-tech-label">Front-end</div>
-                        <p>React — component-driven, responsive. Currently being built independently from backend; integration phase next.</p>
+                        <p>A component-driven React interface with responsive flows for discovery, profiles, diaries, and social features.</p>
                     </div>
                     <div class="artsy-tech-item">
                         <div class="artsy-tech-label">Content Management</div>
                         <p>User profiles, diary entries, event logs, social connections — all managed through a structured backend data layer.</p>
                     </div>
                 </div>
-                <div class="artsy-placeholder">System architecture — event sourcing & recommendation engine</div>
                 <div class="artsy-tag-row" style="margin-top:1.5rem;">
                     <span class="artsy-tag-pill">React</span>
                     <span class="artsy-tag-pill">Node.js</span>
@@ -706,13 +778,16 @@
     <!-- ── STATUS BANNER ── -->
     <section class="artsy-status-banner">
         <div class="artsy-status-inner">
-            <h2>Currently <em>in development</em></h2>
-            <ul class="artsy-status-list">
-                <li>React front-end components built and styled</li>
-                <li>Backend architecture planned — API sourcing, recommendation logic, user data</li>
-                <li>Backend ↔ frontend integration: next milestone</li>
-                <li>Team of 6 across design, front-end, and backend tracks</li>
-            </ul>
+            <h2>Final outcome: <em>live and usable</em></h2>
+            <div>
+                <ul class="artsy-status-list">
+                    <li>Delivered a responsive React experience for Dublin arts discovery</li>
+                    <li>Translated research into discovery, diary, and buddy-matching flows</li>
+                    <li>Balanced cultural warmth with practical product navigation</li>
+                    <li>Deployed the finished project publicly on Vercel</li>
+                </ul>
+                <a class="artsy-status-cta" href="https://artsy-dublin-website.vercel.app/" target="_blank" rel="noopener">Visit Live Site</a>
+            </div>
         </div>
     </section>
 
