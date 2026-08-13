@@ -660,7 +660,7 @@ figure figcaption {
 @media (max-width: 900px) {
     .projectHero {
         grid-template-columns: 1fr;
-        padding: 6rem 1.5rem 3rem;
+        padding: 6rem 4.5rem 3rem 1.5rem;
         gap: 3rem;
     }
     .heroRight { align-items: flex-start; }
@@ -674,23 +674,30 @@ figure figcaption {
     }
     .chapterIndex { position: static; }
 
-    .container { padding: 0 1.5rem; }
+    .container { padding: 0 4.5rem 0 1.5rem; }
 
     .outcomeBannerInner {
         grid-template-columns: 1fr;
         gap: 2.5rem;
     }
-    .outcomeBanner { padding: 3rem 1.5rem; }
+    .outcomeBanner { padding: 3rem 4.5rem 3rem 1.5rem; }
 
     .imgGrid3 { grid-template-columns: 1fr; }
     .imgGrid2 { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 520px) {
-    .top     { padding: 1rem 1rem; }
-    .navPill { padding: 0.4rem 0.5rem 0.4rem 1rem; }
+    html, body { overflow-x: clip; }
+    .top { padding: 10px; }
+    .navPill { width: 100%; height: auto; min-height: 56px; padding: 8px; gap: 2px; }
+    .navLinks { gap: 0; padding-right: 0; }
+    .navLinks a { padding: 8px 7px; font-size: 13px; }
+    .btnPill { padding: 9px 10px; font-size: 12px; }
     .statRow { gap: 1.5rem; }
-    .footer  { padding: 2rem 1.5rem; }
+    .projectHero { padding-right: 4rem; }
+    .container { padding-right: 4rem; }
+    .outcomeBanner { padding-right: 4rem; }
+    .footer  { padding: 2rem 4rem 2rem 1.5rem; }
     .footer-inner { gap: 1.2rem; }
 }
 

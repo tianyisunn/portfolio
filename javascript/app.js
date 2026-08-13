@@ -11,8 +11,12 @@ document.addEventListener('DOMContentLoaded', () => {
   filters.forEach(button => {
     button.addEventListener('click', () => {
       // Toggle active class for buttons
-      filters.forEach(btn => btn.classList.remove('active'));
+      filters.forEach(btn => {
+        btn.classList.remove('active');
+        btn.setAttribute('aria-pressed', 'false');
+      });
       button.classList.add('active');
+      button.setAttribute('aria-pressed', 'true');
 
       // Get category key from the clicked button
       const selectedCategory = button.getAttribute('data-key');
@@ -21,9 +25,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const cardCategory = card.getAttribute('data-category');
         // Logic: Show if 'all' or if card's category matches the button
         if (selectedCategory === 'all' || cardCategory === selectedCategory) {
-          card.style.display = 'block';
+          card.hidden = false;
         } else {
-          card.style.display = 'none';
+          card.hidden = true;
         }
       });
     });
@@ -55,4 +59,3 @@ document.addEventListener('DOMContentLoaded', () => {
 /* Note: renderProjects() and other data-rendering functions are removed 
   to prevent overwriting your custom HTML text. 
 */
-
