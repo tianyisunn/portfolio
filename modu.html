@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MODU — Work in Progress | Emma Sun</title>
+  <meta name="description" content="MODU is an in-progress adaptive furniture assembly experience designed by Emma Sun.">
+  <link rel="icon" type="image/png" href="media/logo-v2.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&family=Ribeye&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/modu.css">
+  <link rel="stylesheet" href="css/case-progress.css">
+  <link rel="stylesheet" href="css/page-navigation.css">
+</head>
+<body data-progress-selector=".projectChapter" data-progress-label-selector=".chapterLabel" data-progress-accent="#715B91">
+  <header class="top">
+    <div class="navPill">
+      <div class="navSpacer"></div>
+      <nav class="navLinks" aria-label="Primary navigation">
+        <a href="index.html#projectsPanel">Work</a>
+        <a href="html/about.html">About Me</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btnPill" href="html/resume.html">Resume</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="projectHero">
+      <div class="heroBgText" aria-hidden="true">MODU</div>
+      <div class="heroLeft">
+        <div class="heroTag">Case Study · Product Design &amp; Frontend</div>
+        <p class="status">Work in progress · Updated August 2026</p>
+        <h1 class="heroTitle">MODU</h1>
+        <p class="heroSubtitle">An adaptive furniture assembly experience designed around different learning and cognitive needs.</p>
+      </div>
+
+      <div class="heroRight">
+        <div class="metaGrid">
+          <div class="factBlock"><div class="factLabel">Timeline</div><div class="factValue">Jun 2026 — Present</div></div>
+          <div class="factBlock"><div class="factLabel">Team</div><div class="factValue">Group 2<br>Astrid Yin · Emma Sun · Ge You<br>Krystyna Mikava · Nashwa Hamido · Sherin Glady</div></div>
+          <div class="factBlock"><div class="factLabel">Tools</div><div class="factValue">Figma · React · TypeScript · Supabase</div></div>
+          <div class="factBlock"><div class="factLabel">My Role</div><div class="factValue">UX/Product Design · 3D Modelling</div></div>
+          <div class="factBlock"><div class="factLabel">Focus</div><div class="factValue">Adaptive Guidance · Task Flows · Accessibility</div></div>
+          <div class="factBlock"><div class="factLabel">Status</div><div class="factValue">Prototype and implementation in progress</div></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <article class="projectChapter" id="overview" data-chapter>
+        <div class="chapterIndex"><div class="chapterNum">01</div><div class="chapterLabel">Overview</div></div>
+        <div class="chapterContent">
+          <h2>Assembly guidance should adapt to <em>how people process a task</em></h2>
+          <p>Furniture assembly combines sequencing, spatial orientation, memory, and physical action. Most instructions present every user with the same dense sequence, regardless of how much structure, reassurance, or visual guidance they need.</p>
+          <p><strong>Our current product question:</strong> How might we make complex assembly tasks easier to understand without removing the user's sense of control?</p>
+          <div class="pullQuote"><p>MODU explores guidance that can change its pace, presentation, and level of detail around the user.</p></div>
+          <figure class="imgFull">
+            <img src="media/modu-cover-v1.jpg" alt="MODU mascot holding a wrench and furniture part in a purple assembly world" width="1800" height="1200">
+            <figcaption>Current MODU visual direction — purple, cream, tactile and approachable.</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="projectChapter" id="product-direction" data-chapter>
+        <div class="chapterIndex"><div class="chapterNum">02</div><div class="chapterLabel">Product Direction</div></div>
+        <div class="chapterContent">
+          <h2>From research themes to a <em>buildable product structure</em></h2>
+          <p>The current direction connects user needs to the product architecture instead of treating accessibility as a final visual check.</p>
+          <div class="processList">
+            <div class="processStep"><div class="processNum">01</div><div class="processBody"><div class="processTitle">Needs and task barriers</div><p>Synthesizing current research into user needs, behavioural patterns, and design considerations.</p></div></div>
+            <div class="processStep"><div class="processNum">02</div><div class="processBody"><div class="processTitle">Journeys and information architecture</div><p>Defining onboarding, learning preferences, task segmentation, assembly guidance, and progress tracking.</p></div></div>
+            <div class="processStep"><div class="processNum">03</div><div class="processBody"><div class="processTitle">Data relationships</div><p>Mapping user profiles, assembly content, task steps, learning preferences, and progress data in Supabase.</p></div></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="projectChapter" id="current-progress" data-chapter>
+        <div class="chapterIndex"><div class="chapterNum">03</div><div class="chapterLabel">Current Progress</div></div>
+        <div class="chapterContent">
+          <h2>Separating what is complete from <em>what still needs evidence</em></h2>
+          <p>MODU is still being designed and built. The case study therefore distinguishes completed design work, active implementation, and work that has not yet been validated.</p>
+          <div class="progressList">
+            <div class="progressRow"><span>Completed</span><div><strong>Research synthesis and initial product architecture</strong><p>Core needs, product areas, task structure, and data relationships have been defined.</p></div></div>
+            <div class="progressRow"><span>In progress</span><div><strong>Critical workflow prototyping and React implementation</strong><p>Key states for personalisation, assembly guidance, and progress are currently being developed.</p></div></div>
+            <div class="progressRow"><span>Not yet validated</span><div><strong>Usability and product outcomes</strong><p>No final claims are made about comprehension, cognitive load, or completion performance at this stage.</p></div></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="projectChapter" id="next-steps" data-chapter>
+        <div class="chapterIndex"><div class="chapterNum">04</div><div class="chapterLabel">Next Steps</div></div>
+        <div class="chapterContent">
+          <h2>The next milestone is to test the <em>critical assembly journey</em></h2>
+          <div class="processList">
+            <div class="processStep"><div class="processNum">01</div><div class="processBody"><div class="processTitle">Complete the prototype</div><p>Connect personalisation, task guidance, and progress into one coherent end-to-end flow.</p></div></div>
+            <div class="processStep"><div class="processNum">02</div><div class="processBody"><div class="processTitle">Run usability testing</div><p>Evaluate task comprehension, navigation accuracy, perceived cognitive load, and moments of uncertainty.</p></div></div>
+            <div class="processStep"><div class="processNum">03</div><div class="processBody"><div class="processTitle">Document the iteration</div><p>Show which findings changed the interface, product requirements, or technical structure.</p></div></div>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <section class="outcomeBanner">
+      <div class="outcomeBannerInner">
+        <h2>A transparent case study<br>that will <em>grow with the product</em></h2>
+        <div>
+          <p>This page documents the current design direction without presenting planned testing as completed evidence.</p>
+          <a href="index.html#projectsPanel">← Back to selected work</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="footer-inner">
+      <div class="footer-item"><span class="icon">LN</span><a href="https://www.linkedin.com/in/emma-sun-138798325" target="_blank" rel="noopener noreferrer">LinkedIn</a></div>
+      <div class="footer-item"><span class="icon">M</span><a href="tel:+353870392996">087 039 2996</a></div>
+      <div class="footer-item"><span class="icon">@</span><a href="mailto:tianyi_sun0611@163.com">tianyi_sun0611@163.com</a></div>
+    </div>
+    <div class="footer-bottom">© 2026 Emma Tianyi Sun</div>
+  </footer>
+  <script src="javascript/case-study-progress.js" defer></script>
+  <script src="javascript/page-navigation.js" defer></script>
+</body>
+</html>

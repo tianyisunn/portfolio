@@ -1,0 +1,142 @@
+.caseProgress{
+  --case-accent:#2f80ff;
+  --case-accent-rgb:47,128,255;
+  --case-ink:#2f80ff;
+  --case-on-accent:#fff;
+  position:fixed;
+  top:50%;
+  right:clamp(10px,1.6vw,26px);
+  z-index:9000;
+  transform:translateY(-50%);
+  pointer-events:none;
+}
+
+.caseProgressNav{
+  position:relative;
+  width:48px;
+  padding:10px 7px;
+  border:1px solid rgba(var(--case-accent-rgb),.2);
+  border-radius:999px;
+  background:rgba(255,255,255,.86);
+  box-shadow:0 12px 34px rgba(20,24,32,.1);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+  pointer-events:auto;
+  transition:width .24s cubic-bezier(.2,.8,.2,1),border-radius .24s ease;
+}
+
+.caseProgressNav:hover,.caseProgressNav:focus-within{width:210px;border-radius:28px}
+
+.caseProgressTrack{
+  position:absolute;
+  top:27px;
+  bottom:27px;
+  right:22px;
+  width:2px;
+  overflow:hidden;
+  background:rgba(var(--case-accent-rgb),.15);
+}
+
+.caseProgressFill{
+  display:block;
+  width:100%;
+  height:100%;
+  background:var(--case-accent);
+  transform:scaleY(0);
+  transform-origin:center top;
+  transition:transform .12s linear;
+}
+
+.caseProgressLinks{position:relative;display:grid;justify-items:end;gap:5px}
+.caseProgressLink{
+  position:relative;
+  width:32px;
+  height:32px;
+  border:1px solid rgba(var(--case-accent-rgb),.22);
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:rgba(255,255,255,.97);
+  color:var(--case-ink);
+  font:500 .62rem/1 ui-monospace,SFMono-Regular,Menlo,monospace;
+  letter-spacing:.02em;
+  text-decoration:none;
+  transition:width .24s cubic-bezier(.2,.8,.2,1),background .2s ease,color .2s ease,box-shadow .2s ease;
+}
+
+.caseProgressNav:hover .caseProgressLink,.caseProgressNav:focus-within .caseProgressLink{width:194px;border-radius:999px}
+.caseProgressLink>span{
+  position:absolute;
+  top:0;
+  right:0;
+  width:32px;
+  height:32px;
+  display:grid;
+  place-items:center;
+}
+.caseProgressLink:not([aria-current="location"]):hover,
+.caseProgressLink:not([aria-current="location"]):focus-visible{
+  border-color:rgba(var(--case-accent-rgb),.38);
+  background:rgba(var(--case-accent-rgb),.13);
+}
+.caseProgressLink[aria-current="location"]{
+  border-color:var(--case-accent);
+  background:var(--case-accent);
+  color:var(--case-on-accent);
+  box-shadow:0 5px 16px rgba(var(--case-accent-rgb),.3);
+}
+
+.caseProgressLabel{
+  position:absolute;
+  top:50%;
+  right:44px;
+  left:14px;
+  max-width:none;
+  padding:0;
+  overflow:hidden;
+  transform:translate(7px,-50%);
+  color:var(--case-ink);
+  font:500 .72rem/1.2 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  letter-spacing:0;
+  opacity:0;
+  white-space:nowrap;
+  text-align:left;
+  text-overflow:ellipsis;
+  pointer-events:none;
+  transition:opacity .18s ease,transform .18s ease;
+}
+
+.caseProgressNav:hover .caseProgressLabel,
+.caseProgressNav:focus-within .caseProgressLabel{
+  transform:translate(0,-50%);
+  opacity:1;
+}
+
+.caseProgressLink[aria-current="location"] .caseProgressLabel{color:var(--case-on-accent)}
+
+.caseProgressSection{scroll-margin-top:115px}
+
+@media(max-width:900px){
+  .caseProgress{right:4px}
+  .caseProgressNav,.caseProgressNav:hover,.caseProgressNav:focus-within{width:28px;padding:6px 1px;border-radius:999px;background:rgba(255,255,255,.72)}
+  .caseProgressLinks{gap:2px}
+  .caseProgressLink{width:24px;height:24px;border-color:transparent;background:transparent;color:transparent;font-size:0;box-shadow:none}
+  .caseProgressLink>span{display:none}
+  .caseProgressLink::after{content:"";width:6px;height:6px;border:1px solid var(--case-accent);border-radius:50%;background:#fff;transition:transform .18s ease,background .18s ease}
+  .caseProgressLink[aria-current="location"]{border-color:transparent;background:transparent;color:transparent;box-shadow:none}
+  .caseProgressLink[aria-current="location"]::after{background:var(--case-accent);transform:scale(1.45)}
+  .caseProgressLabel{display:none}
+  .caseProgressTrack{top:18px;right:13px;bottom:18px;width:1px}
+  .caseProgressSection{scroll-margin-top:82px}
+}
+
+@media(max-height:680px){
+  .caseProgress.caseProgress--dense .caseProgressNav{padding-block:6px}
+  .caseProgress.caseProgress--dense .caseProgressLinks{gap:2px}
+  .caseProgress.caseProgress--dense .caseProgressLink{width:25px;height:25px;font-size:.5rem}
+  .caseProgress.caseProgress--dense .caseProgressTrack{top:19px;bottom:19px}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .caseProgressFill,.caseProgressLink,.caseProgressLabel{transition:none}
+}

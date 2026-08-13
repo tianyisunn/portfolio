@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Retellings — Dubliners | Case Study</title>
     <link rel="stylesheet" href="css/retellings.css">
+    <link rel="stylesheet" href="css/case-progress.css">
+    <link rel="stylesheet" href="css/page-navigation.css">
     <link rel="icon" type="image/png" href="media/logo-v2.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +15,7 @@
 
 
 
-<body>
+<body data-progress-selector=".projectChapter" data-progress-label-selector=".chapterLabel" data-progress-accent="#942823">
     <!-- ── NAVBAR (original structure) ── -->
     <header class="top">
         <div class="navPill">
@@ -28,9 +30,9 @@
     </header>
 
     <!-- LIGHTBOX -->
-<div class="lightbox" id="lightbox">
+<div class="lightbox" id="lightbox" aria-hidden="true">
     <div class="lightboxOverlay" id="lightboxOverlay"></div>
-    <button class="lightboxClose" id="lightboxClose">✕</button>
+    <button class="lightboxClose" id="lightboxClose" aria-label="Close image preview">✕</button>
     <img class="lightboxImg" id="lightboxImg" src="" alt="">
 </div>
 
@@ -46,7 +48,7 @@
                 How do you make a 20th-century stream-of-consciousness 
                 novel feel alive on a busy Dublin street in 2026?
             </p>
-            <b><a class="heroCta" href="https://retellingdubliners.com" target="_blank">Visit Live Site</a></b>
+            <b><a class="heroCta" href="https://retellingdubliners.com" target="_blank" rel="noopener noreferrer">Visit Live Site</a></b>
         </div>
         <div class="heroRight">
             <div class="metaGrid" id="projectFacts">
@@ -74,8 +76,8 @@
                 <div class="factBlock">
                     <div class="factLabel">Links</div>
                     <div class="factValue">
-                        <a href="https://retellingdubliners.com" target="_blank">Live Site</a> ·
-                        <a href="https://github.com/ldulski/cs7026-group7" target="_blank">GitHub</a>
+                        <a href="https://retellingdubliners.com" target="_blank" rel="noopener noreferrer">Live Site</a> ·
+                        <a href="https://github.com/ldulski/cs7026-group7" target="_blank" rel="noopener noreferrer">GitHub</a>
                     </div>
                 </div>
             </div>
@@ -123,16 +125,16 @@
                 <h2>Field investigation uncovered the real barrier: <em>context switching</em></h2>
                 <div class="statRow">
                     <div class="statBlock">
-                        <div class="statNum">80%</div>
-                        <div class="statDesc">of visitors reported cognitive overload at exhibits</div>
-                    </div>
-                    <div class="statBlock">
                         <div class="statNum">3</div>
-                        <div class="statDesc">distinct user personas identified through interviews</div>
+                        <div class="statDesc">user perspectives explored through interviews</div>
                     </div>
                     <div class="statBlock">
                         <div class="statNum">2</div>
-                        <div class="statDesc">site visits to Dublin Writers Museum &amp; Joyce landmarks</div>
+                        <div class="statDesc">cultural sites used for contextual field research</div>
+                    </div>
+                    <div class="statBlock">
+                        <div class="statNum">1</div>
+                        <div class="statDesc">major concept pivot driven by walkthrough feedback</div>
                     </div>
                 </div>
                 <p>
@@ -294,7 +296,7 @@
                     Clean accessible markup, performant across all mobile devices.
                 </p>
                 <div class="pullQuote">
-                    <p>30% increase in user dwell time after the pivot. Removing friction, not adding features, drove the improvement.</p>
+                    <p>Walkthrough feedback supported the shift toward a calmer audio-first experience. Removing visual competition, rather than adding features, became the core design decision.</p>
                 </div>
                 <!-- SCREENSHOT SLOT F -->
                 <figure class="imgGrid3">
@@ -339,7 +341,7 @@
         <div class="outcomeBannerInner">
             <h2>Turning a city street<br>into a <em>reading room</em></h2>
             <ul class="outcomeList">
-                <li>30% increase in user dwell time after audio-first pivot</li>
+                <li>Reframed the experience from visual-first AR to safer audio-led guidance</li>
                 <li>Full responsive delivery across mobile devices for field use</li>
                 <li>Validated problem–research–iteration cycle across 3 personas</li>
                 <li>Live deployment at retellingdubliners.com</li>
@@ -352,7 +354,7 @@
         <div class="footer-inner">
             <div class="footer-item">
                 <span class="icon">LN</span> 
-                <a href="https://www.linkedin.com/in/emma-sun-138798325" target="_blank">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/emma-sun-138798325" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             </div>
             <div class="footer-item">
                 <span class="icon">M</span>
@@ -385,19 +387,26 @@
     const lightboxImg = document.getElementById('lightboxImg');
     const overlay     = document.getElementById('lightboxOverlay');
     const closeBtn    = document.getElementById('lightboxClose');
+    let lastZoomLink;
 
     document.querySelectorAll('.imgZoom').forEach(link => {
         link.addEventListener('click', e => {
             e.preventDefault();
+            lastZoomLink = link;
             lightboxImg.src = link.href;
+            lightboxImg.alt = link.querySelector('img')?.alt || 'Expanded project image';
             lightbox.classList.add('open');
+            lightbox.setAttribute('aria-hidden', 'false');
             document.body.style.overflow = 'hidden';
+            closeBtn.focus();
         });
     });
 
     function closeLightbox() {
         lightbox.classList.remove('open');
+        lightbox.setAttribute('aria-hidden', 'true');
         document.body.style.overflow = '';
+        lastZoomLink?.focus();
     }
 
     overlay.addEventListener('click', closeLightbox);
@@ -406,5 +415,7 @@
         if (e.key === 'Escape') closeLightbox();
     });
 </script>
+<script src="javascript/case-study-progress.js"></script>
+<script src="javascript/page-navigation.js"></script>
 </body>
 </html>

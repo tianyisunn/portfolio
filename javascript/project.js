@@ -170,6 +170,14 @@ function renderProject() {
     throw new Error(`Project not found: ${id}`);
   }
 
+  if (id === "portfolio-dev") {
+    document.body.dataset.progressAccent = "#2F80FF";
+    document.body.dataset.progressInk = "#2F80FF";
+    document.body.dataset.progressOnAccent = "#FFFFFF";
+  } else {
+    delete document.body.dataset.progressSelector;
+  }
+
   document.body.dataset.layout = project.layout || "default";
   document.title = `${project.title} — Emma`;
 

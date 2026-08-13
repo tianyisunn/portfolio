@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Emma — Portfolio</title>
+  <script>document.documentElement.classList.add('js');</script>
   <link rel="stylesheet" href="css/index.css">
    <!-- favicon -->
   <link rel="icon" type="image/png" href="media/logo-v2.png">
@@ -25,28 +26,29 @@
 
   <main>
     <section class="container">
+      <p class="heroEyebrow">Emma Sun — UX/Product Designer · Ireland &amp; UK</p>
       <h1 class="heroTitle">
-        I turn ideas into clear, usable<br/>
-        <span class="blue">digital experiences.</span>
+        I turn user research into<br/>
+        <span class="blue">clear, accessible products.</span>
       </h1>
 
-      <div class="introCard reveal" id="work" reveal>
+      <div class="introCard" id="work">
         <div class="introText">
-          I design and prototype interactive experiences — combining
-          <span class="blue">UX thinking</span>, <span class="blue">visual design</span>, and
-          <span class="blue">front-end implementation</span> to make content intuitive and engaging.
-          Currently pursuing an M.Sc. at Trinity College Dublin.
+          <p class="introLead">
+            I combine <span class="blue">UX research</span>, interaction design, and
+            <span class="blue">front-end prototyping</span> to turn complex journeys into usable digital experiences.
+          </p>
+          <p class="introMeta">M.Sc. Interactive Digital Media at Trinity College Dublin · Open to graduate UX and Product Design opportunities in Ireland and the UK.</p>
+          <div class="heroActions">
+            <a class="heroAction heroAction--primary" href="#projectsPanel">View selected work</a>
+            <a class="heroAction heroAction--secondary" href="media/resume.pdf" download>Download CV</a>
+          </div>
         </div>
 
-        <div class="portrait" aria-label="Portrait">
-          <img src="media/IMG_2459.jpeg" alt="Portrait" class="hero-image"/>
+        <div class="portrait">
+          <img src="media/IMG_2459.jpeg" alt="Emma Sun in Dublin" class="hero-image" width="3024" height="4032"/>
         </div>
       </div>
-
-      <br><br>
-
-     
-      <br>
 
       <div class="projectsSection reveal" id="projectsPanel" >
         <br>
@@ -54,39 +56,53 @@
         <h2 class="sectionTitle sectionTitle--sm">Projects</h2>
         
         <div class="projectsFilters" id="projectsFilters">
-          <button class="filterPill active" data-key="all">All</button>
-          <button class="filterPill" data-key="Interaction & UX Design">UI & UX</button>
-          <button class="filterPill" data-key="Product & Interior Design">Interior & Product</button>
-          <button class="filterPill" data-key="Visual Narratives">Narratives</button>
-          <button class="filterPill" data-key="Creative Coding">Processing</button>
+          <button class="filterPill active" data-key="all" aria-pressed="true">All</button>
+          <button class="filterPill" data-key="Interaction & UX Design" aria-pressed="false">UI & UX</button>
+          <button class="filterPill" data-key="Product & Interior Design" aria-pressed="false">Interior & Product</button>
+          <button class="filterPill" data-key="Visual Narratives" aria-pressed="false">Narratives</button>
+          <button class="filterPill" data-key="Creative Coding" aria-pressed="false">Processing</button>
         </div>
 
         
 
         <div class="projectsGrid reveal" id="projectsGrid"><!--projects part-->
 
-          <a class="projectCard projectCard--featured reveal" href="artsydublin.html" data-category="Interaction & UX Design">
-            <div class="projectImg"><img src="media/thumbnail-artsydublin.png" alt="Artsy Dublin event discovery platform"></div>
+          <a class="projectCard projectCard--featured reveal" href="modu.html" data-category="Interaction & UX Design">
+            <div class="projectVisual projectVisual--modu" role="img" aria-label="MODU mascot holding a wrench and furniture part in a purple assembly world">
+              <span class="projectVisualKicker">Work in progress</span>
+              <strong>MODU</strong>
+              <span>Adaptive assembly guidance</span>
+            </div>
             <div class="projectBody">
-              <h4 class="projectName">Artsy Dublin</h4>
-              <p class="projectDesc">A React platform for discovering Dublin arts events, building a personal event diary, and finding people to attend with.</p>
-              <div class="projectTags"><span class="tagChip">React</span><span class="tagChip">UX Design</span><span class="tagChip">Social UX</span></div>
-              <div class="projectLink">View project <span class="arrow">↗</span></div>
+              <h4 class="projectName">MODU</h4>
+              <p class="projectDesc">An adaptive furniture assembly experience designed around different learning and cognitive needs.</p>
+              <div class="projectTags"><span class="tagChip">Product Discovery</span><span class="tagChip">UX Design</span><span class="tagChip">React + TypeScript</span></div>
+              <div class="projectLink">View work in progress <span class="arrow">↗</span></div>
             </div>
           </a>
 
           <a class="projectCard projectCard--featured reveal" href="retellings.html" data-category="Interaction & UX Design">
-            <div class="projectImg"><img src="media/thumbnail-retellings.png" alt="My Website Project"></div>
+            <div class="projectImg"><img src="media/thumbnail-retellings.png" alt="Retellings Dubliners mobile literary experience" loading="lazy"></div>
             <div class="projectBody">
-              <h4 class="projectName">Retellings - Dubliners</h4>
-              <p class="projectDesc">Inspired by Dubliners, James Joyce, we developed Retellings as a space for the bookworms, history buffs and travellers who want to look beyond the surface of the city.</p>
-              <div class="projectTags"><span class="tagChip">JavaScript</span><span class="tagChip">API</span></div>
-              <div class="projectLink">View project <span class="arrow">↗</span></div>
+              <h4 class="projectName">Retellings — Dubliners</h4>
+              <p class="projectDesc">Field research and street testing led our team from an AR-heavy concept to a safer, audio-first literary experience.</p>
+              <div class="projectTags"><span class="tagChip">UX Research</span><span class="tagChip">Accessibility</span><span class="tagChip">Frontend</span></div>
+              <div class="projectLink">View case study <span class="arrow">↗</span></div>
+            </div>
+          </a>
+
+          <a class="projectCard projectCard--featured reveal" href="artsydublin.html" data-category="Interaction & UX Design">
+            <div class="projectImg"><img src="media/thumbnail-artsydublin.png" alt="Artsy Dublin event discovery interface" loading="lazy"></div>
+            <div class="projectBody">
+              <h4 class="projectName">Artsy Dublin</h4>
+              <p class="projectDesc">A responsive event-discovery product combining trusted cultural listings, a personal diary, and lightweight social connection.</p>
+              <div class="projectTags"><span class="tagChip">Product Design</span><span class="tagChip">React</span><span class="tagChip">Social UX</span></div>
+              <div class="projectLink">View case study <span class="arrow">↗</span></div>
             </div>
           </a>
 
           <a class="projectCard projectCard--featured reveal" href="html/project.html?id=portfolio-dev" data-category="Interaction & UX Design">
-            <div class="projectImg"><img src="media/thumbnail-portfolio.png" alt="My Website Project"></div>
+            <div class="projectImg"><img src="media/thumbnail-portfolio.png" alt="Light and dark themes in Emma's interactive website" loading="lazy"></div>
             <div class="projectBody">
               <h4 class="projectName">Portfolio Engine</h4>
               <p class="projectDesc">A technical showcase of API integration, theme persistence, and scroll-driven interaction.</p>
@@ -97,7 +113,7 @@
 
          
           <a class="projectCard" href="html/project.html?id=sunday" data-category="Visual Narratives">
-            <div class="projectImgSmall"><img src="media/entry.png" alt="Story Narrative"></div>
+            <div class="projectImgSmall"><img src="media/entry.png" alt="Opening screen of the interactive Sunday story" loading="lazy"></div>
             <div class="projectBody">
               <h4 class="projectName">Story Narrative (Twine)</h4>
               <p class="projectDesc">An interactive branching story built with complex variable-driven logic.</p>
@@ -107,7 +123,7 @@
           </a>
 
           <a class="projectCard" href="html/project.html?id=rosetta" data-category="Product & Interior Design">
-            <div class="projectImgSmall"><img src="./media/rosetta/thumbnail-rosetta.png" alt="Rosetta"></div>
+            <div class="projectImgSmall"><img src="./media/rosetta/thumbnail-rosetta.png" alt="Rosetta Stone rebrand identity system" loading="lazy"></div>
             <div class="projectBody">
               <h4 class="projectName">Rosetta Rebrand</h4>
               <p class="projectDesc">A comprehensive brand identity overhaul across digital and social platforms.</p>
@@ -117,7 +133,7 @@
           </a>
 
           <a class="projectCard" href="html/project.html?id=pinocchio" data-category="Visual Narratives">
-            <div class="projectImgSmall"><img src="./media/pinocchio.jpg" alt="Pinocchio"></div>
+            <div class="projectImgSmall"><img src="./media/pinocchio.jpg" alt="3D Pinocchio workshop scene" loading="lazy"></div>
             <div class="projectBody">
               <h4 class="projectName">Pinocchio</h4>
               <p class="projectDesc">Exploring graphic hierarchy through 3D modeling and typographic layout.</p>
@@ -127,7 +143,7 @@
           </a>
 
           <a class="projectCard" href="others.html" data-category="Product & Interior Design">
-            <div class="projectImgSmall"><img src="./media/thumbnail-others.jpg" alt="Blossom"></div>
+            <div class="projectImgSmall"><img src="./media/thumbnail-others.jpg" alt="Collection of spatial and product design work" loading="lazy"></div>
             <div class="projectBody">
               <h4 class="projectName">Spatial & Product Design</h4>
               <p class="projectDesc">A curated collection of my 3D explorations, ranging from flexible educational furniture systems to narrative-driven museum layouts and optimized interior renderings.</p>
@@ -136,8 +152,8 @@
             </div>
           </a>
 
-          <a class="projectCard" href="processing.html" data-category="Creative Visual Coding">
-            <div class="projectImgSmall"><img src="./media/thumbnail-visual-illustration.png" alt="Interactive Almond Blossom creative coding project"></div>
+          <a class="projectCard" href="processing.html" data-category="Creative Coding">
+            <div class="projectImgSmall"><img src="./media/thumbnail-visual-illustration.png" alt="Interactive Almond Blossom creative coding project" loading="lazy"></div>
             <div class="projectBody">
               <h4 class="projectName">Visual Illustration</h4>
               <p class="projectDesc">A collection of five creative coding sketches exploring image transformation, interaction, generative visuals, and playful computational experiments.</p>
@@ -192,7 +208,7 @@
   <div class="footer-inner">
       <div class="footer-item">
         <span class="icon">LN</span> 
-        <a href="https://www.linkedin.com/in/emma-sun-138798325" target="_blank">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/emma-sun-138798325" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </div>
 
       <div class="footer-item">

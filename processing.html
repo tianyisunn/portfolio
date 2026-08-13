@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Processing Works | Emma Sun</title>
   <link rel="stylesheet" href="css/processing.css">
+  <link rel="stylesheet" href="css/page-navigation.css">
   <link rel="icon" type="image/png" href="media/logo-v2.png">
 </head>
 
@@ -37,6 +38,20 @@
 
     <section class="processingGrid" aria-label="Processing project collection">
       <article class="processingCard">
+        <div class="processingContent">
+          <span class="processingCount">01</span>
+          <h2>Almond Blossom</h2>
+          <p>
+            An interactive Processing sketch inspired by Van Gogh's Almond Blossom.
+            Move the mouse to shake the branches, click to release petals, then switch
+            into Synthetic mode to explore the blossom as a 3D point cloud.
+          </p>
+          <div class="processingTags">
+            <span>Processing</span>
+            <span>Image Study</span>
+            <span>Creative Coding</span>
+          </div>
+        </div>
         <div class="processingWorkRow">
           <div class="processingMedia processingCanvasWrap">
             <div id="almond-blossom-sketch" class="processingCanvas" aria-label="Interactive Almond Blossom Processing sketch">
@@ -61,23 +76,23 @@
             <pre><code data-code-src="javascript/almond-blossom-p5.js">Loading code...</code></pre>
           </aside>
         </div>
-        <div class="processingContent">
-          <span class="processingCount">01</span>
-          <h2>Almond Blossom</h2>
-          <p>
-            An interactive Processing sketch inspired by Van Gogh's Almond Blossom.
-            Move the mouse to shake the branches, click to release petals, then switch
-            into Synthetic mode to explore the blossom as a 3D point cloud.
-          </p>
-          <div class="processingTags">
-            <span>Processing</span>
-            <span>Image Study</span>
-            <span>Creative Coding</span>
-          </div>
-        </div>
       </article>
 
       <article class="processingCard">
+        <div class="processingContent">
+          <span class="processingCount">02</span>
+          <h2>Starry Night</h2>
+          <p>
+            A particle-based image transformation sketch. The painting is rebuilt from
+            thousands of glowing dots that repel from the cursor, fade through time,
+            and spring gently back into place.
+          </p>
+          <div class="processingTags">
+            <span>Processing</span>
+            <span>Particles</span>
+            <span>Interaction</span>
+          </div>
+        </div>
         <div class="processingWorkRow">
           <div class="processingMedia processingCanvasWrap">
             <div id="starry-night-sketch" class="processingCanvas starryNightCanvas" aria-label="Interactive Starry Night Processing sketch">
@@ -98,66 +113,8 @@
             <pre><code data-code-src="media/processing/starynight.pde">Loading code...</code></pre>
           </aside>
         </div>
-        <div class="processingContent">
-          <span class="processingCount">02</span>
-          <h2>Starry Night</h2>
-          <p>
-            A particle-based image transformation sketch. The painting is rebuilt from
-            thousands of glowing dots that repel from the cursor, fade through time,
-            and spring gently back into place.
-          </p>
-          <div class="processingTags">
-            <span>Processing</span>
-            <span>Particles</span>
-            <span>Interaction</span>
-          </div>
-        </div>
       </article>
 
-      <article class="processingCard">
-        <div class="processingMedia">
-          <img src="media/processing/work-03.png" alt="Processing work 03 preview" onerror="this.style.display='none'">
-        </div>
-        <div class="processingContent">
-          <span class="processingCount">03</span>
-          <h2>Sketch Title</h2>
-          <p>Add a short description for your third Processing work here.</p>
-          <div class="processingTags">
-            <span>Processing</span>
-            <span>Generative</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="processingCard">
-        <div class="processingMedia">
-          <img src="media/processing/work-04.png" alt="Processing work 04 preview" onerror="this.style.display='none'">
-        </div>
-        <div class="processingContent">
-          <span class="processingCount">04</span>
-          <h2>Sketch Title</h2>
-          <p>Add a short description for your fourth Processing work here.</p>
-          <div class="processingTags">
-            <span>Processing</span>
-            <span>Motion</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="processingCard">
-        <div class="processingMedia">
-          <img src="media/processing/work-05.png" alt="Processing work 05 preview" onerror="this.style.display='none'">
-        </div>
-        <div class="processingContent">
-          <span class="processingCount">05</span>
-          <h2>Sketch Title</h2>
-          <p>Add a short description for your fifth Processing work here.</p>
-          <div class="processingTags">
-            <span>Processing</span>
-            <span>Experiment</span>
-          </div>
-        </div>
-      </article>
     </section>
   </main>
 
@@ -189,5 +146,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
   <script src="javascript/almond-blossom-p5.js"></script>
   <script src="javascript/starry-night-p5.js"></script>
+  <script src="javascript/page-navigation.js"></script>
 </body>
 </html>
