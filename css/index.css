@@ -1353,7 +1353,7 @@ border-radius: 12px;
 }
 
 .projectCard--featured .projectVisual {
-  height: 600px;
+  height: calc(600px - 36px);
 }
 
 /* 2. 核心修改：针对手机小屏进行缩放 */
