@@ -1352,6 +1352,10 @@ border-radius: 12px;
   border-radius: 12px;
 }
 
+.projectCard--featured .projectVisual {
+  height: 600px;
+}
+
 /* 2. 核心修改：针对手机小屏进行缩放 */
 @media (max-width: 600px) {
   .projectCard--featured .projectImg {
@@ -1366,6 +1370,11 @@ border-radius: 12px;
     /* 改为 contain 可以看到完整的长图设计，且不会变形 */
     object-fit: contain !important; 
     border-radius: 8px;
+  }
+
+  .projectCard--featured .projectVisual {
+    height: auto;
+    min-height: 180px;
   }
 
   /* 如果你希望卡片整体也窄一点，可以调整 container */
