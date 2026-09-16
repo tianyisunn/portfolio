@@ -448,8 +448,8 @@ Shot 2 — A clear cut. The camera follows the action and quickly hides behind t
 },
 {
   id: "portfolio-dev",
-  category: "Web Engineering", // 升级为 Engineering 显得更硬核
-  title: "Vanilla Engine: A Custom-Built Portfolio Architecture", // 强调“架构”而非只是网页
+  category: "Creative Coding",
+  title: "Creative Web Playground: An Interactive Art Website",
   layout: "narrative",
   facts: [
     { 
@@ -465,8 +465,8 @@ Shot 2 — A clear cut. The camera follows the action and quickly hides behind t
   sections: [
     {
       type: "text",
-      h: "The Challenge: Beyond Templates",
-      p: "I chose to bypass modern frameworks and static templates to build my own 'Portfolio Engine' from the ground up. My goal was to master the fundamentals of the DOM and browser APIs. This isn't just a website; it's a demonstration of my ability to handle state, asynchronous data, and inclusive design without the 'crutch' of a library. By implementing a dual-theme system and real-time API integration, I bridged the gap between raw logic and high-end user experience."
+      h: "A Personal Space for Creative Experimentation",
+      p: "I designed and built this personal art website as a playful digital space for illustration, motion, and interaction. Rather than treating the page as a static gallery, I used browser APIs, live weather data, and a dual-theme system to let the interface respond to context and invite exploration. The project brings my visual practice and front-end skills together in one expressive experience."
     },
     {
       type: "gallery",
@@ -534,7 +534,7 @@ Shot 2 — A clear cut. The camera follows the action and quickly hides behind t
     {
       type: "text",
       h: "Conclusion",
-      p: "This project serves as proof that I can architect complex, data-driven systems from zero. It showcases my transition from a 'coder' to a 'developer' who considers performance, accessibility, and user psychology at every line of code."
+      p: "This creative website shows how I use code as a visual medium. It brings illustration, interaction, accessibility, and live data into a personal digital space that can keep evolving alongside my art practice."
     }
   ]
 },
