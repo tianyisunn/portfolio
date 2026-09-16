@@ -1032,6 +1032,8 @@ body[data-layout="narrative"] .board--cover .boardImg{
 
 .projectCard--featured {
   grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
 }
 
 .projectCard--featured .projectImg {
@@ -1052,6 +1054,7 @@ body[data-layout="narrative"] .board--cover .boardImg{
   gap: 24px;
   align-items: start;
   margin-top: 16px;
+  min-height: 216px;
 }
 
 .projectCard--featured .projectTags {
@@ -1375,6 +1378,10 @@ border-radius: 12px;
   .projectCard--featured .projectVisual {
     height: auto;
     min-height: 180px;
+  }
+
+  .projectCard--featured .projectBody {
+    min-height: 0;
   }
 
   /* 如果你希望卡片整体也窄一点，可以调整 container */
