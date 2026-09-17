@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&amp;family=DM+Mono:wght@400;500&amp;family=DM+Sans:wght@300;400;500;600&amp;family=Ribeye&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/modu.css?v=20260917-demo-layout">
+  <link rel="stylesheet" href="css/modu.css?v=20260917-research-evidence">
   <link rel="stylesheet" href="css/case-progress.css">
   <link rel="stylesheet" href="css/page-navigation.css">
 </head>
@@ -183,8 +183,32 @@
 
           <div class="competitorSection">
             <p class="eyebrow">Competitor analysis</p>
-            <h3>Each reference solved one part of the experience—not the complete journey.</h3>
-            <p>We compared furniture visualisation and instruction tools with cosy games and learning products. The opportunity was not to copy one competitor, but to connect their strongest patterns around a real assembly task.</p>
+            <h3>Ten reference products revealed three separate approaches.</h3>
+            <p>We grouped the scan into assembly tools, room-planning experiences and gamified learning. The closest products solved one part of the journey, but none combined real assembly, adjustable support and a reason to return.</p>
+
+            <div class="marketScan" aria-label="Three competitor categories">
+              <div>
+                <span>01</span>
+                <strong>Assembly tools</strong>
+                <p class="marketProducts">IKEA Kreativ · Home Improvisation · Furniture Assembly Simulator · Assemble with Care · BILT</p>
+                <p>3D orientation, step-by-step instructions and assembly workflows.</p>
+                <small>Gap: guidance is usually delivered in one fixed way.</small>
+              </div>
+              <div>
+                <span>02</span>
+                <strong>Room planning</strong>
+                <p class="marketProducts">Catroom · IKEA Planner · My Dream Setup · Rooms</p>
+                <p>Ownership, decoration and an emotional connection to furniture.</p>
+                <small>Gap: the experience begins after assembly is complete.</small>
+              </div>
+              <div>
+                <span>03</span>
+                <strong>Gamified learning</strong>
+                <p class="marketProducts">Catroom · Duolingo</p>
+                <p>Visible progress, unlocks and reasons to return to unfinished work.</p>
+                <small>Gap: the patterns are not designed for physical spatial tasks.</small>
+              </div>
+            </div>
 
             <div class="competitorLayout">
               <figure class="competitorLogoCrop">
@@ -226,8 +250,26 @@
         <div class="chapterIndex"><div class="chapterNum">04</div><div class="chapterLabel">Research</div></div>
         <div class="chapterContent">
           <p class="eyebrow">Research synthesis</p>
-          <h2>From diagnostic labels to<br><em>support needs.</em></h2>
-          <p>Our early concepts grouped users by diagnosis. Research showed that this was too rigid: people can share a diagnosis and still need very different support. We reframed the model around what a user needs during a task.</p>
+          <h2>From six diagnosis-led profiles to<br><em>four task-based needs.</em></h2>
+          <p>We reviewed approximately 20 papers and sources covering ADHD, autism, AuDHD, dyslexia and dyspraxia. The recurring assembly difficulties crossed diagnostic categories and could also affect first-time assemblers. We treated these patterns as design hypotheses, not clinical profiles.</p>
+
+          <div class="decisionTrail" aria-label="Research decision from diagnosis-led profiles to support needs">
+            <div>
+              <span>Starting point</span>
+              <strong>Six diagnosis-led profiles</strong>
+              <p>Early concepts connected guidance styles to named cognitive conditions.</p>
+            </div>
+            <div>
+              <span>What changed</span>
+              <strong>Needs overlapped</strong>
+              <p>Planning, information processing, spatial reasoning and reassurance appeared across categories.</p>
+            </div>
+            <div>
+              <span>Product decision</span>
+              <strong>Four adjustable support needs</strong>
+              <p>Guidance would respond to the task and the user's preference, without asking for a diagnosis.</p>
+            </div>
+          </div>
 
           <div class="supportGrid">
             <div><span>01</span><h3>Executive function</h3><p>Planning, starting, sequencing and returning to a task.</p></div>
@@ -235,6 +277,8 @@
             <div><span>03</span><h3>Spatial reasoning</h3><p>Understanding orientation, parts and movement in three dimensions.</p></div>
             <div><span>04</span><h3>Cognitive safety</h3><p>Predictability, reassurance and low-risk recovery from mistakes.</p></div>
           </div>
+
+          <p class="researchChange"><strong>What changed in the product:</strong> onboarding questions moved toward everyday preferences, recommended modes became guidance preferences rather than identities, and support remained adjustable during the build.</p>
 
           <div class="statementBand statementBand--soft">
             <p>Design principle: support is always available, but users control how much they receive and how it is presented.</p>
@@ -302,17 +346,27 @@
         <div class="chapterIndex"><div class="chapterNum">07</div><div class="chapterLabel">Testing</div></div>
         <div class="chapterContent">
           <p class="eyebrow">Formative testing</p>
-          <h2>Testing surfaced friction<br><em>before it became polish.</em></h2>
-          <p>Participants tested the prototype on mobile and iPad. We observed how they moved through the tutorial, interpreted highlighting and controlled the 3D assembly experience.</p>
+          <h2>Five participants tested<br><em>the end-to-end prototype.</em></h2>
+          <p>Participants used the mobile or iPad experience and completed a post-task survey. All had assembled flat-pack furniture a few times and had slight to moderate familiarity with interactive 3D instructions. The sample included mixed self-described cognitive profiles, so we looked for usability signals rather than subgroup differences.</p>
 
-          <div class="progressList">
-            <div class="progressRow"><span>Readability</span><div><strong>Important UI elements felt too small.</strong><p>Increase touch targets and treat tablet layouts as intentional breakpoints rather than scaled mobile screens.</p></div></div>
-            <div class="progressRow"><span>Guidance</span><div><strong>The target part was not always obvious.</strong><p>Strengthen colour contrast and combine highlighting with clearer spatial cues.</p></div></div>
-            <div class="progressRow"><span>Controls</span><div><strong>Screw placement and joystick movement felt imprecise.</strong><p>Tune sensitivity, enlarge interactive zones and provide more forgiving snapping behaviour.</p></div></div>
-            <div class="progressRow"><span>Onboarding</span><div><strong>The tutorial felt long and easy to skip.</strong><p>Shorten the initial sequence and teach controls closer to the moment they are needed.</p></div></div>
+          <div class="testStats" aria-label="Selected results from five user-testing responses">
+            <div><strong>5/5</strong><span>selected step-by-step task segmentation as helpful</span></div>
+            <div><strong>4.8/5</strong><span>average rating for completion feedback clarity</span></div>
+            <div><strong>4.6/5</strong><span>average rating for visual instruction clarity</span></div>
+            <div><strong>3.2/5</strong><span>average rating for ease of 3D model controls</span></div>
           </div>
 
-          <p class="limitNote"><strong>Research limitation:</strong> the sample was formative and too small to validate support profiles or make claims about clinical effectiveness. The findings guide iteration; they do not prove outcomes.</p>
+          <div class="progressList">
+            <div class="progressRow"><span>Keep</span><div><strong>Small steps and clear completion feedback were the strongest parts.</strong><p>All five participants selected step-by-step segmentation as helpful. Visual instructions and completion feedback were among the highest-rated assembly elements.</p></div></div>
+            <div class="progressRow"><span>Simplify</span><div><strong>3D interaction remained the clearest usability risk.</strong><p>Ease of 3D controls averaged 3.2/5, and three participants selected 3D controls as an area for improvement. The next iteration needs larger targets, forgiving snapping and faster actions.</p></div></div>
+            <div class="progressRow"><span>Orient</span><div><strong>Participants did not always know where they were in the build.</strong><p>Stage awareness averaged 3.4/5 and ranged from 1 to 5. An overview, visible target model and stronger current-step cues would make the journey easier to scan.</p></div></div>
+            <div class="progressRow"><span>Clarify</span><div><strong>Onboarding and personalised guidance worked unevenly.</strong><p>Initial questions averaged 4.8/5, but three participants still selected onboarding for improvement and one rated the recommended guidance 2/5. Profile switching needs clearer explanation and an optional guided transition.</p></div></div>
+            <div class="progressRow"><span>Compare</span><div><strong>MODU was not universally preferred to a paper manual.</strong><p>Perceived helpfulness versus a paper manual averaged 3.6/5 and ranged from 2 to 5. One participant wanted a fast overview video rather than waiting through every 3D interaction.</p></div></div>
+          </div>
+
+          <p class="evidenceNote"><strong>Motivation signal:</strong> all five participants agreed that rewards made completion more meaningful, and all selected new furniture tasks as a reason they might return. This reflects stated preference, not measured retention.</p>
+
+          <p class="limitNote"><strong>Research limitation:</strong> this was a five-person convenience sample using a self-report survey. We did not record task time, error rate or a controlled comparison with paper instructions. The findings set iteration priorities; they do not validate clinical fit, subgroup differences or real-world assembly performance.</p>
         </div>
       </article>
 

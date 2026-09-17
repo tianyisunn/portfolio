@@ -111,6 +111,15 @@ img{max-width:100%}
 .competitorSection{margin-top:3.5rem;padding-top:3rem;border-top:1px solid var(--line)}
 .competitorSection>h3{max-width:30ch;margin:0 0 .8rem;font-family:var(--display);font-size:1.4rem;line-height:1.25}
 .competitorSection>p:not(.eyebrow){max-width:64ch;margin:0;color:var(--muted)}
+.marketScan{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-top:2rem}
+.marketScan>div{min-width:0;padding:1.4rem;border:1px solid var(--line);border-radius:22px;background:rgba(255,253,248,.55)}
+.marketScan>div:nth-child(2){background:var(--blue)}
+.marketScan>div:nth-child(3){background:var(--purple-soft)}
+.marketScan span{display:block;margin-bottom:1.2rem;font-family:var(--mono);font-size:.65rem;color:var(--purple-deep)}
+.marketScan strong{display:block;font-family:var(--display);font-size:1rem;line-height:1.25}
+.marketScan p{margin:.55rem 0;color:var(--muted)}
+.marketScan .marketProducts{min-height:3.4em;margin:.55rem 0 1rem;font-family:var(--mono);font-size:.62rem;line-height:1.55;color:var(--purple-deep)}
+.marketScan small{display:block;padding-top:.7rem;border-top:1px solid var(--line);font-size:.75rem;line-height:1.5;color:var(--muted)}
 .competitorLayout{display:grid;grid-template-columns:minmax(220px,.55fr) minmax(0,1.45fr);gap:1.2rem;margin-top:2rem;align-items:start}
 .competitorLogoCrop{margin:0}
 .competitorLogoCrop img{display:block;width:100%;aspect-ratio:.9/1;object-fit:cover;object-position:left center;border-radius:24px;border:1px solid var(--line)}
@@ -127,6 +136,15 @@ img{max-width:100%}
 .gapConclusion span{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--yellow)}
 .gapConclusion p{margin:0;font-family:var(--display);font-size:1.05rem;font-weight:500;line-height:1.45}
 
+.decisionTrail{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin:2rem 0}
+.decisionTrail>div{min-width:0;padding:1.5rem;border-radius:22px;background:var(--paper)}
+.decisionTrail>div:nth-child(2){background:var(--yellow)}
+.decisionTrail>div:nth-child(3){background:var(--purple)}
+.decisionTrail>div:nth-child(3) strong,.decisionTrail>div:nth-child(3) p{color:#fff}
+.decisionTrail>div:nth-child(3) span{color:var(--yellow)}
+.decisionTrail span{display:block;margin-bottom:1.4rem;font-family:var(--mono);font-size:.64rem;letter-spacing:.08em;text-transform:uppercase;color:var(--purple)}
+.decisionTrail strong{display:block;font-family:var(--display);font-size:1.02rem;line-height:1.25}
+.decisionTrail p{margin:.55rem 0 0;color:var(--muted)}
 .supportGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin:2.2rem 0}
 .supportGrid>div{min-height:210px;padding:1.75rem;border-radius:24px;background:var(--paper)}
 .supportGrid>div:nth-child(2){background:var(--blue)}
@@ -135,6 +153,7 @@ img{max-width:100%}
 .supportGrid span{font-family:var(--mono);font-size:.68rem;color:var(--purple-deep)}
 .supportGrid h3{margin:2.4rem 0 .45rem;font-family:var(--display);font-size:1.05rem;line-height:1.2}
 .supportGrid p{margin:0;color:#534b57}
+.researchChange{max-width:none!important;margin:0 0 2rem!important;padding:1.35rem 1.5rem;border-left:3px solid var(--purple);background:rgba(255,253,248,.45);color:var(--muted)!important}
 
 .flowTrack{display:grid;grid-template-columns:repeat(7,minmax(130px,1fr));gap:.65rem;margin:2.4rem 0;padding-bottom:1rem;overflow-x:auto;scrollbar-width:thin}
 .flowTrack>div{position:relative;min-height:190px;padding:1.2rem;border-radius:20px;background:var(--ink);color:#fff}
@@ -165,12 +184,20 @@ img{max-width:100%}
 .ownershipGrid h4{margin:1.2rem 0 .4rem;font-family:var(--display);font-size:1rem}
 .ownershipGrid p{margin:0;color:var(--muted)}
 
+.testStats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem;margin-top:2rem}
+.testStats>div{min-width:0;padding:1.35rem;border-radius:20px;background:var(--paper)}
+.testStats>div:nth-child(2){background:var(--blue)}
+.testStats>div:nth-child(3){background:var(--peach)}
+.testStats>div:nth-child(4){background:var(--purple-soft)}
+.testStats strong{display:block;font-family:var(--display);font-size:1.75rem;line-height:1;color:var(--purple-deep)}
+.testStats span{display:block;margin-top:.75rem;font-size:.78rem;line-height:1.45;color:#4f4854}
 .progressList{margin-top:2rem}
 .progressRow{display:grid;grid-template-columns:145px 1fr;gap:2rem;padding:1.6rem 0;border-top:1px solid var(--line)}
 .progressRow:last-child{border-bottom:1px solid var(--line)}
 .progressRow>span{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--purple)}
 .progressRow strong{font-family:var(--sans);font-size:.95rem;font-weight:500}
 .progressRow p{margin:.35rem 0 0;color:var(--muted)}
+.evidenceNote{max-width:none!important;margin-top:2rem!important;padding:1.4rem 1.6rem;border-radius:18px;background:var(--purple-soft);color:var(--ink)!important}
 .limitNote{max-width:none!important;margin-top:2rem!important;padding:1.4rem 1.6rem;border-radius:18px;background:var(--yellow);color:var(--ink)!important}
 
 .demoGrid{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(250px,.75fr);gap:1.25rem;align-items:stretch;width:100%;margin-top:2rem}
@@ -220,7 +247,9 @@ img{max-width:100%}
   .projectChapter{grid-template-columns:1fr;gap:1.3rem;padding:3rem 0}
   .chapterIndex{position:static}
   .container{padding:0 4.5rem 0 1.5rem}
-  .brandOrigin,.competitorLayout,.demoGrid{grid-template-columns:1fr}
+  .brandOrigin,.competitorLayout,.demoGrid,.decisionTrail{grid-template-columns:1fr}
+  .marketScan{grid-template-columns:1fr}
+  .testStats{grid-template-columns:repeat(2,minmax(0,1fr))}
   .brandIdentity{min-height:380px}
   .brandMascotCrop{background-position:72% center}
   .competitorLogoCrop{max-width:420px}
@@ -247,6 +276,7 @@ img{max-width:100%}
   .chapterContent h2{font-size:2rem}
   .statementBand{padding:1.6rem;border-radius:22px}
   .summaryGrid,.contrastGrid,.rationaleGrid,.audienceGrid,.supportGrid,.timelineGrid,.ownershipGrid{grid-template-columns:1fr}
+  .testStats{grid-template-columns:1fr}
   .brandPrinciples>div{grid-template-columns:28px 1fr}
   .brandPrinciples small{grid-column:2}
   .competitorRow,.competitorRow--head{grid-template-columns:1fr}
