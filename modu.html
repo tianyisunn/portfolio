@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&amp;family=DM+Mono:wght@400;500&amp;family=DM+Sans:wght@300;400;500;600&amp;family=Ribeye&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/modu.css?v=20260917-layout-scale">
+  <link rel="stylesheet" href="css/modu.css?v=20260917-content-components">
   <link rel="stylesheet" href="css/case-progress.css">
   <link rel="stylesheet" href="css/page-navigation.css">
 </head>
@@ -131,10 +131,23 @@
             </div>
           </div>
 
-          <figure class="evidenceImage evidenceImage--wide">
-            <img src="media/modu/problem-and-rationale.png" alt="MODU presentation showing the assembly problem, proposed solution, gamification rationale and IKEA rationale">
-            <figcaption>Early framing aligned the team around the problem, product response and project scope.</figcaption>
-          </figure>
+          <div class="brandOrigin">
+            <div class="brandIdentity">
+              <div class="brandWordmark">MODU</div>
+              <div class="brandMascotCrop" role="img" aria-label="Cropped view of the MODU mascot holding a wrench and a furniture part"></div>
+            </div>
+            <div class="brandStory">
+              <span class="cardKicker">Why the name MODU?</span>
+              <h3>MODU comes from “modular.”</h3>
+              <p>I proposed the name to connect two parts of the product: flat-pack furniture is built from repeatable modules, while MODU's guidance can also be reconfigured around each user's support needs.</p>
+              <div class="brandPrinciples">
+                <div><span>01</span><strong>Modularity</strong><small>A flexible system rather than one fixed instruction flow.</small></div>
+                <div><span>02</span><strong>Modular furniture</strong><small>Repeatable parts and fasteners create a realistic learning context.</small></div>
+                <div><span>03</span><strong>Modular support</strong><small>Users can change the pace, format and amount of help they receive.</small></div>
+              </div>
+              <p class="brandRoleNote"><strong>Brand system:</strong> MODU is the central in-app guide, while four avatars represent different support styles without turning them into clinical labels.</p>
+            </div>
+          </div>
         </div>
       </article>
 
@@ -168,15 +181,43 @@
 
           <p class="pullQuote">Existing tools support visualisation, instruction or engagement—but rarely personalised support during real furniture assembly.</p>
 
-          <div class="imagePair">
-            <figure class="evidenceImage">
-              <img src="media/modu/target-users.png" alt="Presentation slide describing MODU's two target audiences and their shared needs">
-              <figcaption>Target audiences and shared needs.</figcaption>
-            </figure>
-            <figure class="evidenceImage">
-              <img src="media/modu/market-gap.png" alt="Presentation slide comparing furniture assembly and game references and identifying a market gap">
-              <figcaption>Competitor and inspiration scan revealed the gap.</figcaption>
-            </figure>
+          <div class="competitorSection">
+            <p class="eyebrow">Competitor analysis</p>
+            <h3>Each reference solved one part of the experience—not the complete journey.</h3>
+            <p>We compared furniture visualisation and instruction tools with cosy games and learning products. The opportunity was not to copy one competitor, but to connect their strongest patterns around a real assembly task.</p>
+
+            <div class="competitorLayout">
+              <figure class="competitorLogoCrop">
+                <img src="media/modu/market-gap.png" alt="Cropped brand references including Animal Crossing, IKEA, Assemble with Care, Catroom, Duolingo and BILT">
+                <figcaption>Brand references cropped from the original presentation.</figcaption>
+              </figure>
+
+              <div class="competitorMatrix" role="table" aria-label="MODU competitor analysis">
+                <div class="competitorRow competitorRow--head" role="row">
+                  <span role="columnheader">Reference</span><span role="columnheader">What we learned</span><span role="columnheader">Remaining gap</span>
+                </div>
+                <div class="competitorRow" role="row">
+                  <strong role="cell">IKEA Kreativ</strong><span role="cell">Room visualisation connects furniture to a future space.</span><span role="cell">No support during physical assembly.</span>
+                </div>
+                <div class="competitorRow" role="row">
+                  <strong role="cell">BILT</strong><span role="cell">Interactive 3D instructions clarify parts and orientation.</span><span role="cell">Limited personalisation and motivation.</span>
+                </div>
+                <div class="competitorRow" role="row">
+                  <strong role="cell">Assemble with Care</strong><span role="cell">A calm narrative makes assembly feel safe and approachable.</span><span role="cell">A fictional experience, disconnected from real furniture.</span>
+                </div>
+                <div class="competitorRow" role="row">
+                  <strong role="cell">Catroom &amp; Animal Crossing</strong><span role="cell">Ownership, collecting and room customisation sustain engagement.</span><span role="cell">No instructional layer or real-world build.</span>
+                </div>
+                <div class="competitorRow" role="row">
+                  <strong role="cell">Duolingo</strong><span role="cell">Bite-sized progress and immediate feedback support return visits.</span><span role="cell">Not designed for physical or spatial tasks.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="gapConclusion">
+              <span>The opportunity</span>
+              <p>Combine BILT's 3D clarity, cosy games' sense of ownership and learning apps' visible progress with adaptive support for real furniture assembly.</p>
+            </div>
           </div>
         </div>
       </article>
@@ -233,6 +274,13 @@
           <h2>Research shaped the system.<br><em>Making made it real.</em></h2>
           <p>The six-person team worked across product design, frontend, backend, 3D modelling, branding and communication. Weekly role assignment and twice-weekly meetings kept the work connected.</p>
 
+          <div class="teamMethod" aria-label="Team working method">
+            <span>Assigned roles</span>
+            <span>Two weekly meetings</span>
+            <span>Full project documentation</span>
+            <span>Collaborative teamwork</span>
+          </div>
+
           <div class="timelineGrid">
             <div><span>June</span><p>Concept · user research · tech stack · backend logic · prototyping</p></div>
             <div><span>July</span><p>Frontend · backend · 3D modelling · branding</p></div>
@@ -247,10 +295,6 @@
             <div><span>04</span><h4>Communication</h4><p>Coordinated participants and helped shape the final demo, narrative and promotional material.</p></div>
           </div>
 
-          <figure class="evidenceImage evidenceImage--wide">
-            <img src="media/modu/process-and-mascot.png" alt="MODU presentation showing the three-month development process and early mascot work">
-            <figcaption>Development plan and mascot exploration from the team presentation.</figcaption>
-          </figure>
         </div>
       </article>
 
