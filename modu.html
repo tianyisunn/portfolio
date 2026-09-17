@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MODU — Work in Progress | Emma Sun</title>
-  <meta name="description" content="MODU is an in-progress adaptive furniture assembly experience designed by Emma Sun.">
+  <title>MODU — Adaptive Furniture Assembly | Emma Sun</title>
+  <meta name="description" content="MODU is a gamified furniture assembly experience with adaptive 3D guidance, designed by Emma Sun and a multidisciplinary team.">
   <link rel="icon" type="image/png" href="media/logo-v2.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&family=Ribeye&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/modu.css">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&amp;family=DM+Mono:wght@400;500&amp;family=DM+Sans:wght@300;400;500;600&amp;family=Ribeye&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/modu.css?v=20260917-case-study">
   <link rel="stylesheet" href="css/case-progress.css">
   <link rel="stylesheet" href="css/page-navigation.css">
 </head>
@@ -30,73 +30,275 @@
     <section class="projectHero">
       <div class="heroBgText" aria-hidden="true">MODU</div>
       <div class="heroLeft">
-        <div class="heroTag">Case Study · Product Design &amp; Frontend</div>
-        <p class="status">Work in progress · Updated August 2026</p>
+        <div class="heroTag">UX Research · Product Design · 3D</div>
+        <p class="status">MSc group project · June–August 2026</p>
         <h1 class="heroTitle">MODU</h1>
-        <p class="heroSubtitle">An adaptive furniture assembly experience designed around different learning and cognitive needs.</p>
+        <p class="heroSubtitle">Adaptive 3D guidance that makes furniture assembly easier to understand—and more rewarding to finish.</p>
+        <div class="heroActions" aria-label="Project links">
+          <a class="actionButton actionButton--primary" href="https://modugamified.vercel.app/" target="_blank" rel="noopener noreferrer">Try live app <span aria-hidden="true">↗</span></a>
+          <a class="actionButton" href="https://www.youtube.com/watch?v=rp1c4ykVAPM" target="_blank" rel="noopener noreferrer">Watch demo <span aria-hidden="true">↗</span></a>
+          <a class="actionButton" href="media/modu/modu-demo-script.pdf" target="_blank">Demo script <span aria-hidden="true">↓</span></a>
+        </div>
       </div>
 
       <div class="heroRight">
-        <div class="metaGrid">
-          <div class="factBlock"><div class="factLabel">Timeline</div><div class="factValue">Jun 2026 — Present</div></div>
-          <div class="factBlock"><div class="factLabel">Team</div><div class="factValue">Group 2<br>Astrid Yin · Emma Sun · Ge You<br>Krystyna Mikava · Nashwa Hamido · Sherin Glady</div></div>
-          <div class="factBlock"><div class="factLabel">Tools</div><div class="factValue">Figma · React · TypeScript · Supabase</div></div>
-          <div class="factBlock"><div class="factLabel">My Role</div><div class="factValue">UX/Product Design · 3D Modelling</div></div>
-          <div class="factBlock"><div class="factLabel">Focus</div><div class="factValue">Adaptive Guidance · Task Flows · Accessibility</div></div>
-          <div class="factBlock"><div class="factLabel">Status</div><div class="factValue">Prototype and implementation in progress</div></div>
-        </div>
+        <figure class="heroVisual">
+          <img src="media/modu-cover-v1.jpg" alt="MODU mascot holding a wrench and furniture part in a purple assembly world" width="1800" height="1200">
+        </figure>
       </div>
+    </section>
+
+    <section class="projectFacts" aria-label="Project facts">
+      <div><span>Team</span><strong>6 designers &amp; developers</strong></div>
+      <div><span>My role</span><strong>UX research · Product · 3D</strong></div>
+      <div><span>Tools</span><strong>Figma · Blender · React · Supabase</strong></div>
+      <div><span>Outcome</span><strong>Testable mobile web experience</strong></div>
     </section>
 
     <div class="container">
       <article class="projectChapter" id="overview" data-chapter>
         <div class="chapterIndex"><div class="chapterNum">01</div><div class="chapterLabel">Overview</div></div>
         <div class="chapterContent">
-          <h2>Assembly guidance should adapt to <em>how people process a task</em></h2>
-          <p>Furniture assembly combines sequencing, spatial orientation, memory, and physical action. Most instructions present every user with the same dense sequence, regardless of how much structure, reassurance, or visual guidance they need.</p>
-          <p><strong>Our current product question:</strong> How might we make complex assembly tasks easier to understand without removing the user's sense of control?</p>
-          <div class="pullQuote"><p>MODU explores guidance that can change its pace, presentation, and level of detail around the user.</p></div>
-          <figure class="imgFull">
-            <img src="media/modu-cover-v1.jpg" alt="MODU mascot holding a wrench and furniture part in a purple assembly world" width="1800" height="1200">
-            <figcaption>Current MODU visual direction — purple, cream, tactile and approachable.</figcaption>
+          <p class="eyebrow">The idea</p>
+          <h2>Build the furniture.<br><em>Build your own space.</em></h2>
+          <p class="lead">MODU is a gamified mobile experience that teaches furniture assembly through interactive 3D guidance. It adapts how much support users receive, then turns each completed build into furniture for a personal virtual room.</p>
+
+          <div class="statementBand">
+            <p>How might we lower the cognitive load of furniture assembly while preserving independence, choice and a sense of achievement?</p>
+          </div>
+
+          <div class="summaryGrid">
+            <div>
+              <span class="cardKicker">The challenge</span>
+              <h3>Flat-pack instructions assume one kind of learner.</h3>
+              <p>Assembly can require planning, working memory, attention, spatial reasoning and recovery from mistakes—all at once.</p>
+            </div>
+            <div>
+              <span class="cardKicker">The response</span>
+              <h3>One clear action at a time.</h3>
+              <p>Users can see the next part, rotate a 3D model, ask for hints and choose a guidance style without losing control of the task.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="projectChapter" id="why-modu" data-chapter>
+        <div class="chapterIndex"><div class="chapterNum">02</div><div class="chapterLabel">Why MODU</div></div>
+        <div class="chapterContent">
+          <p class="eyebrow">Problem framing</p>
+          <h2>Guidance is usually fixed.<br><em>People are not.</em></h2>
+          <div class="contrastGrid">
+            <div class="contrastCard contrastCard--light">
+              <span class="cardKicker">The problem</span>
+              <h3>Dense manuals place the recovery work on the user.</h3>
+              <p>A missed step or misread diagram can create uncertainty that compounds across the entire build.</p>
+            </div>
+            <div class="contrastCard contrastCard--dark">
+              <span class="cardKicker">The solution</span>
+              <h3>Adaptive support without taking over.</h3>
+              <ul>
+                <li>Show one action, part and tool at a time</li>
+                <li>Offer four support profiles after a short questionnaire</li>
+                <li>Use hints, undo and retry loops to make mistakes safe</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="rationaleGrid">
+            <div>
+              <span class="cardKicker">Why gamification?</span>
+              <p>Visible progress, rewards and room customisation give users a reason to return rather than abandon an unfinished build.</p>
+            </div>
+            <div>
+              <span class="cardKicker">Why IKEA?</span>
+              <p>A recognisable, standardised parts system gave us a real instruction set to design and test against.</p>
+            </div>
+          </div>
+
+          <figure class="evidenceImage evidenceImage--wide">
+            <img src="media/modu/problem-and-rationale.png" alt="MODU presentation showing the assembly problem, proposed solution, gamification rationale and IKEA rationale">
+            <figcaption>Early framing aligned the team around the problem, product response and project scope.</figcaption>
           </figure>
         </div>
       </article>
 
-      <article class="projectChapter" id="product-direction" data-chapter>
-        <div class="chapterIndex"><div class="chapterNum">02</div><div class="chapterLabel">Product Direction</div></div>
+      <article class="projectChapter" id="users-gap" data-chapter>
+        <div class="chapterIndex"><div class="chapterNum">03</div><div class="chapterLabel">Users &amp; Gap</div></div>
         <div class="chapterContent">
-          <h2>From research themes to a <em>buildable product structure</em></h2>
-          <p>The current direction connects user needs to the product architecture instead of treating accessibility as a final visual check.</p>
-          <div class="processList">
-            <div class="processStep"><div class="processNum">01</div><div class="processBody"><div class="processTitle">Needs and task barriers</div><p>Synthesizing current research into user needs, behavioural patterns, and design considerations.</p></div></div>
-            <div class="processStep"><div class="processNum">02</div><div class="processBody"><div class="processTitle">Journeys and information architecture</div><p>Defining onboarding, learning preferences, task segmentation, assembly guidance, and progress tracking.</p></div></div>
-            <div class="processStep"><div class="processNum">03</div><div class="processBody"><div class="processTitle">Data relationships</div><p>Mapping user profiles, assembly content, task steps, learning preferences, and progress data in Supabase.</p></div></div>
+          <p class="eyebrow">Audience</p>
+          <h2>Two audiences, one shared need:<br><em>progress that feels possible.</em></h2>
+          <div class="audienceGrid">
+            <div>
+              <span class="audienceNumber">01</span>
+              <h3>Support-seeking assemblers</h3>
+              <ul>
+                <li>Limited assembly experience or confidence</li>
+                <li>Attention, processing or spatial challenges</li>
+                <li>A need for predictable, adjustable guidance</li>
+                <li>A desire to practise before the real build</li>
+              </ul>
+            </div>
+            <div>
+              <span class="audienceNumber">02</span>
+              <h3>Cozy game players</h3>
+              <ul>
+                <li>Enjoy relaxing, creative and rewarding play</li>
+                <li>Earn XP and coins by building furniture</li>
+                <li>Personalise a virtual room</li>
+                <li>Visit friends and share spaces</li>
+              </ul>
+            </div>
+          </div>
+
+          <p class="pullQuote">Existing tools support visualisation, instruction or engagement—but rarely personalised support during real furniture assembly.</p>
+
+          <div class="imagePair">
+            <figure class="evidenceImage">
+              <img src="media/modu/target-users.png" alt="Presentation slide describing MODU's two target audiences and their shared needs">
+              <figcaption>Target audiences and shared needs.</figcaption>
+            </figure>
+            <figure class="evidenceImage">
+              <img src="media/modu/market-gap.png" alt="Presentation slide comparing furniture assembly and game references and identifying a market gap">
+              <figcaption>Competitor and inspiration scan revealed the gap.</figcaption>
+            </figure>
           </div>
         </div>
       </article>
 
-      <article class="projectChapter" id="current-progress" data-chapter>
-        <div class="chapterIndex"><div class="chapterNum">03</div><div class="chapterLabel">Current Progress</div></div>
+      <article class="projectChapter" id="research" data-chapter>
+        <div class="chapterIndex"><div class="chapterNum">04</div><div class="chapterLabel">Research</div></div>
         <div class="chapterContent">
-          <h2>Separating what is complete from <em>what still needs evidence</em></h2>
-          <p>MODU is still being designed and built. The case study therefore distinguishes completed design work, active implementation, and work that has not yet been validated.</p>
+          <p class="eyebrow">Research synthesis</p>
+          <h2>From diagnostic labels to<br><em>support needs.</em></h2>
+          <p>Our early concepts grouped users by diagnosis. Research showed that this was too rigid: people can share a diagnosis and still need very different support. We reframed the model around what a user needs during a task.</p>
+
+          <div class="supportGrid">
+            <div><span>01</span><h3>Executive function</h3><p>Planning, starting, sequencing and returning to a task.</p></div>
+            <div><span>02</span><h3>Information processing</h3><p>Controlling the amount, pace and form of information.</p></div>
+            <div><span>03</span><h3>Spatial reasoning</h3><p>Understanding orientation, parts and movement in three dimensions.</p></div>
+            <div><span>04</span><h3>Cognitive safety</h3><p>Predictability, reassurance and low-risk recovery from mistakes.</p></div>
+          </div>
+
+          <div class="statementBand statementBand--soft">
+            <p>Design principle: support is always available, but users control how much they receive and how it is presented.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="projectChapter" id="product-system" data-chapter>
+        <div class="chapterIndex"><div class="chapterNum">05</div><div class="chapterLabel">Product System</div></div>
+        <div class="chapterContent">
+          <p class="eyebrow">Experience architecture</p>
+          <h2>A complete loop from<br><em>first question to finished room.</em></h2>
+          <p>The product combines an adaptive setup flow, an interactive assembly session and a cosy reward loop. The same profile informs guidance without locking the user into a permanent mode.</p>
+
+          <div class="flowTrack" aria-label="MODU product flow">
+            <div><span>01</span><strong>Onboarding</strong><small>Choose how MODU should help</small></div>
+            <div><span>02</span><strong>Avatar</strong><small>Create a playful identity</small></div>
+            <div><span>03</span><strong>Tutorial</strong><small>Learn controls safely</small></div>
+            <div><span>04</span><strong>Catalogue</strong><small>Select a furniture build</small></div>
+            <div><span>05</span><strong>Assembly</strong><small>Follow adaptive 3D steps</small></div>
+            <div><span>06</span><strong>Reward</strong><small>Earn XP, coins and furniture</small></div>
+            <div><span>07</span><strong>Virtual room</strong><small>Place, customise and share</small></div>
+          </div>
+
+          <div class="processList">
+            <div class="processStep"><div class="processNum">A</div><div class="processBody"><div class="processTitle">Adaptive profile</div><p>A short questionnaire suggests a support style, while controls remain adjustable during the build.</p></div></div>
+            <div class="processStep"><div class="processNum">B</div><div class="processBody"><div class="processTitle">3D assembly guidance</div><p>Users rotate the object, identify the next part and complete one verified step at a time.</p></div></div>
+            <div class="processStep"><div class="processNum">C</div><div class="processBody"><div class="processTitle">Motivation loop</div><p>Completion unlocks furniture, currency and a visible space that becomes more personal over time.</p></div></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="projectChapter" id="process-role" data-chapter>
+        <div class="chapterIndex"><div class="chapterNum">06</div><div class="chapterLabel">Process &amp; Role</div></div>
+        <div class="chapterContent">
+          <p class="eyebrow">Collaboration</p>
+          <h2>Research shaped the system.<br><em>Making made it real.</em></h2>
+          <p>The six-person team worked across product design, frontend, backend, 3D modelling, branding and communication. Weekly role assignment and twice-weekly meetings kept the work connected.</p>
+
+          <div class="timelineGrid">
+            <div><span>June</span><p>Concept · user research · tech stack · backend logic · prototyping</p></div>
+            <div><span>July</span><p>Frontend · backend · 3D modelling · branding</p></div>
+            <div><span>August</span><p>User testing · refinements · marketing · final execution</p></div>
+          </div>
+
+          <h3 class="sectionTitle">My contribution</h3>
+          <div class="ownershipGrid">
+            <div><span>01</span><h4>UX research</h4><p>Synthesised cognitive and accessibility needs, reframed user profiles and planned the testing survey.</p></div>
+            <div><span>02</span><h4>Product definition</h4><p>Developed onboarding and profile logic, mapped core flows and helped plan the data structure.</p></div>
+            <div><span>03</span><h4>3D &amp; visual design</h4><p>Created the MODU mascot, avatars, the STJÄRNÖ bed and the virtual-room prototype.</p></div>
+            <div><span>04</span><h4>Communication</h4><p>Coordinated participants and helped shape the final demo, narrative and promotional material.</p></div>
+          </div>
+
+          <figure class="evidenceImage evidenceImage--wide">
+            <img src="media/modu/process-and-mascot.png" alt="MODU presentation showing the three-month development process and early mascot work">
+            <figcaption>Development plan and mascot exploration from the team presentation.</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="projectChapter" id="testing" data-chapter>
+        <div class="chapterIndex"><div class="chapterNum">07</div><div class="chapterLabel">Testing</div></div>
+        <div class="chapterContent">
+          <p class="eyebrow">Formative testing</p>
+          <h2>Testing surfaced friction<br><em>before it became polish.</em></h2>
+          <p>Participants tested the prototype on mobile and iPad. We observed how they moved through the tutorial, interpreted highlighting and controlled the 3D assembly experience.</p>
+
           <div class="progressList">
-            <div class="progressRow"><span>Completed</span><div><strong>Research synthesis and initial product architecture</strong><p>Core needs, product areas, task structure, and data relationships have been defined.</p></div></div>
-            <div class="progressRow"><span>In progress</span><div><strong>Critical workflow prototyping and React implementation</strong><p>Key states for personalisation, assembly guidance, and progress are currently being developed.</p></div></div>
-            <div class="progressRow"><span>Not yet validated</span><div><strong>Usability and product outcomes</strong><p>No final claims are made about comprehension, cognitive load, or completion performance at this stage.</p></div></div>
+            <div class="progressRow"><span>Readability</span><div><strong>Important UI elements felt too small.</strong><p>Increase touch targets and treat tablet layouts as intentional breakpoints rather than scaled mobile screens.</p></div></div>
+            <div class="progressRow"><span>Guidance</span><div><strong>The target part was not always obvious.</strong><p>Strengthen colour contrast and combine highlighting with clearer spatial cues.</p></div></div>
+            <div class="progressRow"><span>Controls</span><div><strong>Screw placement and joystick movement felt imprecise.</strong><p>Tune sensitivity, enlarge interactive zones and provide more forgiving snapping behaviour.</p></div></div>
+            <div class="progressRow"><span>Onboarding</span><div><strong>The tutorial felt long and easy to skip.</strong><p>Shorten the initial sequence and teach controls closer to the moment they are needed.</p></div></div>
           </div>
+
+          <p class="limitNote"><strong>Research limitation:</strong> the sample was formative and too small to validate support profiles or make claims about clinical effectiveness. The findings guide iteration; they do not prove outcomes.</p>
         </div>
       </article>
 
-      <article class="projectChapter" id="next-steps" data-chapter>
-        <div class="chapterIndex"><div class="chapterNum">04</div><div class="chapterLabel">Next Steps</div></div>
+      <article class="projectChapter" id="demo" data-chapter>
+        <div class="chapterIndex"><div class="chapterNum">08</div><div class="chapterLabel">Demo &amp; Script</div></div>
         <div class="chapterContent">
-          <h2>The next milestone is to test the <em>critical assembly journey</em></h2>
-          <div class="processList">
-            <div class="processStep"><div class="processNum">01</div><div class="processBody"><div class="processTitle">Complete the prototype</div><p>Connect personalisation, task guidance, and progress into one coherent end-to-end flow.</p></div></div>
-            <div class="processStep"><div class="processNum">02</div><div class="processBody"><div class="processTitle">Run usability testing</div><p>Evaluate task comprehension, navigation accuracy, perceived cognitive load, and moments of uncertainty.</p></div></div>
-            <div class="processStep"><div class="processNum">03</div><div class="processBody"><div class="processTitle">Document the iteration</div><p>Show which findings changed the interface, product requirements, or technical structure.</p></div></div>
+          <p class="eyebrow">See it in motion</p>
+          <h2>The full journey in<br><em>about ninety seconds.</em></h2>
+
+          <div class="demoGrid">
+            <div class="videoFrame">
+              <iframe src="https://www.youtube-nocookie.com/embed/rp1c4ykVAPM" title="MODU product demo video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="demoSummary">
+              <span class="cardKicker">Demo narrative</span>
+              <p>MODU learns how you need help, guides you through the build and turns completion into a space of your own.</p>
+              <a class="actionButton actionButton--primary" href="https://modugamified.vercel.app/" target="_blank" rel="noopener noreferrer">Open the live app <span aria-hidden="true">↗</span></a>
+              <a class="textLink" href="media/modu/modu-demo-script.pdf" target="_blank">Read the original demo script <span aria-hidden="true">↓</span></a>
+            </div>
+          </div>
+
+          <h3 class="sectionTitle">Demo script</h3>
+          <ol class="scriptList">
+            <li><span>00:00</span><div><strong>Onboarding</strong><p>Introduce the promise: a build experience that adapts to the person using it.</p></div></li>
+            <li><span>00:08</span><div><strong>Avatar</strong><p>Create a character and establish the warm, playful world around a practical task.</p></div></li>
+            <li><span>00:16</span><div><strong>Adaptive profile</strong><p>Answer a short set of questions so MODU can suggest how instructions should be presented.</p></div></li>
+            <li><span>00:28</span><div><strong>Tutorial &amp; catalogue</strong><p>Learn the interaction model, then choose the furniture piece to assemble.</p></div></li>
+            <li><span>00:40</span><div><strong>Assembly</strong><p>Rotate the 3D model, identify parts and complete a sequence with hints available at every step.</p></div></li>
+            <li><span>01:02</span><div><strong>Reward &amp; inventory</strong><p>Finish the build to earn XP, coins and a usable version of the furniture.</p></div></li>
+            <li><span>01:14</span><div><strong>Virtual room</strong><p>Place the new item, personalise the room and visit friends' spaces.</p></div></li>
+            <li><span>01:26</span><div><strong>Build with us</strong><p>Close on the product idea: practical guidance can also feel personal, safe and motivating.</p></div></li>
+          </ol>
+        </div>
+      </article>
+
+      <article class="projectChapter" id="reflection" data-chapter>
+        <div class="chapterIndex"><div class="chapterNum">09</div><div class="chapterLabel">Reflection</div></div>
+        <div class="chapterContent">
+          <p class="eyebrow">What I learned</p>
+          <h2>Accessibility works best as<br><em>product logic, not an add-on.</em></h2>
+          <p class="lead">The most important shift was moving away from designing “for a diagnosis” and toward designing flexible support around a task. That changed the onboarding, data model, guidance patterns and testing questions—not just the visual interface.</p>
+
+          <div class="nextGrid">
+            <div><span>Next</span><h3>Validate the support model</h3><p>Test whether profile recommendations match what users actually prefer during a real build.</p></div>
+            <div><span>Next</span><h3>Reduce input friction</h3><p>Refine touch controls, snapping and part highlighting across phone and tablet devices.</p></div>
+            <div><span>Next</span><h3>Measure the right outcomes</h3><p>Compare task comprehension, confidence, recovery and perceived cognitive load—not only completion.</p></div>
           </div>
         </div>
       </article>
@@ -104,10 +306,14 @@
 
     <section class="outcomeBanner">
       <div class="outcomeBannerInner">
-        <h2>A transparent case study<br>that will <em>grow with the product</em></h2>
+        <h2>Build furniture.<br><em>Build confidence.</em></h2>
         <div>
-          <p>This page documents the current design direction without presenting planned testing as completed evidence.</p>
-          <a href="index.html#projectsPanel">← Back to selected work</a>
+          <p>Explore the working experience, watch the complete demo or return to the rest of my selected work.</p>
+          <div class="bannerLinks">
+            <a href="https://modugamified.vercel.app/" target="_blank" rel="noopener noreferrer">Try MODU ↗</a>
+            <a href="https://www.youtube.com/watch?v=rp1c4ykVAPM" target="_blank" rel="noopener noreferrer">Watch demo ↗</a>
+            <a href="index.html#projectsPanel">Back to work ←</a>
+          </div>
         </div>
       </div>
     </section>
