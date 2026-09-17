@@ -173,18 +173,14 @@ img{max-width:100%}
 .progressRow p{margin:.35rem 0 0;color:var(--muted)}
 .limitNote{max-width:none!important;margin-top:2rem!important;padding:1.4rem 1.6rem;border-radius:18px;background:var(--yellow);color:var(--ink)!important}
 
-.demoGrid{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(240px,.6fr);gap:1.2rem;align-items:stretch;margin-top:2.2rem}
-.videoFrame{position:relative;overflow:hidden;aspect-ratio:16/9;border-radius:26px;background:#000;box-shadow:0 20px 55px rgba(42,31,50,.18)}
-.videoFrame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-.demoSummary{display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end;padding:1.8rem;border-radius:26px;background:var(--purple-soft)}
+.demoGrid{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(250px,.75fr);gap:1.25rem;align-items:stretch;width:100%;margin-top:2rem}
+.videoFrame{position:relative;align-self:start;min-width:0;width:100%;overflow:hidden;aspect-ratio:16/9;border-radius:26px;background:#000;box-shadow:0 20px 55px rgba(42,31,50,.18)}
+.videoFrame iframe{position:absolute;inset:0;display:block;width:100%;height:100%;border:0}
+.demoSummary{min-width:0;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end;padding:1.8rem;border-radius:26px;background:var(--purple-soft)}
 .demoSummary p{margin:0 0 1.4rem;font-family:var(--sans);font-size:1rem;font-weight:400;line-height:1.55}
-.demoSummary .actionButton{margin-bottom:1rem}
-.textLink{font-family:var(--mono);font-size:.7rem;text-underline-offset:.25rem}
-.scriptList{margin:0;padding:0;list-style:none;border-top:1px solid var(--line)}
-.scriptList li{display:grid;grid-template-columns:75px 1fr;gap:1rem;padding:1.2rem 0;border-bottom:1px solid var(--line)}
-.scriptList li>span{font-family:var(--mono);font-size:.68rem;color:var(--purple)}
-.scriptList strong{font-family:var(--sans);font-size:.95rem;font-weight:500}
-.scriptList p{margin:.2rem 0 0;color:var(--muted)}
+.demoActions{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem}
+.downloadButton{display:inline-flex;align-items:center;justify-content:center;gap:.4rem;padding:.58rem .78rem;border:1px solid var(--purple);border-radius:999px;color:var(--purple-deep);font-family:var(--mono);font-size:.66rem;font-weight:500;line-height:1;text-decoration:none;transition:transform .18s ease,background .18s ease}
+.downloadButton:hover{transform:translateY(-2px);background:rgba(255,255,255,.45)}
 
 .nextGrid{grid-template-columns:repeat(3,1fr);margin-top:2.3rem}
 .nextGrid>div{padding:1.6rem;border-radius:22px;background:var(--paper)}
@@ -228,7 +224,7 @@ img{max-width:100%}
   .brandIdentity{min-height:380px}
   .brandMascotCrop{background-position:72% center}
   .competitorLogoCrop{max-width:420px}
-  .demoSummary{min-height:260px}
+  .demoSummary{min-height:220px}
   .nextGrid{grid-template-columns:1fr}
   .outcomeBannerInner{grid-template-columns:1fr;gap:2.5rem}
 }
@@ -264,7 +260,6 @@ img{max-width:100%}
   .contrastCard{min-height:280px;padding:1.8rem}
   .supportGrid>div{min-height:180px}
   .progressRow{grid-template-columns:1fr;gap:.6rem}
-  .scriptList li{grid-template-columns:56px 1fr}
   .outcomeBanner{padding:4rem 4rem 4rem 1.5rem}
   .footer{padding:2.5rem 4rem 2.5rem 1.25rem}
   .footer-inner{gap:1.2rem}
@@ -272,5 +267,5 @@ img{max-width:100%}
 
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
-  .actionButton{transition:none}
+  .actionButton,.downloadButton{transition:none}
 }
