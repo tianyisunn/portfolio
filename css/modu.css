@@ -201,7 +201,7 @@ img{max-width:100%}
 .limitNote{max-width:none!important;margin-top:2rem!important;padding:1.4rem 1.6rem;border-radius:18px;background:var(--yellow);color:var(--ink)!important}
 
 .demoGrid{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(250px,.75fr);gap:1.25rem;align-items:stretch;width:100%;margin-top:2rem}
-.videoFrame{position:relative;align-self:start;min-width:0;width:100%;overflow:hidden;aspect-ratio:16/9;border-radius:26px;background:#000;box-shadow:0 20px 55px rgba(42,31,50,.18)}
+.videoFrame{position:relative;align-self:stretch;min-width:0;width:100%;height:100%;overflow:hidden;border-radius:26px;background:#000;box-shadow:0 20px 55px rgba(42,31,50,.18)}
 .videoFrame iframe{position:absolute;inset:0;display:block;width:100%;height:100%;border:0}
 .demoSummary{min-width:0;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end;padding:1.8rem;border-radius:26px;background:var(--purple-soft)}
 .demoSummary p{margin:0 0 1.4rem;font-family:var(--sans);font-size:1rem;font-weight:400;line-height:1.55}
@@ -253,6 +253,7 @@ img{max-width:100%}
   .brandIdentity{min-height:380px}
   .brandMascotCrop{background-position:72% center}
   .competitorLogoCrop{max-width:420px}
+  .videoFrame{height:auto;aspect-ratio:16/9}
   .demoSummary{min-height:220px}
   .nextGrid{grid-template-columns:1fr}
   .outcomeBannerInner{grid-template-columns:1fr;gap:2.5rem}
