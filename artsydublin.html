@@ -454,6 +454,74 @@
         .artsy-status-cta::after { content: '↗'; margin-left: 0.75rem; }
         .artsy-status-cta:hover { color: var(--tan); border-color: var(--tan); }
 
+        /* ── Case-study evidence blocks ── */
+        .artsy-kicker {
+            margin-bottom: .8rem !important;
+            font-family: 'DM Mono', monospace;
+            font-size: .68rem !important;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            color: var(--green) !important;
+        }
+        .artsy-callout {
+            display: grid;
+            grid-template-columns: 190px 1fr;
+            gap: 1.25rem;
+            margin: 2rem 0;
+            padding: 1.5rem 1.7rem;
+            border-left: 3px solid var(--brown);
+            background: var(--tan);
+        }
+        .artsy-callout strong { font-family: 'Lora', serif; font-size: 1.05rem; color: var(--brown); }
+        .artsy-callout span { color: #5a4530; font-size: .92rem; line-height: 1.6; }
+        .artsy-map-frame img { max-height: 560px; object-fit: contain; background: #211f1f; }
+        .artsy-large-artifact img { max-height: 650px; object-fit: contain; background: #f1f8fb; }
+        .artsy-draft-frame img { max-height: 420px; object-fit: contain; background: #808080; }
+        .artsy-font-frame img { max-height: 540px; object-fit: contain; background: #403c3d; }
+        .artsy-stage-flow,
+        .artsy-decision-grid,
+        .artsy-visual-grid,
+        .artsy-build-grid,
+        .artsy-role-grid,
+        .artsy-tool-grid { display: grid; gap: 1rem; margin: 2rem 0; }
+        .artsy-stage-flow { grid-template-columns: repeat(3, 1fr); }
+        .artsy-stage-flow > div { min-height: 170px; padding: 1.35rem; border: 1px solid var(--divider); background: var(--tan); }
+        .artsy-stage-flow > div:nth-child(2n) { background: #f4eadc; }
+        .artsy-stage-flow span,
+        .artsy-decision-grid span,
+        .artsy-decision-list > div > span,
+        .artsy-build-grid span { display: block; margin-bottom: 1.1rem; font-family: 'DM Mono', monospace; font-size: .65rem; letter-spacing: .12em; color: var(--green); }
+        .artsy-stage-flow strong,
+        .artsy-decision-grid strong,
+        .artsy-build-grid strong { display: block; margin-bottom: .45rem; font-family: 'Lora', serif; font-size: 1rem; color: var(--brown); }
+        .artsy-stage-flow small { display: block; font-size: .82rem; line-height: 1.5; color: var(--muted); }
+        .artsy-decision-grid { grid-template-columns: repeat(3, 1fr); }
+        .artsy-decision-grid > div,
+        .artsy-visual-grid > div,
+        .artsy-build-grid > div { padding: 1.4rem; border: 1px solid var(--divider); background: rgba(237,224,200,.55); }
+        .artsy-decision-grid p,
+        .artsy-visual-grid p,
+        .artsy-build-grid p { margin: 0; max-width: none; font-size: .86rem; line-height: 1.6; color: var(--muted); }
+        .artsy-decision-list { margin: 2rem 0; }
+        .artsy-decision-list > div { display: grid; grid-template-columns: 2.5rem 1fr; gap: 1rem; padding: 1.2rem 0; border-top: 1px solid var(--divider); }
+        .artsy-decision-list > div:last-child { border-bottom: 1px solid var(--divider); }
+        .artsy-decision-list strong { display: block; margin-bottom: .3rem; font-family: 'Lora', serif; color: var(--brown); }
+        .artsy-decision-list p { margin: 0; max-width: none; font-size: .9rem; }
+        .artsy-visual-grid { grid-template-columns: repeat(3, 1fr); }
+        .artsy-visual-grid strong { display: block; margin-bottom: .45rem; font-family: 'Lora', serif; color: var(--brown); }
+        .artsy-build-grid { grid-template-columns: repeat(3, 1fr); }
+        .artsy-build-grid > div { background: var(--cream); }
+        .artsy-tech-list { margin-top: 2rem; }
+        .artsy-role-grid { grid-template-columns: repeat(3, 1fr); }
+        .artsy-role-grid > div { min-height: 190px; padding: 1.5rem; background: var(--tan); border: 1px solid var(--divider); }
+        .artsy-role-grid span { display: block; margin-bottom: 1.2rem; font-family: 'DM Mono', monospace; font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; color: var(--green); }
+        .artsy-role-grid p { margin: 0; max-width: none; font-size: .9rem; }
+        .artsy-tool-grid { grid-template-columns: repeat(4, 1fr); }
+        .artsy-tool-grid > div { display: grid; grid-template-columns: 30px 1fr; gap: .2rem .75rem; align-items: center; padding: 1rem; border: 1px solid var(--divider); background: #fffaf2; }
+        .artsy-tool-grid img { width: 28px; height: 28px; object-fit: contain; grid-row: span 2; }
+        .artsy-tool-grid strong { font-family: 'Lora', serif; font-size: .95rem; color: var(--brown); }
+        .artsy-tool-grid small { font-size: .7rem; line-height: 1.35; color: var(--muted); }
+
         /* ── Footer ── */
         .footer { border-top: 1px solid var(--divider); padding: 2.5rem; background: var(--cream); }
         .footer-inner { display: flex; justify-content: center; gap: 2.5rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
@@ -488,6 +556,21 @@
             .artsy-status-banner { padding: 3rem 1.5rem; margin-top: 3rem; }
             .artsy-tech-item { grid-template-columns: 1fr; gap: 0.5rem; }
             .artsy-hero { padding: 5rem 1.5rem 3rem; }
+            .artsy-stage-flow,
+            .artsy-decision-grid,
+            .artsy-visual-grid,
+            .artsy-build-grid,
+            .artsy-role-grid { grid-template-columns: 1fr 1fr; }
+            .artsy-tool-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 560px) {
+            .artsy-callout { grid-template-columns: 1fr; gap: .5rem; }
+            .artsy-stage-flow,
+            .artsy-decision-grid,
+            .artsy-visual-grid,
+            .artsy-build-grid,
+            .artsy-role-grid,
+            .artsy-tool-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -547,230 +630,162 @@
         </div>
     </section>
 
-    <!-- ── BODY ── -->
+    <!-- ── CASE STUDY BODY ── -->
     <main class="artsy-body">
 
         <!-- 01 -->
         <article class="artsy-chapter" id="adOverview">
-            <div class="artsy-ch-index">
-                <div class="artsy-ch-num">01</div>
-                <div class="artsy-ch-label">Overview</div>
-            </div>
+            <div class="artsy-ch-index"><div class="artsy-ch-num">01</div><div class="artsy-ch-label">The Gap</div></div>
             <div class="artsy-ch-content">
-                <h2>A platform built for <em>Dublin's living art scene</em></h2>
-                <p>Artsy Dublin is a live web platform for discovering local performance and arts events in Dublin — music, theatre, film, ballet and beyond — with recommendations shaped around personal interests.</p>
-                <p>The project combines <strong>event discovery</strong>, <strong>personalised recommendation</strong>, and <strong>lightweight social connection</strong>. Instead of presenting culture as another long list of listings, the platform helps users decide what is worth seeing and who they might want to go with.</p>
-                <figure class="artsy-img-full">
-                    <a href="https://artsy-dublin-website.vercel.app/" target="_blank" rel="noopener">
-                        <img src="media/thumbnail-artsydublin.png" alt="Artsy Dublin live website preview">
-                    </a>
-                    <figcaption>Live platform preview — Artsy Dublin, deployed on Vercel.</figcaption>
+                <p class="artsy-kicker">Problem framing</p>
+                <h2>The journey did not end when the <em>ticket was booked.</em></h2>
+                <p>Artsy started with a simple problem: cultural platforms are good at getting people to an event, but weak at what happens next. After checkout, attendance becomes a memory the platform cannot see.</p>
+                <p>There is no easy place to keep a record, build a cultural identity or find someone with similar interests. That is the <strong>participation continuity gap</strong>.</p>
+                <div class="artsy-callout"><strong>Participation continuity gap</strong><span>Artsy is not only a way to buy a ticket. It is a layer that helps people discover, remember and continue participating in Dublin's cultural life.</span></div>
+                <figure class="artsy-img-full artsy-map-frame">
+                    <img src="media/artsy/journey-map-dark.png" alt="Dark mode journey map showing the experience disappearing after attendance">
+                    <figcaption>The first journey map made the break visible: after Attend, the experience disappears.</figcaption>
                 </figure>
             </div>
         </article>
 
         <!-- 02 -->
         <article class="artsy-chapter" id="adProblem">
-            <div class="artsy-ch-index">
-                <div class="artsy-ch-num">02</div>
-                <div class="artsy-ch-label">The Problem</div>
-            </div>
+            <div class="artsy-ch-index"><div class="artsy-ch-num">02</div><div class="artsy-ch-label">The Journey</div></div>
             <div class="artsy-ch-content">
-                <h2>Existing platforms aren't built for <em>art people</em></h2>
-                <p>Platforms like Eventbrite have reasonable event categorisation — but they're general-purpose. Anyone can create an event and tag it however they like, leading to <strong>unreliable, polluted category data</strong>.</p>
-                <div class="artsy-problem-list">
-                    <div class="artsy-problem-item">
-                        <div class="artsy-problem-icon">①</div>
-                        <div><strong>Inaccurate tagging</strong> — user-generated events frequently carry wrong or misleading category labels.</div>
-                    </div>
-                    <div class="artsy-problem-item">
-                        <div class="artsy-problem-icon">②</div>
-                        <div><strong>Weak recommendation algorithms</strong> — existing platforms don't build a nuanced interest profile; suggestions feel random.</div>
-                    </div>
-                    <div class="artsy-problem-item">
-                        <div class="artsy-problem-icon">③</div>
-                        <div><strong>No spontaneous social layer</strong> — social features focus on long-term groups, not lightweight, event-specific buddy-finding.</div>
-                    </div>
-                </div>
-                <div class="artsy-pull-quote">
-                    <p>"I want to find someone to go to a jazz night with — not join a Facebook group about jazz."</p>
+                <p class="artsy-kicker">Research synthesis</p>
+                <h2>The low point came <em>after the event</em>, not before it.</h2>
+                <p>Mapping the full experience changed the question. Discovery and attendance were already visible. The missing part was the quiet work afterwards: recording what happened, building a sense of taste and finding people to share the next event with.</p>
+                <figure class="artsy-img-full artsy-map-frame">
+                    <img src="media/artsy/journey-map-light.png" alt="Light mode user's journey map covering discovery, ticketing, attendance, logging, cultural profile and connection">
+                    <figcaption>The refined map expanded the journey from six stages: Discover, Ticket, Attend, Log, Build a profile and Connect.</figcaption>
+                </figure>
+                <div class="artsy-stage-flow" aria-label="Artsy participation journey">
+                    <div><span>01</span><strong>Discover</strong><small>Find an event that fits my interests, budget and schedule.</small></div>
+                    <div><span>02</span><strong>Book</strong><small>Understand the event and complete the ticket handoff.</small></div>
+                    <div><span>03</span><strong>Attend</strong><small>Enjoy the experience and feel part of the local scene.</small></div>
+                    <div><span>04</span><strong>Log</strong><small>Keep a quick record instead of letting the memory disappear.</small></div>
+                    <div><span>05</span><strong>Build</strong><small>Let past events shape a visible cultural profile.</small></div>
+                    <div><span>06</span><strong>Connect</strong><small>Find shared interests and make a low-pressure connection.</small></div>
                 </div>
             </div>
         </article>
 
         <!-- 03 -->
         <article class="artsy-chapter" id="adSolution">
-            <div class="artsy-ch-index">
-                <div class="artsy-ch-num">03</div>
-                <div class="artsy-ch-label">The Solution</div>
-            </div>
+            <div class="artsy-ch-index"><div class="artsy-ch-num">03</div><div class="artsy-ch-label">The Structure</div></div>
             <div class="artsy-ch-content">
-                <h2>Curated sources + social layer + <em>personal diary</em></h2>
-                <p>Rather than relying on user-generated tags, Artsy Dublin sources event data <strong>directly from reputable venues and institutions</strong> — concert halls, cinemas, galleries — keeping quality high and noise low.</p>
-                <p>The final product turns that data into a calmer browsing experience: users can explore cultural events, keep track of what they have attended, and use social features only when they are useful.</p>
-                <div class="artsy-feature-grid">
-                    <div class="artsy-feature-card">
-                        <div class="artsy-feature-num">A</div>
-                        <h4>Event Buddy Matching</h4>
-                        <p>See who else is going to an event and send a lightweight "join me" request. No long-term commitment required until you want one.</p>
-                    </div>
-                    <div class="artsy-feature-card">
-                        <div class="artsy-feature-num">B</div>
-                        <h4>Art Event Diary</h4>
-                        <p>Log events you've attended. Add a short reflection, a rating, a photo. Your diary becomes both a keepsake and the basis for your recommendation profile.</p>
-                    </div>
-                    <div class="artsy-feature-card">
-                        <div class="artsy-feature-num">C</div>
-                        <h4>Tailored "For You" Feed</h4>
-                        <p>Recommendations built from your interest profile, diary history, and what your connections are attending — not generic "popular in Dublin" filler.</p>
-                    </div>
-                    <div class="artsy-feature-card">
-                        <div class="artsy-feature-num">D</div>
-                        <h4>Community-Led Events</h4>
-                        <p>Informal cultural gatherings such as art-topic presentation nights, debate clubs, and collaborative viewing parties.</p>
-                    </div>
-                </div>
-                <div class="artsy-outcome-grid">
-                    <div class="artsy-outcome-card">
-                        <strong>Find</strong>
-                        <span>Browse Dublin arts events through clearer categories and interest-led discovery.</span>
-                    </div>
-                    <div class="artsy-outcome-card">
-                        <strong>Remember</strong>
-                        <span>Turn attended events into a personal cultural record through the art diary.</span>
-                    </div>
-                    <div class="artsy-outcome-card">
-                        <strong>Connect</strong>
-                        <span>Meet around specific events instead of joining broad, long-term social groups.</span>
-                    </div>
+                <p class="artsy-kicker">Information architecture</p>
+                <h2>We connected discovery, memory and <em>connection.</em></h2>
+                <p>The sitemap turned the gap into a product structure. Home helps people discover. Profile keeps participation visible. Inbox supports the reminders and conversations that make the next visit easier.</p>
+                <figure class="artsy-img-full artsy-large-artifact">
+                    <img src="media/artsy/sitemap.png" alt="Artsy Dublin sitemap connecting Home Page, Inbox, Profile Page, Events, User Posts and Activities">
+                    <figcaption>Information architecture: the product is organised around what people do before, during and after an event.</figcaption>
+                </figure>
+                <div class="artsy-decision-grid">
+                    <div><span>Home</span><strong>Keep discovery easy to scan</strong><p>All Events, For You and user-created events sit together because people need both reliable listings and a sense of what the community is doing.</p></div>
+                    <div><span>Profile</span><strong>Make participation accumulate</strong><p>History, saved events, posts and created events turn a profile into a record of participation rather than a static identity card.</p></div>
+                    <div><span>Inbox</span><strong>Keep the next step visible</strong><p>Reminders, ticket updates and messages give the experience a place to continue after the user leaves an event page.</p></div>
                 </div>
             </div>
         </article>
 
         <!-- 04 -->
         <article class="artsy-chapter" id="adUsers">
-            <div class="artsy-ch-index">
-                <div class="artsy-ch-num">04</div>
-                <div class="artsy-ch-label">Target Users</div>
-            </div>
+            <div class="artsy-ch-index"><div class="artsy-ch-num">04</div><div class="artsy-ch-label">The Decisions</div></div>
             <div class="artsy-ch-content">
-                <h2>Two audiences, <em>one platform</em></h2>
-                <div class="artsy-persona-grid">
-                    <div class="artsy-persona">
-                        <div class="artsy-persona-label">Primary</div>
-                        <h4>The Dublin Art-Goer</h4>
-                        <p>People living in or visiting Dublin who want to stay in the loop on art and performance that actually matches their taste — without trawling five different websites.</p>
-                        <div class="artsy-tag-row">
-                            <span class="artsy-tag-pill">Local resident</span>
-                            <span class="artsy-tag-pill">Tourist</span>
-                            <span class="artsy-tag-pill">Student</span>
-                        </div>
-                    </div>
-                    <div class="artsy-persona">
-                        <div class="artsy-persona-label">Secondary</div>
-                        <h4>The Solo Attendee</h4>
-                        <p>People who want to share art experiences with others — but don't have a ready-made group. They want spontaneous, low-commitment connection around shared events.</p>
-                        <div class="artsy-tag-row">
-                            <span class="artsy-tag-pill">New to Dublin</span>
-                            <span class="artsy-tag-pill">Introvert-friendly</span>
-                            <span class="artsy-tag-pill">Interest-driven</span>
-                        </div>
-                    </div>
+                <p class="artsy-kicker">From sketch to system</p>
+                <h2>The early sketches changed the product's <em>centre.</em></h2>
+                <p>The first sketches were useful because they showed where the experience was still fragmented. We used them to decide which screens should carry the continuity of the product.</p>
+                <figure class="artsy-img-full artsy-draft-frame">
+                    <img src="media/artsy/draft.png" alt="Early hand-drawn Artsy Dublin homepage, user page and event page sketches">
+                    <figcaption>Early sketches: homepage, user page and event page before the system was resolved.</figcaption>
+                </figure>
+                <div class="artsy-decision-list">
+                    <div><span>01</span><div><strong>Homepage</strong><p>Keep the feed-led structure, but make For You depend on interests and participation rather than a generic list.</p></div></div>
+                    <div><span>02</span><div><strong>User page</strong><p>Move beyond an avatar and bio. Past events, posts and saved plans should show how a person takes part.</p></div></div>
+                    <div><span>03</span><div><strong>Event page</strong><p>Support the decision to go, the ticket handoff and the possibility of meeting someone around the same event.</p></div></div>
                 </div>
-                <div class="artsy-outcome-grid">
-                    <div class="artsy-outcome-card">
-                        <strong>Save time</strong>
-                        <span>Browse trusted cultural options in one place instead of checking multiple venue sites.</span>
-                    </div>
-                    <div class="artsy-outcome-card">
-                        <strong>Choose confidently</strong>
-                        <span>Clear categories and recommendations help users find events that match their taste.</span>
-                    </div>
-                    <div class="artsy-outcome-card">
-                        <strong>Avoid going alone</strong>
-                        <span>Buddy matching offers solo attendees a low-pressure way to share an experience.</span>
-                    </div>
-                </div>
+                <div class="artsy-pull-quote"><p>Every feature had to answer one question: what helps the user continue after the event?</p></div>
             </div>
         </article>
 
         <!-- 05 -->
         <article class="artsy-chapter" id="adDesign">
-            <div class="artsy-ch-index">
-                <div class="artsy-ch-num">05</div>
-                <div class="artsy-ch-label">Design</div>
-            </div>
+            <div class="artsy-ch-index"><div class="artsy-ch-num">05</div><div class="artsy-ch-label">The Visual System</div></div>
             <div class="artsy-ch-content">
-                <h2>Warm, tactile, <em>cultural</em> — not another cold tech app</h2>
-                <p>The visual direction was deliberate: Dublin's art scene feels warm, textured, and human. We used <strong>cream, deep brown, and forest green</strong> to echo printed programmes, gallery labels, and the atmosphere of small cultural venues.</p>
-                <div class="artsy-color-row">
-                    <div class="artsy-swatch">
-                        <div class="artsy-swatch-block" style="background:#FBF4EA; border:1px solid #d4c4a8;"></div>
-                        <span class="artsy-swatch-hex">#FBF4EA</span>
-                        <span class="artsy-swatch-name">Background / Cream</span>
-                    </div>
-                    <div class="artsy-swatch">
-                        <div class="artsy-swatch-block" style="background:#5A3713;"></div>
-                        <span class="artsy-swatch-hex" style="color:#5A3713;">#5A3713</span>
-                        <span class="artsy-swatch-name">Primary / Deep Brown</span>
-                    </div>
-                    <div class="artsy-swatch">
-                        <div class="artsy-swatch-block" style="background:#10755A;"></div>
-                        <span class="artsy-swatch-hex" style="color:#10755A;">#10755A</span>
-                        <span class="artsy-swatch-name">Accent / Forest Green</span>
-                    </div>
-                </div>
-                <div class="artsy-outcome-grid">
-                    <div class="artsy-outcome-card">
-                        <strong>Readable first</strong>
-                        <span>Event details are arranged for quick scanning across mobile and desktop.</span>
-                    </div>
-                    <div class="artsy-outcome-card">
-                        <strong>Soft social cues</strong>
-                        <span>Buddy-finding supports the event journey without overpowering it.</span>
-                    </div>
-                    <div class="artsy-outcome-card">
-                        <strong>Consistent tone</strong>
-                        <span>The interface feels like a cultural guide rather than a generic ticketing product.</span>
-                    </div>
+                <p class="artsy-kicker">Visual design</p>
+                <h2>A neutral interface lets the events <em>keep their colour.</em></h2>
+                <p>Event posters already bring colour, imagery and strong visual personalities. If the interface used another loud colour system, it would compete with the content. We kept the product neutral so the event itself could lead.</p>
+                <figure class="artsy-img-full artsy-font-frame">
+                    <img src="media/artsy/font-study.png" alt="Artsy Dublin typography study comparing display and body typefaces">
+                    <figcaption>Typography study: expressive display type paired with a readable body system.</figcaption>
+                </figure>
+                <div class="artsy-visual-grid">
+                    <div><strong>Neutral base</strong><p>Cream, brown and muted green give the interface a stable background for very different event posters.</p></div>
+                    <div><strong>Readable details</strong><p>Body text and event metadata stay quiet and scannable, especially when the content around them is visually dense.</p></div>
+                    <div><strong>Controlled emphasis</strong><p>Display type adds character to the brand without turning every screen into a competing visual statement.</p></div>
                 </div>
             </div>
         </article>
 
         <!-- 06 -->
         <article class="artsy-chapter" id="adTech">
-            <div class="artsy-ch-index">
-                <div class="artsy-ch-num">06</div>
-                <div class="artsy-ch-label">Technical Stack</div>
-            </div>
+            <div class="artsy-ch-index"><div class="artsy-ch-num">06</div><div class="artsy-ch-label">The Build</div></div>
             <div class="artsy-ch-content">
-                <h2>A data-driven concept with a <em>responsive React front-end</em></h2>
-                <p>The project required the team to think beyond static screens: event sourcing, recommendation logic, profile state, and responsive interaction all had to work together as a coherent product.</p>
+                <p class="artsy-kicker">From product logic to interface</p>
+                <h2>The system had to support the <em>whole loop.</em></h2>
+                <p>Because the product connects events, people and histories, the build could not stop at a set of static screens. The front-end needed to make those relationships visible and keep the experience usable across the main journeys.</p>
+                <div class="artsy-build-grid">
+                    <div><span>01</span><strong>Discover</strong><p>Event cards, categories and For You content make the first decision easier to scan.</p></div>
+                    <div><span>02</span><strong>Record</strong><p>History and saved events give participation a place to accumulate.</p></div>
+                    <div><span>03</span><strong>Connect</strong><p>Posts, messages and event-specific relationships support a lighter form of social use.</p></div>
+                </div>
                 <div class="artsy-tech-list">
-                    <div class="artsy-tech-item">
-                        <div class="artsy-tech-label">Event Sourcing</div>
-                        <p>Structured around verified Dublin venues and cultural institutions, reducing the noise of open user-generated listings.</p>
-                    </div>
-                    <div class="artsy-tech-item">
-                        <div class="artsy-tech-label">Recommendation Engine</div>
-                        <p>Designed around user interests, diary history, and social connections so personalisation can improve over time.</p>
-                    </div>
-                    <div class="artsy-tech-item">
-                        <div class="artsy-tech-label">Front-end</div>
-                        <p>A component-driven React interface with responsive flows for discovery, profiles, diaries, and social features.</p>
-                    </div>
-                    <div class="artsy-tech-item">
-                        <div class="artsy-tech-label">Content Management</div>
-                        <p>User profiles, diary entries, event logs, social connections — all managed through a structured backend data layer.</p>
-                    </div>
+                    <div class="artsy-tech-item"><div class="artsy-tech-label">React</div><p>Built reusable event, profile and feed components so the same information could appear across different journeys.</p></div>
+                    <div class="artsy-tech-item"><div class="artsy-tech-label">MySQL</div><p>Structured the relationships between users, events, saved items, attendance history and posts.</p></div>
+                    <div class="artsy-tech-item"><div class="artsy-tech-label">GitHub</div><p>Used for version control, team collaboration and keeping design and implementation changes traceable.</p></div>
                 </div>
-                <div class="artsy-tag-row" style="margin-top:1.5rem;">
-                    <span class="artsy-tag-pill">React</span>
-                    <span class="artsy-tag-pill">Node.js</span>
-                    <span class="artsy-tag-pill">REST API</span>
-                    <span class="artsy-tag-pill">Recommendation Algorithm</span>
-                    <span class="artsy-tag-pill">Figma</span>
+            </div>
+        </article>
+
+        <!-- 07 -->
+        <article class="artsy-chapter" id="adRole">
+            <div class="artsy-ch-index"><div class="artsy-ch-num">07</div><div class="artsy-ch-label">My Role</div></div>
+            <div class="artsy-ch-content">
+                <p class="artsy-kicker">UX Research · UI Design · Front-end</p>
+                <h2>I connected the research to the <em>working product.</em></h2>
+                <div class="artsy-role-grid">
+                    <div><span>UX Research</span><p>Mapped the participation journey, identified the continuity gap and helped turn the problem into a product structure.</p></div>
+                    <div><span>UI Design</span><p>Developed the neutral visual system, information hierarchy and key screens for discovery, profiles and event participation.</p></div>
+                    <div><span>Front-end</span><p>Implemented responsive React interfaces and connected the visual decisions to real content and interaction states.</p></div>
                 </div>
+                <div class="artsy-tool-grid" aria-label="Tools used on Artsy Dublin">
+                    <div><img src="https://cdn.simpleicons.org/figma" alt="Figma logo"><strong>Figma</strong><small>Maps, wireframes, UI system and prototype</small></div>
+                    <div><img src="https://cdn.simpleicons.org/mysql" alt="MySQL logo"><strong>MySQL</strong><small>Users, events, posts and participation data</small></div>
+                    <div><img src="https://cdn.simpleicons.org/github" alt="GitHub logo"><strong>GitHub</strong><small>Version control and team collaboration</small></div>
+                    <div><img src="https://cdn.simpleicons.org/react" alt="React logo"><strong>React</strong><small>Reusable responsive front-end components</small></div>
+                </div>
+            </div>
+        </article>
+
+        <!-- 08 -->
+        <article class="artsy-chapter" id="adOutcome">
+            <div class="artsy-ch-index"><div class="artsy-ch-num">08</div><div class="artsy-ch-label">What Comes Next</div></div>
+            <div class="artsy-ch-content">
+                <p class="artsy-kicker">Outcome and reflection</p>
+                <h2>What we made, and what still needs <em>testing.</em></h2>
+                <p>The prototype moved Artsy beyond event discovery. It connected the moments that usually sit apart: choosing something to attend, remembering it afterwards and finding a reason to return.</p>
+                <div class="artsy-outcome-grid">
+                    <div class="artsy-outcome-card"><strong>Established</strong><span>A clearer way to connect event discovery with personal history and future recommendations.</span></div>
+                    <div class="artsy-outcome-card"><strong>Still open</strong><span>Whether people will return after an event to record it, and what would make that habit feel worthwhile.</span></div>
+                    <div class="artsy-outcome-card"><strong>Next test</strong><span>Measure repeat participation, diary use and whether event-based connections become meaningful over time.</span></div>
+                </div>
+                <div class="artsy-pull-quote"><p>The next question is not whether people can find an event. It is whether Artsy gives them a reason to come back.</p></div>
+                <figure class="artsy-img-full">
+                    <a href="https://artsy-dublin-website.vercel.app/" target="_blank" rel="noopener"><img src="media/thumbnail-artsydublin.png" alt="Artsy Dublin live website preview"></a>
+                    <figcaption>Live platform preview — Artsy Dublin.</figcaption>
+                </figure>
             </div>
         </article>
 
@@ -779,13 +794,13 @@
     <!-- ── STATUS BANNER ── -->
     <section class="artsy-status-banner">
         <div class="artsy-status-inner">
-            <h2>Final outcome: <em>live and usable</em></h2>
+            <h2>Artsy is built around <em>what happens next.</em></h2>
             <div>
                 <ul class="artsy-status-list">
-                    <li>Delivered a responsive React experience for Dublin arts discovery</li>
-                    <li>Translated research into discovery, diary, and buddy-matching flows</li>
-                    <li>Balanced cultural warmth with practical product navigation</li>
-                    <li>Deployed the finished project publicly on Vercel</li>
+                    <li>From discovery to attendance, the product keeps the journey visible</li>
+                    <li>Past events become part of a cultural profile rather than disappearing</li>
+                    <li>Social connection happens around a shared event, not a generic group</li>
+                    <li>The next iteration should test whether people return after attending</li>
                 </ul>
                 <a class="artsy-status-cta" href="https://artsy-dublin-website.vercel.app/" target="_blank" rel="noopener">Visit Live Site</a>
             </div>
